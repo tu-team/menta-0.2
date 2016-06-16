@@ -1,0 +1,10 @@
+#summary Associator component specification for Menta 0.2.
+
+= Associator. =
+Creates the link from inbound AcceptanceCriteria, CommonSenseRule to a generated Solution(Sequence of HowTo-s).
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20associator.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Associator.apply.png

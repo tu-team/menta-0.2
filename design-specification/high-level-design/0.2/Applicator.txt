@@ -1,0 +1,17 @@
+#summary Applicator component specification for Menta 0.2.
+
+= Applicator. =
+Is some form of the Translator that actually implements the generated Solution over current Architecture in HowTo representation or creates the patch and applies it over the file representation of application.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20applicator.png
+
+== Component diagram. ==
+Components:
+  # FileApplicator.
+  # HowToApplicator.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component%20applicator.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Applicator.apply.png

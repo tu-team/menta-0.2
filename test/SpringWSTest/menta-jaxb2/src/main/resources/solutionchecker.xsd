@@ -1,0 +1,28 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/solutiongenerator/solutionchecker"
+        targetNamespace="http://www.menta.org/model/solutiongenerator/solutionchecker"
+        xmlns:howTo="http://www.menta.org/model/howTo"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:import namespace="http://www.menta.org/model/howTo" schemaLocation="howTo.xsd"/>
+
+   <!-- SoulutionChecker -->
+    <xs:complexType name="Rule">
+        <xs:sequence>
+            <xs:element name="howTo" type="howTo:HowTo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RuleChange">
+        <xs:complexContent>
+            <xs:extension base="Rule"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RuleChangeSet">
+        <xs:sequence>
+            <xs:element name="ruleChange" type="RuleChange" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

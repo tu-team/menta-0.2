@@ -1,0 +1,80 @@
+// HowTo definitions:
+
+AddClass (
+ uri = "AddName"
+ superClass = AddClass
+ parameters = [StringLiteral]
+ mandatoryParameters = [StringLiteral]
+)
+
+AddClass (
+ uri = "AddActionClass"
+ superClass = AddClass
+ parameters = [AddName, ...]
+ mandatoryParameters = [AddName]
+)
+
+AddClass (
+ uri = "AddPackage"
+ superClass = AddClass
+ parameters = [AddName, AddActionClass]
+ mandatoryParameters = [AddName]
+)
+
+AddClass (
+ uri = "AddProject"
+ superClass = AddClass
+ parameters = [AddPackage, AddName, AddAddress]
+ mandatoryParameters = [AddName]
+)
+
+AddClass (
+ uri= "AddApplication"
+ superClass = AddClass
+ parameters = [AddProject, AddName]
+ mandatoryParameters = [AddName]
+)
+
+
+# HowTo-s invocations:
+AddIndividual(
+ actionClass = AddApplication
+ parameters = [AddProject(
+  parameters = [AddName(
+   parameters = StringLiteral("TestProject")
+  ),
+  AddPackage(
+   parameters = [AddName(
+    parameters = StringLiteral("TestPackage")
+   ),
+   AddActionClass(
+    parameters = AddName("TestClass")
+   )
+  )]
+ )]
+)
+
+Solution (
+  AddIndividual(
+    actionClass = AddActionClass
+    destination = TestPackage
+    parameters = AddName("NewClass")
+  )
+)
+
+# Test HowTo
+## the AcceptanceCriteria
+AddIndividual(
+ actionClass = AddActionClass
+ parameters = AddName("Facade_Inventory")
+)
+AddIndividual(
+ actionClass = AddActionClass
+ parameters = AddName("Main_Inventory")
+ destination = Facade_Inventory
+)
+AddIndividual(
+ actionClass = AddActionClass
+ parameters = AddName("Main_Inventory_Controller")
+ destination = Facade_Inventory
+)

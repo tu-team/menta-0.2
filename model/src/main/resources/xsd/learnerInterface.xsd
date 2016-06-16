@@ -1,0 +1,22 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/learner/interface"
+        targetNamespace="http://www.menta.org/model/learner/interface"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:model="http://www.menta.org/model">
+
+    <xs:import namespace="http://www.menta.org/model" schemaLocation="./model.xsd"/>
+
+    <xs:complexType name="PartialAssociation">
+        <xs:complexContent>
+            <xs:extension base="model:Knowledge">
+                <xs:sequence>
+                    <xs:element name="howToURI" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="solutionURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="ruleURI" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

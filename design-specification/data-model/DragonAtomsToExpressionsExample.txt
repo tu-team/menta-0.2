@@ -1,0 +1,31 @@
+﻿# 4 examples of the ADL for Scala
+
+$val visibilityDeclaration = $ref Scala.Identifier.Simple.Atom.Expression.Private 
+								$| $ref Scala.Identifier.Simple.Atom.Expression.Public 
+								$| $ref Scala.Identifier.Simple.Atom.Expression.Pakage
+
+# Scala.Question.Atom.Dragon
+# $ref is the reference to the OWL class
+$def Scala.Question.Atom.Dragon
+	if ($ref Logical.Expression) { $ref Item.sequence }
+
+# $$ is the reference to ADL value
+$def Method.Scala.Method.UMLClass
+	$$visibilityDeclaration def $ref Scala.Identifier.Simple.Atom.Expression { $ref Item.sequence }
+
+$def Scala.Attribute.UMLClass
+	$$visiblityDeclaration var $ref Scala.Identifier.Simple.Atom.Expression : $ref Scala.Identifier.Simple.Atom.Expression
+
+$def Scala.UMLClass
+	$$visibilityDeclaration class { $ref Method.Scala.Method.UMLClass $| $ref Scala.Attribute.UMLClass }
+	
+# Variant.Atom.Dragon
+$def Scala.Variant.Atom.Dragon
+	$ref Expression
+
+# $prop is the reference to OWL Object property
+$def Choise.Atom.Dragon
+	$prop hasValueExpression.Expression match { $ref Variant.Atom.Dragon }
+
+$def Variant.Atom.Dragon 
+	$prop hasValueExpression.Expression

@@ -1,0 +1,14 @@
+==============================================
+The list of specification artifacts Menta 0.2.
+==============================================
+
+#. Requirements specification.
+
+  #. Target application description. (Doc) = Artem
+  #. Automation description. (Doc) = Artem
+
+#. Design specification.
+
+  #. Purpose background. (Wiki) = Max
+  #. Components. (Wiki, UML) = Max
+  #. Data model. (Wiki, UML) = Max

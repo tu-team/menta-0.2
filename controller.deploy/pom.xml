@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>menta</artifactId>
+        <groupId>menta</groupId>
+        <version>${menta.version}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>ear</packaging>
+
+    <artifactId>controller.deploy</artifactId>
+    <version>${menta.version}</version>
+    <name>${project.artifactId}</name>
+
+    <description>Menta.Controller deploy</description>
+    <inceptionYear>2010</inceptionYear>
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE</name>
+            <url>http://www.gnu.org/licenses/gpl.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <repositories>
+        <repository>
+            <id>scala-tools.org</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </repository>
+        <repository>
+            <id>java.net</id>
+            <name>GlassFish Maven Repository</name>
+            <url>http://download.java.net/maven/glassfish</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>scala-tools.org</id>
+            <name>Scala-Tools Maven2 Repository</name>
+            <url>http://scala-tools.org/repo-releases</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>glassfish</id>
+            <url>http://download.java.net/maven/glassfish</url>
+        </pluginRepository>
+    </pluginRepositories>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>${scala.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>menta</groupId>
+            <artifactId>controller</artifactId>
+            <version>${menta.version}</version>
+            <type>war</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hypergraphdb</groupId>
+                    <artifactId>hgdbfull</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.scala-tools.testing</groupId>
+            <artifactId>specs_${scala.version}</artifactId>
+            <version>${specs.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest</artifactId>
+            <version>${scalatest.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Glassfish depedency -->
+
+        <dependency>
+            <groupId>org.glassfish.deployment</groupId>
+            <artifactId>deployment-client</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+        <!-- Menta dependencies -->
+        <dependency>
+            <groupId>menta</groupId>
+            <artifactId>controller</artifactId>
+            <version>${menta.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+    <build>
+        <sourceDirectory>src/main/scala</sourceDirectory>
+        <testSourceDirectory>src/test/scala</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <configuration>
+                    <displayName>Menta Controller</displayName>
+                    <description>Menta Service</description>
+                    <!--<earName>menta-service</earName>-->
+                    <version>5</version>
+                    <generateApplicationXml>true</generateApplicationXml>
+
+                    <modules>
+                        <webModule>
+                            <groupId>menta</groupId>
+                            <artifactId>controller</artifactId>
+
+                        </webModule>
+
+                    </modules>
+                </configuration>
+            </plugin>
+
+            <!-- Cargo deploy -->
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven2-plugin</artifactId>
+                <version>1.1.2</version>
+                <configuration>
+                    <container>
+                        <containerId>glassfish3x</containerId>
+                        <type>remote</type>
+                        <dependencies>
+                            <dependency>
+                                <groupId>org.glassfish.deployment</groupId>
+                                <artifactId>deployment-client</artifactId>
+                            </dependency>
+
+                        </dependencies>
+                    </container>
+                    <configuration>
+                        <type>runtime</type>
+                        <properties>
+                            <cargo.hostname>menta-test</cargo.hostname>
+                            <cargo.servlet.port>8080</cargo.servlet.port>
+                            <cargo.remote.username>admin</cargo.remote.username>
+                            <cargo.remote.password>123</cargo.remote.password>
+                            <cargo.glassfish.domain.name>domain1</cargo.glassfish.domain.name>
+                        </properties>
+                    </configuration>
+
+                    <deployer>
+
+                        <deployables>
+                            <deployable>
+                                <groupId>${project.groupId}</groupId>
+                                <artifactId>${project.artifactId}</artifactId>
+                                <type>ear</type>
+                            </deployable>
+                        </deployables>
+                    </deployer>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.glassfish.deployment</groupId>
+                        <artifactId>deployment-client</artifactId>
+                        <version>3.1.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+
+
+            <!-- Deploy to local glass fish -->
+            <!-- <plugin>
+                <groupId>org.glassfish.maven.plugin</groupId>
+                <artifactId>maven-glassfish-plugin</artifactId>
+                <version>2.1</version>
+
+                <configuration>
+
+                    <glassfishDirectory>D:/glassfish3/glassfish</glassfishDirectory>
+
+                    <user>admin</user>
+                    <passwordFile>D:/glassfish3/glassfish/domains/domain1/config/password</passwordFile>
+                    <autoCreate>false</autoCreate>
+                    <debug>true</debug>
+                    <echo>true</echo>
+                    <terse>false</terse>
+                    <domain>
+                        <name>domain1</name>
+                        <httpPort>8080</httpPort>
+                        <adminPort>4848</adminPort>
+                        <host>10.182.170.142</host>
+                        <reuse>true</reuse>
+                    </domain>
+                    <components>
+                        <component>
+                            <name>${project.artifactId}</name>
+                            <artifact>${project.build.directory}/menta-service.ear</artifact>
+                        </component>
+                    </components>
+                </configuration>
+            </plugin>-->
+        </plugins>
+
+    </build>
+
+
+</project>

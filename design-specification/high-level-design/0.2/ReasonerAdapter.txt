@@ -1,0 +1,5 @@
+#summary ReasonerAdapter component specification for Menta 0.2.
+
+= ReasonerAdapter. =
+Reasoner adapter is the interface and translator to the probabilistic [http://en.wikipedia.org/wiki/Semantic_reasoner reasoner] statements.
+Main purpose is to provide the adapter and translation from the [http://code.google.com/p/menta/wiki/Knowledge Knowledge] classes and individuals into the Reasoner objects.

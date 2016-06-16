@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>menta</artifactId>
+        <groupId>menta</groupId>
+        <version>${menta.version}</version>
+    </parent>
+    <groupId>menta</groupId>
+    <artifactId>lib</artifactId>
+    <version>${menta.version}</version>
+    <name>Menta.Library project</name>
+    <description>Library project to install all jars not in maven repository. ()</description>
+
+
+
+
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE</name>
+            <url>http://www.gnu.org/licenses/gpl.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <properties>
+        <lib.dir>src/main/resources</lib.dir>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-install-plugin</artifactId>
+                <version>2.2</version>
+                <executions>
+                    <execution>
+                        <id>install-ecj</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/ecj.zip</file>
+                            <groupId>ecj</groupId>
+                            <artifactId>ecj</artifactId>
+                            <packaging>jar</packaging>
+                            <version>19</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install sesame</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/openrdf-sesame-2.2.2-onejar.jar</file>
+                            <groupId>org.openrdf</groupId>
+                            <artifactId>openrdf-sesame</artifactId>
+                            <packaging>jar</packaging>
+                            <version>3.3</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install owlim</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/owlim-3.3.jar</file>
+                            <groupId>owlim</groupId>
+                            <artifactId>owlim</artifactId>
+                            <packaging>jar</packaging>
+                            <version>3.3</version>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>install trree</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/trree-3.3.jar</file>
+                            <groupId>owlim</groupId>
+                            <artifactId>trree</artifactId>
+                            <packaging>jar</packaging>
+                            <version>3.3</version>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install hypergraph</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/hgdbfull.jar</file>
+                            <groupId>org.hypergraphdb</groupId>
+                            <artifactId>hgdbfull</artifactId>
+                            <packaging>jar</packaging>
+                            <version>1.1</version>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install berkley</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/db.jar</file>
+                            <groupId>com.sleepycat</groupId>
+                            <artifactId>je</artifactId>
+                            <packaging>jar</packaging>
+                            <version>3.3.75</version>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>install glassfish appserv </id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/appserv-rt.jar</file>
+                            <groupId>glassfish</groupId>
+                            <artifactId>appserv-rt.jar</artifactId>
+                            <packaging>jar</packaging>
+                            <version>3.1.1</version>
+                        </configuration>
+                    </execution>
+                     <execution>
+                        <id>install glassfish javaee</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>install-file</goal>
+                        </goals>
+                        <configuration>
+                            <file>${lib.dir}/javaee.jar</file>
+                            <groupId>glassfish</groupId>
+                            <artifactId>javaee.jar</artifactId>
+                            <packaging>jar</packaging>
+                            <version>3.1.1</version>
+                        </configuration>
+                    </execution>
+
+
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

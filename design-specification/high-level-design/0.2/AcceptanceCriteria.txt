@@ -1,0 +1,6 @@
+#summary AcceptanceCriteria model for Menta 0.2.
+
+AcceptanceCriteria is the set of the probabilistic predicates created in the form of [http://code.google.com/p/menta/wiki/HowTo HowTos].
+
+Please see [http://code.google.com/p/menta/wiki/OntologyModel Ontology model AddMethodAction] the AcceptanceCriteria rules have comment {{{AcceptanceCriteria rules expression group}}}.
+

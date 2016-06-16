@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="MentaService"
+             xmlns="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             targetNamespace="http://www.menta.org/controller"
+             xmlns:tns="http://www.menta.org/controller"
+             xmlns:xmime="http://www.w3.org/2005/05/xmlmime"
+             xmlns:con="http://www.menta.org/model/conversation/interface">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://www.menta.org/model/conversation/interface" schemaLocation="conversationInterface.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="CreateRequestMsg">
+        <wsdl:part name="parameter" element="con:RequestGenerationParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="URIMsg">
+        <wsdl:part name="parameter" element="con:URIParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="URIMsg2">
+        <wsdl:part name="parameter" element="con:URIParameter2"/>
+    </wsdl:message>
+
+
+    <wsdl:message name="URIMsg1">
+        <wsdl:part name="parameter" element="con:URIParameter1"/>
+    </wsdl:message>
+
+
+
+    <wsdl:message name="SelectActionClassURIMsg">
+        <wsdl:part name="parameter" element="con:SelectActionClassURIParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="SelectActionIndividualURIMsg">
+        <wsdl:part name="parameter" element="con:SelectActionIndividualURIParameter"/>
+    </wsdl:message>
+
+
+
+    <wsdl:message name="ConversationURIMsg_Historical">
+        <wsdl:part name="parameter" element="con:ConversationURIParameter_Historical"/>
+    </wsdl:message>
+
+    <wsdl:message name="EvolutionURIMsg">
+        <wsdl:part name="parameter" element="con:EvolutionURIMsgParameter"/>
+    </wsdl:message>
+
+
+
+    <wsdl:message name="UpdateRequirementsMsg">
+        <wsdl:part name="parameter" element="con:UpdateRequirementsParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="ConfirmSolutionMsg">
+        <wsdl:part name="parameter" element="con:ConfirmSolutionParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="PartialConfirmSolutionMsg">
+        <wsdl:part name="parameter" element="con:PartialConfirmSolutionParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="ImportApplicationMsg">
+        <wsdl:part name="parameter" element="con:ImportApplicationParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddHowToChangeSetMsg">
+        <wsdl:part name="parameter" element="con:UpdateHowToResponseParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="ConversationURIMsg">
+        <wsdl:part name="parameter" element="con:ConversationURIParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="SelectTerminalURIMsg">
+        <wsdl:part name="parameter" element="con:SelectTerminalURIParameter"/>
+    </wsdl:message>
+
+     <wsdl:message name="AddHowToMsg">
+        <wsdl:part name="parameter" element="con:HowToParameter"/>
+
+    </wsdl:message>
+
+    <wsdl:message name="AddHowTosMsg">
+        <wsdl:part name="parameter" element="con:AddHowTosParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="SetURIMsg">
+        <wsdl:part name="parameter" element="con:SetURIParameter"/>
+
+    </wsdl:message>
+
+    <wsdl:message name="ReportMsg">
+        <wsdl:part name="parameter" element="con:ReportParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddCommonSenseRuleMsg">
+        <wsdl:part name="parameter" element="con:RuleParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddCommonSenseRulesMsg">
+        <wsdl:part name="parameter" element="con:SetRuleParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="KnowledgeClassMsg">
+        <wsdl:part name="parameter" element="con:KnowledgeClassParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="KnowledgeIndividualMsg">
+        <wsdl:part name="parameter" element="con:KnowledgeIndividualParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddAssociationMsg">
+        <wsdl:part name="parameter" element="con:AddAssociationParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="SelectActionClassMsg">
+        <wsdl:part name="parameter" element="con:SelectActionClassParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="SelectActionIndividualMsg">
+        <wsdl:part name="parameter" element="con:SelectActionIndividualParameter"/>
+    </wsdl:message>
+
+
+
+    <wsdl:message name="GetHistoricalReportMsg">
+        <wsdl:part name="parameter" element="con:GetHistoricalReportParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetEvolutionReportMsg">
+        <wsdl:part name="parameter" element="con:GetEvolutionReportParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="GetSolutionReportMsg">
+        <wsdl:part name="parameter" element="con:GetSolutionReportParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="SelectTerminalMsg">
+        <wsdl:part name="parameter" element="con:SelectTerminalParameter"/>
+    </wsdl:message>
+
+    <wsdl:message name="AddClassifierMsg">
+        <wsdl:part name="parameter" element="con:AddClassifierParameter"/>
+    </wsdl:message>
+
+    <wsdl:portType name="MentaServicePort">
+        <wsdl:operation name="CreateRequest">
+            <wsdl:input message="tns:CreateRequestMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateRequirements">
+            <wsdl:input message="tns:UpdateRequirementsMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="ConfirmSolution">
+            <wsdl:input message="tns:ConfirmSolutionMsg"/>
+            <wsdl:output message="tns:ReportMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="PartialConfirmSolution">
+            <wsdl:input message="tns:PartialConfirmSolutionMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="ImportApplication">
+            <wsdl:input message="tns:ImportApplicationMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddHowToChangeSet">
+            <wsdl:input message="tns:AddHowToChangeSetMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+
+         <wsdl:operation name="AddHowTo">
+            <wsdl:input message="tns:AddHowToMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddHowTos">
+            <wsdl:input message="tns:AddHowTosMsg"/>
+            <wsdl:output message="tns:SetURIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddCommonSenseRule">
+            <wsdl:input message="tns:AddCommonSenseRuleMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddCommonSenseRules">
+            <wsdl:input message="tns:AddCommonSenseRulesMsg"/>
+            <wsdl:output message="tns:SetURIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="SelectKnowledgeClass">
+            <wsdl:input message="tns:URIMsg"/>
+            <wsdl:output message="tns:KnowledgeClassMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="SelectKnowledgeIndividual">
+            <wsdl:input message="tns:URIMsg1"/>
+            <wsdl:output message="tns:KnowledgeIndividualMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddAssociation">
+            <wsdl:input message="tns:AddAssociationMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+       <wsdl:operation name="SelectActionClass">
+            <wsdl:input message="tns:SelectActionClassURIMsg"/>
+            <wsdl:output message="tns:SelectActionClassMsg"/>
+        </wsdl:operation>
+       <wsdl:operation name="SelectActionIndividual">
+            <wsdl:input message="tns:SelectActionIndividualURIMsg"/>
+            <wsdl:output message="tns:SelectActionIndividualMsg"/>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetHistoricalReport">
+            <wsdl:input message="tns:ConversationURIMsg_Historical"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetEvolutionReport">
+            <wsdl:input message="tns:EvolutionURIMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="GetSolutionReport">
+            <wsdl:input message="tns:ConversationURIMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="RevertToPerHistorical">
+            <wsdl:input message="tns:URIMsg2"/>
+            <wsdl:output message="tns:URIMsg2"/>
+        </wsdl:operation>
+        <wsdl:operation name="SelectTerminal">
+            <wsdl:input message="tns:SelectTerminalURIMsg"/>
+            <wsdl:output message="tns:SelectTerminalMsg"/>
+        </wsdl:operation>
+        <wsdl:operation name="AddClassifier">
+            <wsdl:input message="tns:AddClassifierMsg"/>
+            <wsdl:output message="tns:URIMsg"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="MentaBinding" type="tns:MentaServicePort">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CreateRequest">
+            <soap:operation soapAction="CreateRequest"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="UpdateRequirements">
+            <soap:operation soapAction="UpdateRequirements"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ConfirmSolution">
+            <soap:operation soapAction="ConfirmSolution"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="PartialConfirmSolution">
+            <soap:operation soapAction="PartialConfirmSolution"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="ImportApplication">
+            <soap:operation soapAction="ImportApplication"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddHowTo">
+            <soap:operation soapAction="AddHowTo"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddHowTos">
+            <soap:operation soapAction="AddHowTos"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddCommonSenseRule">
+            <soap:operation soapAction="AddCommonSenseRule"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddCommonSenseRules">
+            <soap:operation soapAction="AddCommonSenseRules"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SelectKnowledgeClass">
+            <soap:operation soapAction="SelectKnowledgeClass"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SelectKnowledgeIndividual">
+            <soap:operation soapAction="SelectKnowledgeIndividual"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="AddAssociation">
+            <soap:operation soapAction="AddAssociation"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SelectActionClass">
+            <soap:operation soapAction="SelectActionClass"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="SelectActionIndividual">
+            <soap:operation soapAction="SelectActionIndividual"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+        <wsdl:operation name="GetHistoricalReport">
+            <soap:operation soapAction="GetHistoricalReport"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetEvolutionReport">
+            <soap:operation soapAction="GetEvolutionReport"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="GetSolutionReport">
+            <soap:operation soapAction="GetSolutionReport"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="RevertToPerHistorical">
+            <soap:operation soapAction="RevertToPerHistorical"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+         <wsdl:operation name="SelectTerminal">
+            <soap:operation soapAction="SelectTerminal"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="AddClassifier">
+            <soap:operation soapAction="AddClassifier"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="MentaService">
+        <wsdl:port binding="tns:MentaBinding" name="tns:MentaServicePort">
+            <soap:address location="http://localhost:8080/Menta/services/MentaService"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</definitions>

@@ -1,0 +1,35 @@
+Accosiation(
+ rule = Rule(
+  AddIndividual(
+   actionClass = AddImplication
+    parameters = (
+     AddInheritance(
+      parameters = (
+       AddVariable(AddName("module")),
+       StringLiteral("addField")
+      )
+     ),
+     AddInheritance(
+      StringLiteral("Self"),
+      StringLiteral("Ok")
+     )
+    )
+   )
+  )
+ ),
+ HowTos = Set(
+  AddIndividual(
+   actionClass = AddActionClass
+   destination = TestPackage
+   parameters = AddName("NewClass")
+  )
+ ),
+ Solution = Solution (
+  AddIndividual(
+   actionClass = AddActionClass
+   destination = TestPackage
+   parameters = AddName("NewClass")
+  ), ...
+ )
+)
+

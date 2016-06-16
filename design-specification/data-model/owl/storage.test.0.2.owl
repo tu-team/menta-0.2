@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY v "http://menta.org/ontologies/v.0.2#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://menta.org/ontologies/v.0.2#"
+     xml:base="http://menta.org/ontologies/v.0.2"
+     xmlns:v="http://menta.org/ontologies/v.0.2#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#hasFirst -->
+
+    <owl:ObjectProperty rdf:about="#hasFirst">
+        <rdfs:subPropertyOf rdf:resource="#sequenceProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#hasHowTo -->
+
+    <owl:ObjectProperty rdf:about="#hasHowTo"/>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#hasHowToSequence -->
+
+    <owl:ObjectProperty rdf:about="#hasHowToSequence"/>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#hasNext -->
+
+    <owl:ObjectProperty rdf:about="#hasNext">
+        <rdfs:subPropertyOf rdf:resource="#sequenceProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#howTo.action.hasParameter -->
+
+    <owl:ObjectProperty rdf:about="#howTo.action.hasParameter">
+        <rdfs:subPropertyOf rdf:resource="#howToProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#howTo.action.hasParameter.destination -->
+
+    <owl:ObjectProperty rdf:about="#howTo.action.hasParameter.destination">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >references how-to that could possibly contain current</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#howTo.action.hasParameter.howTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#howTo.action.hasParameter.howTo -->
+
+    <owl:ObjectProperty rdf:about="#howTo.action.hasParameter.howTo">
+        <rdfs:subPropertyOf rdf:resource="#howTo.action.hasParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#howTo.action.hasParameter.object -->
+
+    <owl:ObjectProperty rdf:about="#howTo.action.hasParameter.object">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >references parameter of the how-to</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#howTo.action.hasParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#howTo.action.hasParameter.sub.howTo -->
+
+    <owl:ObjectProperty rdf:about="#howTo.action.hasParameter.sub.howTo">
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >references nested how-to</rdfs:comment>
+        <owl:inverseOf rdf:resource="#howTo.action.hasParameter.destination"/>
+        <rdfs:subPropertyOf rdf:resource="#howTo.action.hasParameter.howTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#howToProperty -->
+
+    <owl:ObjectProperty rdf:about="#howToProperty"/>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#sequenceProperty -->
+
+    <owl:ObjectProperty rdf:about="#sequenceProperty">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#solution.hasHowTo -->
+
+    <owl:ObjectProperty rdf:about="#solution.hasHowTo">
+        <rdfs:subPropertyOf rdf:resource="#solutionProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#solutionProperty -->
+
+    <owl:ObjectProperty rdf:about="#solutionProperty">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action -->
+
+    <owl:Class rdf:about="#HowTo.Action">
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.sub.howTo"/>
+                <owl:allValuesFrom rdf:resource="#HowTo.Action.Add"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Application -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Application">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Condition -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Condition">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Method -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Method">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.MethodAction -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.MethodAction">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.MethodAction.Operator -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.MethodAction.Operator">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.MethodAction.Operator.Conjunction -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.MethodAction.Operator.Conjunction">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction.Operator.ProbabilisticalLogic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.MethodAction.Operator.Implication -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.MethodAction.Operator.Implication">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction.Operator.ProbabilisticalLogic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.MethodAction.Operator.Negation -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.MethodAction.Operator.Negation">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction.Operator.ProbabilisticalLogic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.MethodAction.Operator.ProbabilisticalLogic -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.MethodAction.Operator.ProbabilisticalLogic">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction.Operator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Module -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Module">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.sub.howTo"/>
+                <owl:someValuesFrom rdf:resource="#HowTo.Action.Add.Method"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.sub.howTo"/>
+                <owl:someValuesFrom rdf:resource="#HowTo.Action.Add.Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.destination"/>
+                <owl:someValuesFrom rdf:resource="#HowTo.Action.Add.NameSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.sub.howTo"/>
+                <owl:someValuesFrom rdf:resource="#HowTo.Action.Add.Scope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="&xsd;string"
+            >Module could be added to the Namespace, and could has sub-how-tos add.method, add.property, add.scope(of the module)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.NameSpace -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.NameSpace">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.ProbabiliticalExpression -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.ProbabiliticalExpression">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.Condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Project -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Project">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Property -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Property">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add.MethodAction.Operator.ProbabilisticalLogic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.destination"/>
+                <owl:someValuesFrom rdf:resource="#HowTo.Action.Add.Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#howTo.action.hasParameter.sub.howTo"/>
+                <owl:allValuesFrom rdf:resource="#HowTo.Action.Add.Scope"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Action.Add.Scope -->
+
+    <owl:Class rdf:about="#HowTo.Action.Add.Scope">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.ActionClass.Remove -->
+
+    <owl:Class rdf:about="#HowTo.ActionClass.Remove">
+        <rdfs:subClassOf rdf:resource="#HowTo.Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.NumberILiteral -->
+
+    <owl:Class rdf:about="#HowTo.NumberILiteral">
+        <rdfs:subClassOf rdf:resource="#HowTo.Terminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Reference -->
+
+    <owl:Class rdf:about="#HowTo.Reference">
+        <rdfs:subClassOf rdf:resource="#HowTo.Terminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.StringLiteral -->
+
+    <owl:Class rdf:about="#HowTo.StringLiteral">
+        <rdfs:subClassOf rdf:resource="#HowTo.Terminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowTo.Terminal -->
+
+    <owl:Class rdf:about="#HowTo.Terminal">
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#HowToGroup -->
+
+    <owl:Class rdf:about="#HowToGroup"/>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#Rule -->
+
+    <owl:Class rdf:about="#Rule">
+        <rdfs:subClassOf rdf:resource="#SolutonCheckerGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasHowToSequence"/>
+                <owl:someValuesFrom rdf:resource="#Sequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#Sequence -->
+
+    <owl:Class rdf:about="#Sequence">
+        <rdfs:subClassOf rdf:resource="#SequenceGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFirst"/>
+                <owl:allValuesFrom rdf:resource="#SequenceElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#SequenceElement -->
+
+    <owl:Class rdf:about="#SequenceElement">
+        <rdfs:subClassOf rdf:resource="#SequenceGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNext"/>
+                <owl:allValuesFrom rdf:resource="#SequenceElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasHowTo"/>
+                <owl:allValuesFrom rdf:resource="#HowToGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#SequenceGroup -->
+
+    <owl:Class rdf:about="#SequenceGroup">
+        <rdfs:subClassOf rdf:resource="#UtilGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#Solution -->
+
+    <owl:Class rdf:about="#Solution">
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasHowToSequence"/>
+                <owl:someValuesFrom rdf:resource="#Sequence"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#SolutionGeneratorGroup -->
+
+    <owl:Class rdf:about="#SolutionGeneratorGroup"/>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#SolutonCheckerGroup -->
+
+    <owl:Class rdf:about="#SolutonCheckerGroup">
+        <rdfs:subClassOf rdf:resource="#SolutionGeneratorGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.org/ontologies/v.0.2#UtilGroup -->
+
+    <owl:Class rdf:about="#UtilGroup"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

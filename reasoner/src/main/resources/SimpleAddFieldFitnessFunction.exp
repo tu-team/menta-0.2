@@ -1,0 +1,99 @@
+********** Simple Fitness function example
+** fitness function is Self ok?
+// Goal
+<(*, Self) --> ok>!
+
+// genotype:
+<(*, genotype, <(*, Customer, 1 ) --> RemoveFieldCommand>) --> contains>.
+<(*, genotype, <(*, CreateCustomerServlet, 2 ) --> RemoveFieldCommand>) --> contains>.
+<(*, genotype, <(*, ListCustomers, 3 ) --> RemoveFieldCommand>) --> contains>.
+
+
+// rules:
+<addField --> opeartion>.
+<removeField --> operation>.
+<Customer {-- module>.
+<CreateCustomer {-- module>.
+<ListCustomersServlet {-- module>.
+<CreateCustomerServlet {-- module>.
+<ListCustomers {-- module>.
+
+<(*, Customer, CreateCustomer) --> linked>.
+<(*, Customer, ListCustomersServlet) --> linked>.
+<(*, Customer, CreateCustomerServlet) --> linked>.
+<(*, Customer, ListCustomers) --> linked>.
+
+// all the operations must be addField
+<(&&, <(*, genotype, #x) --> contains>, <#x <=> <(*, #x, #y) --> addField>>) =|> <(*, Self) --> ok>>.
+// all Modules must relate to the Customer
+<(&&, <(*, genotype, #x) --> contains>, <(*, Customer, #x) --> linked>) =|> <(*, Self) --> ok>>.
+// applying same operation to one module twice produces the penalty
+<(&&, <(*, gonotype, <(*, #module, #number1) --> #operation>) --> contains>, <(*, gonotype, <(*, #module, #number2) --> #operation>) --> contains>, (--, <#nuber1 <=> #nuber2>)) =|> (--, <(*, Self) --> ok>)>.
+// if not all the expected modules processed have to have penalty
+<(&&, <(*, Customer, #module) --> linked>, <(*, genotype, #module) --> contains>) =|> <(*, Self) --> ok>>.
+
+// if there are less than expected number of operatios result a penalty
+// if there are not expected modules processes have to have penalty
+
+//end
+
+// procedural flow
+// all the operations must be addField
+*
+<(*, genotype, <(*, Customer, 1) --> addField>) --> contains>.
+<(*, genotype, <(*, #module, #number) --> addField>) --> contains>.
+4
+ OUT: <(*,genotype,<(*,#1,#2) --> addField>) --> contains>. %1.00;0.95% {4 : 1;2}
+*
+<(*, genotype, <(*, ListCustomersServlet, 3) --> removeField>) --> contains>.
+<(*, genotype, <(*, #module, #number) --> addField>) --> contains>.
+<(*, genotype, <(--, <(*, #module, #number) --> addField>)>) --> contains>.%0%
+10
+
+
+// DEBUG
+* 2s on AMD64
+<module1 --> module>.
+<module1 --> processed>.
+1
+(&&, <#module --> module>, <#module --> processed>)?
+5
+ OUT: (&&,<#1() --> module>,<#1() --> processed>). %1.00;0.81% {6 : 1;2}
+*
+<module2 --> module>.
+<module2 --> processed>.
+1
+(&&, <#module --> module>, <#module --> processed>)?
+5
+ OUT: (&&,<#1() --> module>,<#1() --> processed>). %1.00;0.81% {6 : 1;2}
+*
+<module3 --> module>.
+<module3 --> processed>.
+1
+(&&, <#module --> module>, <#module --> processed>)?
+5
+ OUT: (&&,<#1() --> module>,<#1() --> processed>). %1.00;0.81% {6 : 1;2}
+*
+<module4 --> module>.
+<module4 --> processed>. %0%
+1
+(&&, <#module --> module>, <#module --> processed>)?
+11
+ OUT: (&&,<#1() --> module>,<#1() --> processed>). %0.00;0.90% {12 : 1;2}
+*
+<module5 --> module>.
+<module5 --> processed>. %0%
+1
+(&&, <#module --> module>, <#module --> processed>)?
+11
+ OUT: (&&,<#1() --> module>,<#1() --> processed>). %0.00;0.90% {12 : 1;2}
+
+* combine results
+(&&,<#module --> module>,<#module --> processed>). %1.00%
+(&&,<#module --> module>,<#module --> processed>). %1.00%
+(&&,<#module --> module>,<#module --> processed>). %1.00%
+(&&,<#module --> module>,<#module --> processed>). %0.00%
+(&&,<#module --> module>,<#module --> processed>). %0.00%
+3
+ OUT: (&&,<#1 --> module>,<#1 --> processed>). %0.60;0.98% {3 : 1;3;4;5;2}
+ OUT: (&&,<#1 --> module>,<#1 --> processed>). %0.60;0.98% {3 : 2;1;4;5;3}

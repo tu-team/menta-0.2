@@ -1,0 +1,7 @@
+#summary SubscriberController component specification for Menta 0.2.
+
+= SubscriberController. =
+Is a [http://en.wikipedia.org/wiki/Publish/subscribe Publisher-Subscriber] design pattern implemented via web-services.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20subscribercontroller.png

@@ -1,0 +1,62 @@
+#summary MentaController component specification for Menta 0.2.
+
+= MentaController. =
+MentaController is the main component and implements the work-flow pattern and is capable of the invocation of the dependent component in the work-flow manner.
+
+== Interface diagram. ==
+This is the interface for the API provided by MentaController class and the web-service provided by MentaService interface.
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface.png
+
+== Component diagram. ==
+Components:
+  # SolutionGenerator.
+  # [http://code.google.com/p/menta/wiki/Communicator Communicator].
+  # ReasonerAdapter.
+  # [http://code.google.com/p/menta/wiki/Learner Learner].
+  # [http://code.google.com/p/menta/wiki/Translator Translator].
+  # [http://code.google.com/p/menta/wiki/Applicator Applicator].
+  # SubscriberController.
+  # [http://code.google.com/p/menta/wiki/KBServer KBServer].
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component.png
+
+== Activity diagrams. ==
+
+=== MentaController.addHowTo ===
+Consists of three [http://code.google.com/p/menta/wiki/DesignSpecification02#Menta_Use-case. use-cases/activities].
+  # Create Terminal.
+  # Create Action (Non-terminal).
+
+Typically Expert crates: Terminals then uses them to create Non-terminals Expressions(Actions). Then system receives created HowTo, checks for consistency and saves in Storage.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/createHowtoactivity1.png
+
+=== MentaController.importApplication. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/MentaController.importApplication.png
+
+=== MentaController.addHowTo. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/MentaController.addHowTo.png
+
+=== MentaController.addHowTos. ===
+Adds several HowTos to the System invoking MentaController.addHowTo n times with all the HowTos specified.
+
+=== MentaController.addCommonSenseRule. ===
+Is the same as MentaController.addHowTo except for the HowTos are selected only from AddProbabiliticalExpression OWL class.
+
+=== MentaController.addCommonSenceRules. ===
+Adds several CommonSenseRules to the System invoking MentaController.ad n times with all the CommonSenseRules specified.
+
+=== MentaController.selectActionClass. ===
+Simply invokes the KBServer.selectClass with specified URI and returns the result.
+
+=== MentaController.selectActionIndividual. ===
+Simply invokes the KBServer.selectIndividual with specified URI and returns the result.
+
+=== MentaController.createRequest. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Activity%20MentaController%20createRequest.png
+
+=== MentaController.updateRequirements. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Activity%20MentaController%20updateRequirements.png
+
+=== MentaController.confirmSolution. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Activity%20MentaController.confirmSolution.png

@@ -1,0 +1,1924 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY kaon 'http://kaon.semanticweb.org/2001/11/kaon-lexical#'>
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-root" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-root.xml"?>
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-lexical" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-lexical.xml"?>
+
+<?model-attribute key="OIModel.version" value="661"?>
+
+<rdf:RDF xml:base="http://menta/ontologies/2010/01/ProblemSolutionGeneration"
+    xmlns:rdf="&rdf;"
+    xmlns:kaon="&kaon;"
+    xmlns:rdfs="&rdfs;">
+
+<rdfs:Class rdf:ID="AbstractApplicationArchitecture">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Action">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ActionGroup">
+    <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ActionParameter.DestinationName">
+    <rdfs:subClassOf rdf:resource="#ActionProperty"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ActionParameter.DestinationName.ModuleName">
+    <rdfs:subClassOf rdf:resource="#ActionParameter.DestinationName"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ActionParameter.DestinationName.PageName">
+    <rdfs:subClassOf rdf:resource="#ActionParameter.DestinationName"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ActionParameter.FieldName">
+    <rdfs:subClassOf rdf:resource="#ActionProperty"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ActionProperty">
+    <rdfs:subClassOf rdf:resource="#ActionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AddFieldAction">
+    <rdfs:subClassOf rdf:resource="#AnyAction"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AddFieldAction.WebForm">
+    <rdfs:subClassOf rdf:resource="#AddFieldAction.WebPage"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AddFieldAction.WebPage">
+    <rdfs:subClassOf rdf:resource="#AddFieldAction"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AddFieldToWebForm">
+    <rdfs:subClassOf rdf:resource="#AnyAddFieldToWebPage"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="And.Operator.Condition">
+    <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAction">
+    <rdfs:subClassOf rdf:resource="#ActionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAddFieldToClass">
+    <rdfs:subClassOf rdf:resource="#AnyAddFieldToModule"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAddFieldToList">
+    <rdfs:subClassOf rdf:resource="#AnyDataRepresentationUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAddFieldToModule">
+    <rdfs:subClassOf rdf:resource="#AnyModuleCreation"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAddFieldToWebPage">
+    <rdfs:subClassOf rdf:resource="#AnyWebPageUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAddFieldToWebPageList">
+    <rdfs:subClassOf rdf:resource="#AnyAddFieldToList"/>
+    <rdfs:subClassOf rdf:resource="#AnyAddFieldToWebPage"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyAddMethodToModule">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyApplication">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyConnectionSetup">
+    <rdfs:subClassOf rdf:resource="#AnyStatementUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyDBConnectionSetup">
+    <rdfs:subClassOf rdf:resource="#AnyConnectionSetup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyDataRepresentationUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyDataRetrievalUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyHTTPRequestProcessorUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyRequestDataProcessingUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyHowTo">
+    <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyInsertDataStatementUpdate">
+    <rdfs:subClassOf rdf:resource="#AnySQLStatementUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyJDBCConnectionSetup">
+    <rdfs:subClassOf rdf:resource="#AnyDBConnectionSetup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyModuleCreation">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyProgrammingLanguage">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyReqestDataNormalisation">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyRequestDataProcessingUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyRequestDataValidationUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnySQLExpression">
+    <rdfs:subClassOf rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup.SQL"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnySQLSelectStatementUpdate">
+    <rdfs:subClassOf rdf:resource="#AnySQLStatementUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnySQLStatementUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyStatementUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyStatement">
+    <rdfs:subClassOf rdf:resource="#StatementGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyStatementOfProgrammingLanguage">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyStatementUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyWebApplicationUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyApplication"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AnyWebPageUpdate">
+    <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Behaviour">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BehaviourGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BisinessIdentifier">
+    <rdfs:subClassOf rdf:resource="#BusinessProcessGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BugReportGroup">
+    <rdfs:subClassOf rdf:resource="#RequestGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessAction">
+    <rdfs:subClassOf rdf:resource="#BusinessProcessGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessActionSequence">
+    <rdfs:subClassOf rdf:resource="#BusinessProcessGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessProcess">
+    <rdfs:subClassOf rdf:resource="#BusinessProcessGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessProcessDescription">
+    <rdfs:subClassOf rdf:resource="#BusinessProcessGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessProcessGroup">
+    <rdfs:subClassOf rdf:resource="#BusinessReqGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessReq">
+    <rdfs:subClassOf rdf:resource="#BusinessReqGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BusinessReqGroup">
+    <rdfs:subClassOf rdf:resource="#ReqSpecGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CR">
+    <rdfs:subClassOf rdf:resource="#BugReportGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CRGroup">
+    <rdfs:subClassOf rdf:resource="#RequestGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Condition">
+    <rdfs:subClassOf rdf:resource="#ConditionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ConditionGroup">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CurrentBehaviour">
+    <rdfs:subClassOf rdf:resource="#RequestGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="DB.Column">
+    <rdfs:subClassOf rdf:resource="#AbstractApplicationArchitecture"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="DB.ColumnType">
+    <rdfs:subClassOf rdf:resource="#AbstractApplicationArchitecture"/>
+</rdfs:Class>
+<rdf:Property rdf:ID="DB.hasColumn">
+    <rdfs:domain rdf:resource="#Table"/>
+    <rdfs:range rdf:resource="#DB.Column"/>
+</rdf:Property>
+<rdf:Property rdf:ID="DB.hasColumnType">
+    <rdfs:domain rdf:resource="#DB.Column"/>
+    <rdfs:range rdf:resource="#DB.ColumnType"/>
+</rdf:Property>
+<rdfs:Class rdf:ID="DataRetrieval.AddField">
+    <rdfs:subClassOf rdf:resource="#AnyDataRetrievalUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Element.Sequence.Condition">
+    <rdfs:subClassOf rdf:resource="#SequenceGroup.Condition"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ExpressionGroup">
+    <rdfs:subClassOf rdf:resource="#ProgramGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ExpressionGroup.SQL">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Finction">
+    <rdfs:subClassOf rdf:resource="#NonTerminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Function">
+    <rdfs:subClassOf rdf:resource="#CRGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="FunctionalReq">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+    <rdfs:subClassOf rdf:resource="#ReqSpecGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="GUI.InputInterface">
+    <rdfs:subClassOf rdf:resource="#InputInterface"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowToGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Identifier">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="InputInterface">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="IntendedBehaviour">
+    <rdfs:subClassOf rdf:resource="#RequestGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Keyword">
+    <rdfs:subClassOf rdf:resource="#Terminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Lexem">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Lexem.SQL">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup.SQL"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="LexemSequence">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="LexemSequence.SQL">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup.SQL"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="LexemSequence.SQL.Select">
+    <rdfs:subClassOf rdf:resource="#LexemSequence.SQL"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ListLiterals">
+    <rdfs:subClassOf rdf:resource="#ListSubElements"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ListLiterals.Separated">
+    <rdfs:subClassOf rdf:resource="#ListLiterals"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ListLiterals.Separated.SQL.Select">
+    <rdfs:subClassOf rdf:resource="#ListLiterals.Separated"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ListSubElements">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Literal">
+    <rdfs:subClassOf rdf:resource="#Terminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="NonFunctionalReq">
+    <rdfs:subClassOf rdf:resource="#ReqSpecGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="NonTerminal">
+    <rdfs:subClassOf rdf:resource="#Lexem"/>
+    <rdfs:subClassOf rdf:resource="#Operand"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Not.Operator.Condition">
+    <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operand">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operand.Condition">
+    <rdfs:subClassOf rdf:resource="#ConditionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operator">
+    <rdfs:subClassOf rdf:resource="#Keyword"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operator.Condititon">
+    <rdfs:subClassOf rdf:resource="#ConditionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Or.Operator.Condition">
+    <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="OutputInterface">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Pattern.AddField.SQL.Select">
+    <rdfs:subClassOf rdf:resource="#PatternGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="PatternGroup">
+    <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Performance">
+    <rdfs:subClassOf rdf:resource="#NonFunctionalReq"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="PostCondition">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Precondition">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ProgramGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ProgrammingLanguage.SQL%3D%5C">
+    <rdfs:subClassOf rdf:resource="#AnyProgrammingLanguage"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Property">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Report.OutputInterface">
+    <rdfs:subClassOf rdf:resource="#OutputInterface"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ReqSpec">
+    <rdfs:subClassOf rdf:resource="#ReqSpecGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ReqSpecGroup">
+    <rdfs:subClassOf rdf:resource="#RequestGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="RequestGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLExpression.InsertIntoTable">
+    <rdfs:subClassOf rdf:resource="#AnySQLExpression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLExpression.Select">
+    <rdfs:subClassOf rdf:resource="#AnySQLExpression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLKeyword">
+    <rdfs:subClassOf rdf:resource="#Keyword"/>
+    <rdfs:subClassOf rdf:resource="#SQLTerminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLLiteral">
+    <rdfs:subClassOf rdf:resource="#Literal"/>
+    <rdfs:subClassOf rdf:resource="#SQLOperand"/>
+    <rdfs:subClassOf rdf:resource="#SQLTerminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLLiteral.ColumnName">
+    <rdfs:subClassOf rdf:resource="#SQLLiteral"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLLiteral.ColumnValue">
+    <rdfs:subClassOf rdf:resource="#SQLLiteral"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLLiteral.Comma">
+    <rdfs:subClassOf rdf:resource="#SQLLiteral"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLLiteral.TableName">
+    <rdfs:subClassOf rdf:resource="#SQLLiteral"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperand">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup.SQL"/>
+    <rdfs:subClassOf rdf:resource="#Operand"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator">
+    <rdfs:subClassOf rdf:resource="#Operator"/>
+    <rdfs:subClassOf rdf:resource="#SQLKeyword"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.Bracket">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.CloseBracket">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.Delete">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.EQ">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.FROM">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.INTO">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.Insert">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.SELECT">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.SET">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.Update">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.VALUES">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLOperator.WHERE">
+    <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SQLTerminal">
+    <rdfs:subClassOf rdf:resource="#Lexem.SQL"/>
+    <rdfs:subClassOf rdf:resource="#Terminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Security.NonFunctionalReq">
+    <rdfs:subClassOf rdf:resource="#NonFunctionalReq"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Sequence.Condition">
+    <rdfs:subClassOf rdf:resource="#SequenceGroup.Condition"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SequenceGroup.Condition">
+    <rdfs:subClassOf rdf:resource="#ConditionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StatemenUpdate.SQL.AddField">
+    <rdfs:subClassOf rdf:resource="#AnySQLSelectStatementUpdate"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Statement.SQL.Select.First">
+    <rdfs:subClassOf rdf:resource="#AnyStatement"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StatementGroup">
+    <rdfs:subClassOf rdf:resource="#ProgramGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StatementSequence">
+    <rdfs:subClassOf rdf:resource="#StatementGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StatementSequence.SQL.Select.First">
+    <rdfs:subClassOf rdf:resource="#StatementSequence"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Table">
+    <rdfs:subClassOf rdf:resource="#AbstractApplicationArchitecture"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Terminal">
+    <rdfs:subClassOf rdf:resource="#Lexem"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ToAddData">
+    <rdfs:subClassOf rdf:resource="#UpdateDataGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ToAddData.SQL.Select">
+    <rdfs:subClassOf rdf:resource="#ToAddData"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ToDeleteData">
+    <rdfs:subClassOf rdf:resource="#UpdateDataGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UpdateDataGroup">
+    <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Value">
+    <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Varible">
+    <rdfs:subClassOf rdf:resource="#NonTerminal"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="WebForm.InputInteface">
+    <rdfs:subClassOf rdf:resource="#InputInterface"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="WebService.InputInterface">
+    <rdfs:subClassOf rdf:resource="#InputInterface"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="WebService.OutputInterface">
+    <rdfs:subClassOf rdf:resource="#OutputInterface"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Xor.Operator.Condition">
+    <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+</rdfs:Class>
+<rdf:Property rdf:ID="hasDataToAdd.SQL.Select">
+    <rdfs:domain rdf:resource="#Pattern.AddField.SQL.Select"/>
+    <rdfs:range rdf:resource="#ToAddData.SQL.Select"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasDestination.AddField.SQL.Select">
+    <rdfs:domain rdf:resource="#ToAddData.SQL.Select"/>
+    <rdfs:range rdf:resource="#ListLiterals.Separated.SQL.Select"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasDestinationName">
+    <rdfs:domain rdf:resource="#AddFieldAction"/>
+    <rdfs:range rdf:resource="#ActionParameter.DestinationName"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasDestinationName.PageName">
+    <rdfs:domain rdf:resource="#AddFieldAction.WebForm"/>
+    <rdfs:range rdf:resource="#ActionParameter.DestinationName.PageName"/>
+    <rdfs:subPropertyOf rdf:resource="#hasDestinationName"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasElements">
+    <rdfs:domain rdf:resource="#ListLiterals.Separated"/>
+    <rdfs:range rdf:resource="#Literal"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasElements.SQL.Select">
+    <rdfs:domain rdf:resource="#ListLiterals.Separated.SQL.Select"/>
+    <rdfs:range rdf:resource="#SQLLiteral.ColumnName"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasEpressionToDelete">
+    <rdfs:domain rdf:resource="#ToDeleteData"/>
+    <rdfs:range rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasExpression">
+    <rdfs:domain rdf:resource="#AnyStatement"/>
+    <rdfs:range rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasExpression.Select.First">
+    <rdfs:domain rdf:resource="#Statement.SQL.Select.First"/>
+    <rdfs:range rdf:resource="#SQLExpression.Select"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFieldName">
+    <rdfs:domain rdf:resource="#AddFieldAction"/>
+    <rdfs:range rdf:resource="#ActionParameter.FieldName"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFirstLexem.SQL.Select">
+    <rdfs:domain rdf:resource="#LexemSequence.SQL.Select"/>
+    <rdfs:range rdf:resource="#SQLOperator.SELECT"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFirstStatement">
+    <rdfs:domain rdf:resource="#StatementSequence"/>
+    <rdfs:range rdf:resource="#AnyStatement"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFirstStatement.SQL.Select.First">
+    <rdfs:domain rdf:resource="#StatementSequence.SQL.Select.First"/>
+    <rdfs:range rdf:resource="#Statement.SQL.Select.First"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowing">
+    <rdfs:domain rdf:resource="#AnyStatement"/>
+    <rdfs:range rdf:resource="#AnyStatement"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowingLexem">
+    <rdfs:domain rdf:resource="#Lexem"/>
+    <rdfs:range rdf:resource="#Lexem"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowingLexem.SQL">
+    <rdfs:domain rdf:resource="#Lexem.SQL"/>
+    <rdfs:range rdf:resource="#Lexem.SQL"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowingLexem.SQL.Select">
+    <rdfs:domain rdf:resource="#SQLOperator.SELECT"/>
+    <rdfs:range rdf:resource="#ListLiterals.Separated.SQL.Select"/>
+    <rdfs:subPropertyOf rdf:resource="#hasFollowingLexem.SQL.Select.Group"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowingLexem.SQL.Select.From">
+    <rdfs:domain rdf:resource="#SQLLiteral.ColumnName"/>
+    <rdfs:range rdf:resource="#SQLOperator.FROM"/>
+    <rdfs:subPropertyOf rdf:resource="#hasFollowingLexem.SQL.Select.Group"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowingLexem.SQL.Select.Group">
+    <rdfs:domain rdf:resource="#LexemSequence.SQL.Select"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFollowingLexem.SQL.Select.Tablename">
+    <rdfs:domain rdf:resource="#SQLOperator.FROM"/>
+    <rdfs:range rdf:resource="#SQLLiteral.TableName"/>
+    <rdfs:subPropertyOf rdf:resource="#hasFollowingLexem.SQL.Select.Group"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasHeadLexem">
+    <rdfs:domain rdf:resource="#LexemSequence"/>
+    <rdfs:range rdf:resource="#Lexem"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasHeadLexem.SQL">
+    <rdfs:domain rdf:resource="#LexemSequence.SQL"/>
+    <rdfs:range rdf:resource="#Lexem.SQL"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasHowTo.AddFieldToWebForm">
+    <rdfs:domain rdf:resource="#AddFieldAction.WebForm"/>
+    <rdfs:range rdf:resource="#AnyAddFieldToWebPageList"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasLexemSequence">
+    <rdfs:domain rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+    <rdfs:range rdf:resource="#LexemSequence"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasLexemSequence.SQL">
+    <rdfs:domain rdf:resource="#AnySQLExpression"/>
+    <rdfs:range rdf:resource="#LexemSequence.SQL"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasLexemSequence.SQL.Select">
+    <rdfs:domain rdf:resource="#SQLExpression.Select"/>
+    <rdfs:range rdf:resource="#LexemSequence.SQL.Select"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasObject.AddField.SQL.Select">
+    <rdfs:domain rdf:resource="#ToAddData.SQL.Select"/>
+    <rdfs:range rdf:resource="#ActionParameter.FieldName"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasOperand">
+    <rdfs:domain rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+    <rdfs:range rdf:resource="#Operand"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasOperator">
+    <rdfs:domain rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+    <rdfs:range rdf:resource="#Operator"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasPattern.SQL.Select">
+    <rdfs:domain rdf:resource="#StatemenUpdate.SQL.AddField"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasProgrammingLanguage">
+    <rdfs:domain rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+    <rdfs:range rdf:resource="#AnyProgrammingLanguage"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSQLFollowing">
+    <rdfs:domain rdf:resource="#SQLLiteral.ColumnValue"/>
+    <rdfs:domain rdf:resource="#SQLLiteral.TableName"/>
+    <rdfs:domain rdf:resource="#SQLOperator.Bracket"/>
+    <rdfs:domain rdf:resource="#SQLOperator.INTO"/>
+    <rdfs:domain rdf:resource="#SQLOperator.Insert"/>
+    <rdfs:domain rdf:resource="#SQLOperator.VALUES"/>
+    <rdfs:range rdf:resource="#SQLLiteral.ColumnValue"/>
+    <rdfs:range rdf:resource="#SQLLiteral.TableName"/>
+    <rdfs:range rdf:resource="#SQLOperator.Bracket"/>
+    <rdfs:range rdf:resource="#SQLOperator.CloseBracket"/>
+    <rdfs:range rdf:resource="#SQLOperator.INTO"/>
+    <rdfs:range rdf:resource="#SQLOperator.VALUES"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSQLOperator">
+    <rdfs:domain rdf:resource="#SQLExpression.InsertIntoTable"/>
+    <rdfs:range rdf:resource="#SQLOperator.Insert"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSeparator">
+    <rdfs:domain rdf:resource="#ListLiterals.Separated"/>
+    <rdfs:range rdf:resource="#Literal"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSeparator.SQL.Comma">
+    <rdfs:domain rdf:resource="#ListLiterals.Separated.SQL.Select"/>
+    <rdfs:range rdf:resource="#SQLLiteral.Comma"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasStatement.SQL.Select">
+    <rdfs:domain rdf:resource="#Pattern.AddField.SQL.Select"/>
+    <rdfs:range rdf:resource="#StatementSequence.SQL.Select.First"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1262441572925-1459239983"
+    kaon:value="AnyHowTo">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyHowTo"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262441611202-1022568500"
+    kaon:value="AnyApplicationUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyApplication"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262441626936-1541438319"
+    kaon:value="AnyModuleUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyModuleCreation"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262463960517-1648448122"
+    kaon:value="AnyAddFieldToModule">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAddFieldToModule"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262463987133-687918388"
+    kaon:value="AnyWebApplicationUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyWebApplicationUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464005631-980130464"
+    kaon:value="AnyWebPageUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyWebPageUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464076499-1129598018"
+    kaon:value="AnyAddFieldToWebPage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAddFieldToWebPage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464126546-1902972771"
+    kaon:value="AnyAddMethodToModule">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAddMethodToModule"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464205380-1600863204"
+    kaon:value="AnyAddFieldToWebForm">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AddFieldToWebForm"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464241240-1509786408"
+    kaon:value="AnyAddFieldToList">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAddFieldToList"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464275092-1393182508"
+    kaon:value="AnyDataRetrievalUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyDataRetrievalUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262464408656-31955601"
+    kaon:value="AnyDataRepresentationUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyDataRepresentationUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465065881-1536829352"
+    kaon:value="AnyHTTPRequestProcessorUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyHTTPRequestProcessorUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465146699-1902943187"
+    kaon:value="ConnectionSetupUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyConnectionSetup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465159209-707593401"
+    kaon:value="ConnectionSetupUpdate.DB">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyDBConnectionSetup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465182336-1767287726"
+    kaon:value="ConnectionSetupUpdate.DB.JDBC">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyJDBCConnectionSetup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465236739-1746694312"
+    kaon:value="StatementUpdate.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnySQLStatementUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465330541-1357287409"
+    kaon:value="AnyRequestDataValidationUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyRequestDataValidationUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465409602-1478530130"
+    kaon:value="AnyReqestDataNormalisation">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyReqestDataNormalisation"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262465505528-180198703"
+    kaon:value="StatementUpdate.SQL.Instert">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyInsertDataStatementUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262528858908-46965512"
+    kaon:value="StatementUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyStatementUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262529012690-1388851430"
+    kaon:value="StatementUpdate.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnySQLSelectStatementUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262529742001-1760365806"
+    kaon:value="AnyProgrammingLanguage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyProgrammingLanguage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262529805899-768390930"
+    kaon:value="AnyExpressionOfProgrammingLanguage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyStatementOfProgrammingLanguage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262529826043-2135189688"
+    kaon:value="hasProgrammingLanguage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasProgrammingLanguage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262550891244-29621535"
+    kaon:value="ExpressionGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ExpressionGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262550941339-1562174970"
+    kaon:value="Terminal">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Terminal"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262550966716-1523789964"
+    kaon:value="NonTerminal">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#NonTerminal"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262550995001-684607223"
+    kaon:value="VariableCall">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Varible"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551018183-378745766"
+    kaon:value="FunctionCall">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Finction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551059962-484240944"
+    kaon:value="Keyword">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Keyword"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551070255-1849050482"
+    kaon:value="Operator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551119783-1579725528"
+    kaon:value="hasOperand">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasOperand"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551130975-1621654041"
+    kaon:value="Literal">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Literal"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551168418-105009530"
+    kaon:value="Operand">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operand"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551695378-389689145"
+    kaon:value="AbstractProgramSyntaxGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ProgramGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551730240-1916000562"
+    kaon:value="AnyStatementSequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StatementSequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262551782110-1590468759"
+    kaon:value="hasFollowing">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowing"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262552011612-1973508099"
+    kaon:value="AnyStatement">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyStatement"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262552050060-1011460174"
+    kaon:value="hasExpression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasExpression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262552120123-969301271"
+    kaon:value="hasOperator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasOperator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262552322446-936945048"
+    kaon:value="hasFirstStatement">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFirstStatement"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262553836835-748561412"
+    kaon:value="UpdateDataGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UpdateDataGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262553854914-657788329"
+    kaon:value="ToAddData">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ToAddData"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262553872900-1114484314"
+    kaon:value="ToDeleteData">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ToDeleteData"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262553895993-885788244"
+    kaon:value="insteadOf">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#insteadOf"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262554044940-437408435"
+    kaon:value="hasEpressionToDelete">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasEpressionToDelete"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262635879234-1078183871"
+    kaon:value="AnySQLExpression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnySQLExpression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262635912650-529722565"
+    kaon:value="SQLTerminal">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLTerminal"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262635939092-1446272349"
+    kaon:value="SQLKeyword">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLKeyword"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262635971181-1048428764"
+    kaon:value="SQLOperator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636030527-1232449018"
+    kaon:value="SQLOperator.INSERT">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.Insert"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636050386-1469365985"
+    kaon:value="SQLOperator.UPDATE">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.Update"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636070712-1402525423"
+    kaon:value="SQLOperator.DELETE">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.Delete"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636187900-1063811178"
+    kaon:value="SQLOperator.INTO">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.INTO"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636216588-1517953700"
+    kaon:value="SQLOperator.VALUES">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.VALUES"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636265463-935498528"
+    kaon:value="SQLOperator.SET">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.SET"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636428545-1649420639"
+    kaon:value="SQLOperator.WHERE">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.WHERE"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636643794-535073222"
+    kaon:value="SQLOperator.FROM">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.FROM"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636695701-426606211"
+    kaon:value="SQLOperator.EQ">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.EQ"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262636802904-550729946"
+    kaon:value="SQLOperator.SELECT">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.SELECT"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262640982843-2135270333"
+    kaon:value="SQLExpression.InsertIntoTable">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLExpression.InsertIntoTable"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641294843-1173463324"
+    kaon:value="hasSQLOperator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSQLOperator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641559263-1794438146"
+    kaon:value="hasSQLFollowing">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSQLFollowing"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641680116-1817715565"
+    kaon:value="SQLOperand">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperand"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641703251-1357156295"
+    kaon:value="SQLLiteral">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLLiteral"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641732937-215460086"
+    kaon:value="SQLLiteral.TableName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLLiteral.TableName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641755245-1459768774"
+    kaon:value="SQLLiteral.ColumnName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLLiteral.ColumnName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262641931884-1215362610"
+    kaon:value="SQLLiteral.ColumnValue">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLLiteral.ColumnValue"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262642094171-1645221512"
+    kaon:value="SQLOperator.OpenBracket">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.Bracket"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262642122282-1164619820"
+    kaon:value="SQLOperator.CloseBracket">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLOperator.CloseBracket"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262719525477-1515580219"
+    kaon:value="probablyHasMethod">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#probablyHasMethod"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262721990903-787451281"
+    kaon:value="AnyAddFieldToClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAddFieldToClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262723710479-331857402"
+    kaon:value="AnyAddFieldToWebPageList">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAddFieldToWebPageList"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262723780845-672215476"
+    kaon:value="AnyRequestDataProcessingUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyRequestDataProcessingUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262724025609-104359539"
+    kaon:value="probablyHasNormalization">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#probablyHasNormalization"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262724053712-434171958"
+    kaon:value="probablyHasValidation">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#probablyHasValidation"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262724244052-93285395"
+    kaon:value="probablyRequests">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#probablyRequests"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262724759759-70980597"
+    kaon:value="probablyIncludes">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#probablyIncludes"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262724810008-1415465424"
+    kaon:value="probablyRequiresRetrivalUpdate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#probablyRequiresRetrivalUpdate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262725437648-1547907168"
+    kaon:value="StatementSequence.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StatementSequence.SQL.Select.First"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262725515730-396325036"
+    kaon:value="Statement.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Statement.SQL.Select.First"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262725671748-1029382649"
+    kaon:value="SQLExpression.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLExpression.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262725779409-722190583"
+    kaon:value="hasExpression.Select.First">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasExpression.Select.First"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262725853022-901501069"
+    kaon:value="hasFirstStatement.SQL.Select.First">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFirstStatement.SQL.Select.First"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262812893721-1902000806"
+    kaon:value="ExpressionGroup.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ExpressionGroup.SQL"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813154085-2105572119"
+    kaon:value="ListSubElements">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ListSubElements"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813176506-1256291382"
+    kaon:value="ListLiterals">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ListLiterals"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813225328-218493729"
+    kaon:value="ListLiterals.Separated">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ListLiterals.Separated"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813237811-1562393976"
+    kaon:value="hasSeparator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSeparator"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813358980-511216245"
+    kaon:value="hasElements">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasElements"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813536282-1540936730"
+    kaon:value="LexemSequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#LexemSequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813745579-970682918"
+    kaon:value="Lexem">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Lexem"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813943209-1655798996"
+    kaon:value="hasHeadLexem">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasHeadLexem"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262813963822-871262783"
+    kaon:value="hasFollowingLexem">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowingLexem"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814013513-1443307822"
+    kaon:value="LexemSequence.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#LexemSequence.SQL"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814028461-425380144"
+    kaon:value="Lexem.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Lexem.SQL"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814123417-73826833"
+    kaon:value="hasHeadLexem.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasHeadLexem.SQL"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814148654-1867253800"
+    kaon:value="hasFollowingLexem.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowingLexem.SQL"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814197952-773033979"
+    kaon:value="hasLexemSequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasLexemSequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814228961-242370041"
+    kaon:value="hasLexemSequence.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasLexemSequence.SQL"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814266981-1491907359"
+    kaon:value="hasLexemSequence.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasLexemSequence.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814287115-1992633821"
+    kaon:value="LexemSequence.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#LexemSequence.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814311805-1473108666"
+    kaon:value="hasFirstLexem.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFirstLexem.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814445405-299039730"
+    kaon:value="ListLiterals.Separated.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ListLiterals.Separated.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814472786-1165160431"
+    kaon:value="hasElements.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasElements.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814548334-1868825871"
+    kaon:value="SQLLiteral.Comma">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SQLLiteral.Comma"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814569641-356270501"
+    kaon:value="hasSeparator.SQL.Comma">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSeparator.SQL.Comma"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814635165-2144942632"
+    kaon:value="hasFollowingLexem.SQL.Select.Columname">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowingLexem.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814704938-476440160"
+    kaon:value="hasFollowingLexem.SQL.Select.From">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowingLexem.SQL.Select.From"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814745225-36921980"
+    kaon:value="hasFollowingLexem.SQL.Select.Tablename">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowingLexem.SQL.Select.Tablename"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814823610-33012433"
+    kaon:value="hasFollowingLexem.SQL.Select.Group">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFollowingLexem.SQL.Select.Group"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814940526-178510635"
+    kaon:value="AbstractApplicationArchitecture">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AbstractApplicationArchitecture"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814956294-1014236139"
+    kaon:value="DB.Table">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Table"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262814985308-1213043418"
+    kaon:value="DB.Column">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DB.Column"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262815004306-1616101107"
+    kaon:value="DB.hasColumn">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DB.hasColumn"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262815054136-1927577251"
+    kaon:value="DB.ColumnType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DB.ColumnType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262815072763-659522188"
+    kaon:value="DB.hasColumnType">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DB.hasColumnType"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262815120503-122955026"
+    kaon:value="references">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#references"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262815205958-85104373"
+    kaon:value="references.DB.Column">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#references.DB.Column"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262815232134-2023632217"
+    kaon:value="references.DB.Table">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#references.DB.Table"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262931513376-190374963"
+    kaon:value="HowToGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262931646395-1150953036"
+    kaon:value="ProgrammingLanguage.SQL">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ProgrammingLanguage.SQL%3D%5C"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932013967-299398195"
+    kaon:value="StatementGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StatementGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932238864-2064144538"
+    kaon:value="hasPattern.SQL.Select.AddField">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasPattern.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932301272-1172138369"
+    kaon:value="ToAddData.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ToAddData.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932530262-296841723"
+    kaon:value="hasDestination.AddField.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasDestination.AddField.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932558325-729917444"
+    kaon:value="hasObject.AddField.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasObject.AddField.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932625421-646356031"
+    kaon:value="ActionGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932633077-2135143275"
+    kaon:value="AnyAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AnyAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932664984-105943145"
+    kaon:value="AddFieldAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AddFieldAction"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932715017-629265317"
+    kaon:value="AddFieldAction.WebPageList">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AddFieldAction.WebForm"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932728142-1736892851"
+    kaon:value="hasFieldName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFieldName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932741923-1556606923"
+    kaon:value="hasDestinationName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasDestinationName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932875771-1402915942"
+    kaon:value="AnyActionParameter">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionProperty"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932913475-766618482"
+    kaon:value="ActionParameter.FieldName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionParameter.FieldName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932934819-637998275"
+    kaon:value="ActionParameter.DestinationName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionParameter.DestinationName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262932963148-934129816"
+    kaon:value="ActionParameter.DestinationName.ModuleName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionParameter.DestinationName.ModuleName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933005290-1499564226"
+    kaon:value="ActionParameter.DestinationName.PageName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ActionParameter.DestinationName.PageName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933027540-176395005"
+    kaon:value="hasDestinationName.PageName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasDestinationName.PageName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933105870-1118983325"
+    kaon:value="hasHowTo.AddFieldToWebPageList">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasHowTo.AddFieldToWebForm"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933192998-811556976"
+    kaon:value="AddFieldAction.WebPage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AddFieldAction.WebPage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933256218-629383597"
+    kaon:value="PatternGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#PatternGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933287687-482842870"
+    kaon:value="Pattern.AddField.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Pattern.AddField.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933363580-321753045"
+    kaon:value="DataRetrieval.AddField">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DataRetrieval.AddField"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933424394-1035344784"
+    kaon:value="StatementUpdate.SQL.Select.AddField">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StatemenUpdate.SQL.AddField"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933727980-317387138"
+    kaon:value="hasStatementSequence.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasStatement.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1262933831061-835267531"
+    kaon:value="hasDataToAdd.SQL.Select">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasDataToAdd.SQL.Select"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264108783018-853780207"
+    kaon:value="CRGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CRGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264108794997-570037484"
+    kaon:value="BugReport">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CR"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109007711-1082845561"
+    kaon:value="IntendedBehaviour">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#IntendedBehaviour"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109019797-1446186643"
+    kaon:value="CurrentBehaviour">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CurrentBehaviour"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109049643-982623614">
+    <rdfs:domain rdf:resource="#CR"/>
+    <rdfs:range rdf:resource="#IntendedBehaviour"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109049645-1131967592"
+    kaon:value="hasIntendedBehaviour.CR">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109049643-982623614"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109065405-1219890663">
+    <rdfs:domain rdf:resource="#CR"/>
+    <rdfs:range rdf:resource="#CurrentBehaviour"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109065406-2137939690"
+    kaon:value="hasCurrentBehaviour">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109065405-1219890663"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109176472-1663778160"
+    kaon:value="BehaviourGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BehaviourGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109188377-1632368282"
+    kaon:value="Property">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Property"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109198334-1017688921"
+    kaon:value="Value">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Value"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109269643-617408653"
+    kaon:value="Precondition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Precondition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109276642-751256570"
+    kaon:value="Action">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Action"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109293870-1987191531"
+    kaon:value="PostCondition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#PostCondition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109303241-1215653339"
+    kaon:value="hasValue">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109303241-382307840"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109303241-382307840">
+    <rdfs:domain rdf:resource="#Property"/>
+    <rdfs:range rdf:resource="#Value"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109348909-701365918"
+    kaon:value="Identifier">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Identifier"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109362654-1805434867"
+    kaon:value="hasIdentifier">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109362654-201136605"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109362654-201136605">
+    <rdfs:domain rdf:resource="#Action"/>
+    <rdfs:range rdf:resource="#Identifier"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109389250-33381539"
+    kaon:value="Behaviour">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Behaviour"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109402997-940291757">
+    <rdfs:domain rdf:resource="#Behaviour"/>
+    <rdfs:range rdf:resource="#Precondition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109402998-990737627"
+    kaon:value="hasPrecondition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109402997-940291757"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109506476-1769298166"
+    kaon:value="hasProperty">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109506476-530701183"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109506476-530701183">
+    <rdfs:domain rdf:resource="#Operand.Condition"/>
+    <rdfs:range rdf:resource="#Property"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1264109664018-2062315220">
+    <rdfs:domain rdf:resource="#Behaviour"/>
+    <rdfs:range rdf:resource="#Action"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109664018-662657390"
+    kaon:value="hasAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109664018-2062315220"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264109684487-1823070021">
+    <rdfs:domain rdf:resource="#Behaviour"/>
+    <rdfs:range rdf:resource="#PostCondition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264109684488-532174329"
+    kaon:value="hasPostCondition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264109684487-1823070021"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109731949-2146966651"
+    kaon:value="ConditionGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ConditionGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109751318-1418183212"
+    kaon:value="Operator.Condititon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operator.Condititon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109778606-1012057071"
+    kaon:value="Or.Operator.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Or.Operator.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109795279-1628638021"
+    kaon:value="Not.Operator.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Not.Operator.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109808172-681356387"
+    kaon:value="And.Operator.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#And.Operator.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109828682-719300379"
+    kaon:value="Xor.Operator.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Xor.Operator.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109886788-2068873524"
+    kaon:value="Operand.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operand.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264109943432-1257296050"
+    kaon:value="Sequence.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Sequence.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264110044770-313952742"
+    kaon:value="SequenceGroup.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SequenceGroup.Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264110084854-2077347028"
+    kaon:value="Element.Sequence.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Element.Sequence.Condition"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264110103177-1072168025">
+    <rdfs:domain rdf:resource="#Sequence.Condition"/>
+    <rdfs:range rdf:resource="#Element.Sequence.Condition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264110103177-1431057044"
+    kaon:value="hasFirstElement.Sequence.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264110103177-1072168025"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264110284388-1406823438">
+    <rdfs:domain rdf:resource="#Condition"/>
+    <rdfs:range rdf:resource="#Operator.Condititon"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264110284388-328429783"
+    kaon:value="hasOperator.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264110284388-1406823438"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264110825083-741155333"
+    kaon:value="Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264110865539-1853621665"
+    kaon:value="hasOperand.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264110865539-656278008"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264110865539-656278008">
+    <rdfs:domain rdf:resource="#Element.Sequence.Condition"/>
+    <rdfs:range rdf:resource="#Operand.Condition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264110905495-1163405499"
+    kaon:value="hasOperandSequence.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264110905495-1488976367"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264110905495-1488976367">
+    <rdfs:domain rdf:resource="#Condition"/>
+    <rdfs:range rdf:resource="#Sequence.Condition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264110945895-1780614626"
+    kaon:value="hasNextElement.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264110945895-536759078"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264110945895-536759078">
+    <rdfs:domain rdf:resource="#Element.Sequence.Condition"/>
+    <rdfs:range rdf:resource="#Element.Sequence.Condition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264110984130-1479968400"
+    kaon:value="hasLastElement.Sequence.Condition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264110984130-993556476"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264110984130-993556476">
+    <rdfs:domain rdf:resource="#Sequence.Condition"/>
+    <rdfs:range rdf:resource="#Element.Sequence.Condition"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1264111239125-606850008">
+    <rdfs:domain rdf:resource="#PostCondition"/>
+    <rdfs:domain rdf:resource="#Precondition"/>
+    <rdfs:range rdf:resource="#Condition"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264111239126-1902891156"
+    kaon:value="hasCondition">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264111239125-606850008"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264188232010-695967375"
+    kaon:value="BugReportGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BugReportGroup"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264308011925-1848573449">
+    <rdfs:domain rdf:resource="#CurrentBehaviour"/>
+    <rdfs:domain rdf:resource="#IntendedBehaviour"/>
+    <rdfs:range rdf:resource="#Behaviour"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264308011926-1724902760"
+    kaon:value="hasDescription">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264308011925-1848573449"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264308169601-736056992"
+    kaon:value="Function">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Function"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264308285394-1159091222"
+    kaon:value="RequestGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#RequestGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264308674569-72216680"
+    kaon:value="hasBehaviour">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264308674569-78382106"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264308674569-78382106">
+    <rdfs:domain rdf:resource="#Function"/>
+    <rdfs:domain rdf:resource="#NonFunctionalReq"/>
+    <rdfs:range rdf:resource="#IntendedBehaviour"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264308700876-1902792057"
+    kaon:value="ReqSpecGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ReqSpecGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309284656-571495309"
+    kaon:value="ReqSpec">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ReqSpec"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309298322-541880850"
+    kaon:value="FunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#FunctionalReq"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309310644-452670278"
+    kaon:value="NonFunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#NonFunctionalReq"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264309562352-1661099885">
+    <rdfs:domain rdf:resource="#ReqSpec"/>
+    <rdfs:range rdf:resource="#FunctionalReq"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264309562353-1907100646"
+    kaon:value="hasFunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264309562352-1661099885"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264309577534-2000749251">
+    <rdfs:domain rdf:resource="#ReqSpec"/>
+    <rdfs:range rdf:resource="#NonFunctionalReq"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264309577534-850243007"
+    kaon:value="hasNonFunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264309577534-2000749251"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309605471-884136360"
+    kaon:value="InputInterface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#InputInterface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309687896-1167992423"
+    kaon:value="GUI.InputInterface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#GUI.InputInterface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309701099-1502539026"
+    kaon:value="OutputInterface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#OutputInterface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309739934-2005021443"
+    kaon:value="Report.OutputInterface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Report.OutputInterface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309765601-1674420695"
+    kaon:value="WebForm.InputInteface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#WebForm.InputInteface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309799136-1351997452"
+    kaon:value="WebService.InputInterface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#WebService.InputInterface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309836647-986921290"
+    kaon:value="WebService.OutputInterface">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#WebService.OutputInterface"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264309979601-1434922961"
+    kaon:value="Performance.NonFunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Performance"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310029587-1862850246"
+    kaon:value="Security.NonFunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Security.NonFunctionalReq"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310255990-366294516"
+    kaon:value="BusinessReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessReq"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310286331-1944384015"
+    kaon:value="BusinessActionDescription">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessProcessDescription"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310305324-109897913"
+    kaon:value="BusinessProcessGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessProcessGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310342859-471137627"
+    kaon:value="BusinessActionSequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessActionSequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310366417-1156666220"
+    kaon:value="BusinessAction">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessAction"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310383478-1626579254">
+    <rdfs:domain rdf:resource="#BusinessActionSequence"/>
+    <rdfs:range rdf:resource="#BusinessAction"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310383479-1053598261"
+    kaon:value="hasFirstAction.BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310383478-1626579254"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310407191-1451543986"
+    kaon:value="BisinessIdentifier">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BisinessIdentifier"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310430832-1268405022">
+    <rdfs:domain rdf:resource="#BusinessReq"/>
+    <rdfs:range rdf:resource="#FunctionalReq"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310430832-1636193550"
+    kaon:value="hasFunctionalReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310430832-1268405022"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310452537-2022041384">
+    <rdfs:domain rdf:resource="#ReqSpec"/>
+    <rdfs:range rdf:resource="#BusinessReq"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310452538-2094842969"
+    kaon:value="hasBusinessReq">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310452537-2022041384"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310498828-1802633028"
+    kaon:value="hasIdentifier.BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310498828-549650094"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310498828-549650094">
+    <rdfs:domain rdf:resource="#BusinessActionSequence"/>
+    <rdfs:domain rdf:resource="#BusinessProcess"/>
+    <rdfs:range rdf:resource="#BisinessIdentifier"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310554102-1526221316"
+    kaon:value="hasDescription">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310554102-83706127"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310554102-83706127">
+    <rdfs:domain rdf:resource="#BusinessProcessDescription"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1264310601223-1113991095">
+    <rdfs:domain rdf:resource="#BusinessAction"/>
+    <rdfs:range rdf:resource="#BusinessAction"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310601223-385344333"
+    kaon:value="hasNextAction.BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310601223-1113991095"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310656530-1501804611">
+    <rdfs:domain rdf:resource="#BusinessAction"/>
+    <rdfs:range rdf:resource="#BusinessProcessDescription"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310656531-1681429000"
+    kaon:value="hasDescripton.BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310656530-1501804611"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310731353-574864208"
+    kaon:value="BusinessReqGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessReqGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310772838-1106417222"
+    kaon:value="hasBusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310772838-1511920202"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310772838-1511920202">
+    <rdfs:domain rdf:resource="#BusinessReq"/>
+    <rdfs:range rdf:resource="#BusinessProcess"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1264310865151-1662898519">
+    <rdfs:domain rdf:resource="#BusinessReq"/>
+    <rdfs:range rdf:resource="#NonFunctionalReq"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264310865151-723526338"
+    kaon:value="hasNonFunctionalReq.ReqSpec">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310865151-1662898519"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310918658-1169397309"
+    kaon:value="BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BusinessProcess"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264310978311-1609431506"
+    kaon:value="hasLastAction.BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264310978311-27627999"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264310978311-27627999">
+    <rdfs:domain rdf:resource="#BusinessActionSequence"/>
+    <rdfs:range rdf:resource="#BusinessAction"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264311139114-211241771"
+    kaon:value="hasSequence.BusinessProcess">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264311139114-269505023"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264311139114-269505023">
+    <rdfs:domain rdf:resource="#BusinessProcess"/>
+    <rdfs:range rdf:resource="#BusinessActionSequence"/>
+</rdf:Property>
+<rdf:Property rdf:ID="insteadOf">
+    <rdfs:domain rdf:resource="#ToAddData"/>
+    <rdfs:range rdf:resource="#ToDeleteData"/>
+</rdf:Property>
+<rdf:Property rdf:ID="probablyHasMethod">
+    <rdfs:domain rdf:resource="#AnyAddFieldToClass"/>
+    <rdfs:range rdf:resource="#AnyAddMethodToModule"/>
+</rdf:Property>
+<rdf:Property rdf:ID="probablyHasNormalization">
+    <rdfs:domain rdf:resource="#AnyRequestDataProcessingUpdate"/>
+    <rdfs:range rdf:resource="#AnyReqestDataNormalisation"/>
+</rdf:Property>
+<rdf:Property rdf:ID="probablyHasValidation">
+    <rdfs:domain rdf:resource="#AnyRequestDataProcessingUpdate"/>
+    <rdfs:range rdf:resource="#AnyRequestDataValidationUpdate"/>
+</rdf:Property>
+<rdf:Property rdf:ID="probablyIncludes">
+    <rdfs:domain rdf:resource="#AnyDataRetrievalUpdate"/>
+    <rdfs:range rdf:resource="#AnySQLSelectStatementUpdate"/>
+</rdf:Property>
+<rdf:Property rdf:ID="probablyRequests">
+    <rdfs:domain rdf:resource="#AddFieldToWebForm"/>
+    <rdfs:range rdf:resource="#AnyHTTPRequestProcessorUpdate"/>
+</rdf:Property>
+<rdf:Property rdf:ID="probablyRequiresRetrivalUpdate">
+    <rdfs:domain rdf:resource="#AnyAddFieldToList"/>
+    <rdfs:range rdf:resource="#DataRetrieval.AddField"/>
+</rdf:Property>
+<rdf:Property rdf:ID="references">
+    <rdfs:domain rdf:resource="#Literal"/>
+    <rdfs:range rdf:resource="#AbstractApplicationArchitecture"/>
+</rdf:Property>
+<rdf:Property rdf:ID="references.DB.Column">
+    <rdfs:domain rdf:resource="#SQLLiteral.ColumnName"/>
+    <rdfs:range rdf:resource="#DB.Column"/>
+    <rdfs:subPropertyOf rdf:resource="#references"/>
+</rdf:Property>
+<rdf:Property rdf:ID="references.DB.Table">
+    <rdfs:domain rdf:resource="#SQLLiteral.TableName"/>
+    <rdfs:range rdf:resource="#Table"/>
+    <rdfs:subPropertyOf rdf:resource="#references"/>
+</rdf:Property>
+
+</rdf:RDF>

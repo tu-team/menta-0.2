@@ -1,0 +1,45 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/translator"
+        targetNamespace="http://www.menta.org/model/translator"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:menta="http://www.menta.org/model"
+        xmlns:howTo="http://www.menta.org/model/howTo"
+        xmlns:learner="http://www.menta.org/model/learner">
+    <xs:import namespace="http://www.menta.org/model" schemaLocation="model.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/howTo" schemaLocation="howTo.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/learner" schemaLocation="learner.xsd"/>
+    <xs:complexType name="Report">
+        <xs:sequence>
+            <xs:element name="contents" type="menta:Knowledge" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EvolutionReport">
+        <xs:complexContent>
+            <xs:extension base="Report"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SolutionReport">
+        <xs:complexContent>
+            <xs:extension base="Report">
+                <xs:sequence>
+                    <xs:element name="superClass" type="howTo:Solution" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HistoricalReport">
+        <xs:complexContent>
+            <xs:extension base="Report">
+                <xs:sequence>
+                    <xs:element name="superClass" type="learner:History" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+</xs:schema>

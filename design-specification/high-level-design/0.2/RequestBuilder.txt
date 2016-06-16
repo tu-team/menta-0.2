@@ -1,0 +1,11 @@
+#summary RequestBuilder component specification for Menta 0.2.
+
+= RequestBuilder. =
+Creates ConfirmationRequest-s to Expert.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20requestbuilder.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/RequestBuilder.apply.png
+

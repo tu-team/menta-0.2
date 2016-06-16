@@ -1,0 +1,63 @@
+PartialClarificationResponse (
+ partialAssociations = [
+  Accosiation(
+   rule = Rule(
+    AddIndividual(
+     actionClass = AddImplication
+      parameters = (
+       AddInheritance(
+        parameters = (
+         AddVariable(AddName("module")),
+         StringLiteral("addField")
+        )
+       ),
+       AddInheritance(
+        StringLiteral("Self"),
+        StringLiteral("Ok")
+       )
+      )
+     )
+    )
+   ),
+   HowTos = Set(
+    AddIndividual(
+     actionClass = AddActionClass
+     destination = TestPackage
+     parameters = AddName("NewClass")
+    )
+   ),
+   Solution = Solution (
+    AddIndividual(
+     actionClass = AddActionClass
+     destination = TestPackage
+     parameters = AddName("NewClass")
+    ), ...
+   )
+  )
+ ],
+ requirementChangeSet = RuleChangeSet (
+  ruleChange = Sequence(
+   RuleChange = (
+    AddIndividual(
+     actionClass = AddImplication (
+      parameters = [
+       AddInheritance(
+        parameters = [
+         AddVariable(AddName("module")),
+         StringLiteral("addField")
+        ]
+       ),
+       AddInheritance(
+        parameters = [
+         StringLiteral("Self"),
+         StringLiteral("Ok")
+        ]
+       )
+      ]
+     )
+    )
+   )
+  )
+ ),
+ solutionURI = menta.0.2#SomeSolution
+)

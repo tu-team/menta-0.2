@@ -1,0 +1,27 @@
+=Probabilistic reasoner requirements=
+ #. Implement following logical operations:
+  #. Implication.
+  #. Conjunction.
+  #. Negation.
+  #. Property.
+ #. Implement variables.
+ #. Implement revision of the facts (combines similar facts and recalculate the frequency).
+ #. Implement comments.
+ #. Implement list of facts.
+ #. Implement list operations, ex.: foreach
+
+=Examples in meta-language=
+
+== // all the operations must be addField ==
+=== Declaration ===
+def property("applied")
+def property("is")
+def terminal("System")
+def terminal("addField")
+def variable("$module")
+
+=== Fact ===
+property(applied, module1, addField)
+
+=== Rule ===
+implication(property(applied, $module, addField), property(is, System, ok)

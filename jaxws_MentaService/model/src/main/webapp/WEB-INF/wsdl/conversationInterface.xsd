@@ -1,0 +1,323 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/conversation/interface"
+        targetNamespace="http://www.menta.org/model/conversation/interface"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:model="http://www.menta.org/model"
+        xmlns:solutionchecker="http://www.menta.org/model/solutiongenerator/solutionchecker/interface"
+        xmlns:learner="http://www.menta.org/model/learner/interface"
+        xmlns:howTo="http://www.menta.org/model/howTo/interface"
+        xmlns:translator="http://www.menta.org/model/translator/interface">
+
+    <xs:import namespace="http://www.menta.org/model" schemaLocation="./model.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/solutiongenerator/solutionchecker/interface"
+               schemaLocation="solutioncheckerInterface.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/learner/interface" schemaLocation="learnerInterface.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/howTo/interface" schemaLocation="howToInterface.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/translator/interface" schemaLocation="translatorInterface.xsd"/>
+
+    <xs:complexType name="ConversationAny">
+        <xs:complexContent>
+            <xs:extension base="model:Knowledge">
+                <xs:sequence>
+                    <xs:element name="authorURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Conversation">
+        <xs:complexContent>
+            <xs:extension base="ConversationAny">
+                <xs:sequence>
+                    <xs:element name="subsriberURI" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ConversationAct">
+        <xs:complexContent>
+            <xs:extension base="ConversationAny">
+                <xs:sequence>
+                    <xs:element name="conversationURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Abstract class -->
+    <xs:complexType name="Response">
+        <xs:complexContent>
+            <xs:extension base="ConversationAny"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="UpdateHowToResponse">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="howToChangeSet" type="howTo:HowToChangeSet" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="Request">
+        <xs:complexContent>
+            <xs:extension base="ConversationAny"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ClarificationResponse">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="requirementChangeSet" type="solutionchecker:RuleChangeSet" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="PartialClarificationResponse">
+        <xs:complexContent>
+            <xs:extension base="ClarificationResponse">
+                <xs:sequence>
+                    <xs:element name="partialAssociation" type="learner:PartialAssociation" minOccurs="1"
+                                maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StartGenerationResponse">
+        <xs:complexContent>
+            <xs:extension base="ClarificationResponse"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="ConfirmationRequest">
+        <xs:complexContent>
+            <xs:extension base="Request">
+                <xs:sequence>
+                    <xs:element name="report" type="translator:SolutionReport" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+
+    <xs:complexType name="URIResponse">
+        <xs:sequence>
+            <xs:element name="uri" type="xs:anyURI"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ReportResponse">
+        <xs:sequence>
+            <xs:element name="report" type="translator:Report"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HowToParameterType">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="howTo" type="howTo:HowTo" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SetUpdateHowToResponse">
+        <xs:sequence>
+            <xs:element name="updateHowToResponse" type="UpdateHowToResponse" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="SetHowToParameterType">
+        <xs:sequence>
+            <xs:element name="howToParameter" type="HowToParameterType" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="SetURIResponse">
+        <xs:sequence>
+            <xs:element name="uRIResponse" type="URIResponse" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ConfirmationResponse">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="solutionURI" type="xs:anyURI" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="UpdateRequirementsResponse">
+        <xs:sequence>
+            <xs:element name="conversationURI" type="xs:anyURI"/>
+            <xs:element name="response" type="solutionchecker:RuleChangeSet" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ConfirmSolutionResponse">
+        <xs:sequence>
+            <xs:element name="conversationURI" type="xs:anyURI"/>
+            <xs:element name="response" type="ConfirmationResponse" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PartialConfirmSolutionResponse">
+        <xs:sequence>
+            <xs:element name="partialAssociation" type="learner:PartialAssociation" minOccurs="1"
+                        maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+
+
+    <xs:complexType name="SetRule">
+        <xs:sequence>
+            <xs:element name="Rule" type="solutionchecker:Rule" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+     <xs:complexType name="AddAssociation">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="actionClass" type="learner:PartialAssociation" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="SelectActionClass">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="actionClass" type="howTo:ExpressionTemplate" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="SelectActionIndividual">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="actionIndividual" type="howTo:ExpressionIndividual" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="GetHistoricalReport">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="historicalReport" type="translator:HistoricalReport" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="GetEvolutionReport">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="evolutionReport" type="translator:EvolutionReport" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="GetSolutionReport">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="solutionReport" type="translator:SolutionReport" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SelectTerminal">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="terminal" type="howTo:Terminal" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AddClassifier">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="classifier" type="howTo:Classifier" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- elements -->
+    <xs:element name="RequestGenerationParameter" type="StartGenerationResponse"/>
+    <xs:element name="URIParameter" type="URIResponse"/>
+    <xs:element name="URIParameter1" type="URIResponse"/>
+    <xs:element name="URIParameter2" type="URIResponse"/>
+    <xs:element name="SelectActionClassURIParameter" type="URIResponse"/>
+    <xs:element name="SelectActionIndividualURIParameter" type="URIResponse"/>
+
+    <xs:element name="ConversationURIParameter_Historical" type="URIResponse"/>
+    <xs:element name="EvolutionURIMsgParameter" type="URIResponse"/>
+    <xs:element name="SelectTerminalURIParameter" type="URIResponse"/>
+    <xs:element name="HowToParameter" type="HowToParameterType"/>
+    <xs:element name="AddHowTosParameter" type="SetHowToParameterType"/>
+    <xs:element name="UpdateHowToResponseParameter" type="UpdateHowToResponse"/>
+    <xs:element name="SetURIParameter" type="SetURIResponse"/>
+    <xs:element name="ConversationURIParameter" type="URIResponse"/>
+
+    <xs:element name="UpdateRequirementsParameter" type="UpdateRequirementsResponse"/>
+    <xs:element name="ConfirmSolutionParameter" type="ConfirmSolutionResponse"/>
+    <xs:element name="ReportParameter" type="ReportResponse"/>
+    <xs:element name="PartialConfirmSolutionParameter" type="PartialConfirmSolutionResponse"/>
+    <xs:element name="ImportApplicationParameter" type="xs:anyURI"/>
+
+
+    <xs:element name="RuleParameter" type="solutionchecker:Rule"/>
+    <xs:element name="SetRuleParameter" type="SetRule"/>
+    <xs:element name="KnowledgeClassParameter" type="model:KnowledgeClass"/>
+    <xs:element name="KnowledgeIndividualParameter" type="model:KnowledgeIndividual"/>
+
+    <xs:element name="AddAssociationParameter" type="AddAssociation"/>
+    <xs:element name="SelectActionClassParameter" type="SelectActionClass"/>
+    <xs:element name="SelectActionIndividualParameter" type="SelectActionIndividual"/>
+
+    <xs:element name="GetHistoricalReportParameter" type="GetHistoricalReport"/>
+    <xs:element name="GetEvolutionReportParameter" type="GetEvolutionReport"/>
+    <xs:element name="GetSolutionReportParameter" type="GetSolutionReport"/>
+    <xs:element name="SelectTerminalParameter" type="SelectTerminal"/>
+    <xs:element name="AddClassifierParameter" type="AddClassifier"/>
+
+</xs:schema>

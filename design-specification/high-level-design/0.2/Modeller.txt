@@ -1,0 +1,21 @@
+#summary Modeller component specification for Menta 0.2.
+
+= Modeller. =
+Is component that implements the ontology to object mapping.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20modeller.png
+
+== Activities. ==
+
+=== Modeller.save. ==
+Stores the descendants of [http://code.google.com/p/menta/wiki/Knowledge Knowledge] in Storage.
+
+=== Modeller.addClass, Modeller.addIndividual. ===
+Creates the [http://code.google.com/p/menta/wiki/Knowledge Knowledge Class/Individual] in memory and returns the created instance.
+
+=== Modeller.getClass, Modeller.getIndividual. ===
+Creates the Knowledge Class and retrieves the proper class information from Storage for current entity and all referenced entities with Radius (caching).
+
+== Alternative way. ==
+To improve the performance the [http://code.google.com/p/menta/wiki/DomainModel Domain model] should be impemented as set of classes with dynamic creation of model classes and dynamic class loading option.

@@ -1,0 +1,34 @@
+#summary Communicator component specification for Menta 0.2.
+
+= Communicator. =
+Provides an interface to the whole application with several options:
+  * From Expert perspective:
+    * Start conversation with requirements in form of HowTo-s.
+    * Update requirements.
+    * Stop conversation.
+  * From System perspective:
+    * Create confirmation request to Expert.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20communicator.png
+
+== Component diagram. ==
+Components:
+  # RequestBuilder.
+  # ResponseAnalyser.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component%20communicator.png
+
+== Activity diagrams. ==
+=== Communicator.createRequest. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Communicator.createRequest.png
+
+=== Communicator.processReply(requestFromExpert). ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Communicator.processReply(requestFromExpert).png
+
+=== Communicator.processReply(URI,ClarificationResponse).===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Communicator.processReply(URI,ClarificationResponse).png
+
+=== Communicator.stop. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Communicator.stop.png
+

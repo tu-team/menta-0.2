@@ -1,0 +1,18 @@
+glob:*.orig
+glob:*.iml
+glob:*.uml~
+glob:*.ipr
+glob:*.iws
+glob:*.gitignore
+glob:*/target/*
+glob:*.log
+glob:*.*~
+glob:test/OwlTest/repositories/*
+glob:test/SesameTest/storage.rdf/*
+glob:*.metadata
+glob:knowledgebaseserver/db/mentadb/*
+glob:knowledgebaseserver/mentadb/*
+glob:.idea\
+atlassian-ide-plugin.xml
+syntax: glob
+*.log.*

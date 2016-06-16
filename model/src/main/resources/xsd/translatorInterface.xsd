@@ -1,0 +1,50 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/translator/interface"
+        targetNamespace="http://www.menta.org/model/translator/interface"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:model="http://www.menta.org/model">
+
+    <xs:import namespace="http://www.menta.org/model" schemaLocation="./model.xsd"/>
+
+    <xs:complexType name="Report">
+        <xs:complexContent>
+            <xs:extension base="model:Knowledge">
+                <xs:sequence>
+                    <xs:element name="contentsURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SolutionReport">
+        <xs:complexContent>
+            <xs:extension base="Report">
+                <xs:sequence>
+                    <xs:element name="solutionURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HistoricalReport">
+        <xs:complexContent>
+            <xs:extension base="Report">
+                <xs:sequence>
+                    <xs:element name="historyURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EvolutionReport">
+        <xs:complexContent>
+            <xs:extension base="Report">
+                <xs:sequence>
+                    <xs:element name="evolutionURI" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

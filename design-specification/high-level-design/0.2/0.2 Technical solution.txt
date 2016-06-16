@@ -1,0 +1,118 @@
+#summary Technical solution of Menta 0.2.
+
+= Introduction. =
+The TS is applicable at any level of the Menta product architecture and to every product component.  NOTE:  The TS focuses on the tasks listed below:
+ # Evaluating and selecting solutions (sometimes referred to as “design approaches,” “design concepts,” or “preliminary designs”) that potentially satisfy an appropriate set of allocated requirements to chosen Menta release 0.2
+ # Developing detailed designs for the selected solutions (detailed in the context of containing all the information needed to manufacture, code, or otherwise implement the design as a product or product component)
+ # Implementing the designs as a product or product component.
+Some level of design may be needed to select final solution.  Menta release 0.1 may be used as a means of gaining sufficient knowledge to develop a technical data package or a complete set of requirements for Menta release 0.2.
+
+= Plan. =
+ # Investigation phase.
+   # *Investigate the OWLIM storage.*
+     # Install the OWLIM storage.
+     # Test load and read the OWL model.
+   # *Investigate the Java application servers to create web-services interface to the Storage.*
+   # Investigate the Java mock frameworks based on the [http://en.wikipedia.org/wiki/List_of_unit_testing_frameworks list.]
+   # Investigate the NARS 1.4
+     # Run Menta 0.1 rules in NARS 1.4
+     # Investigate the options to keep them functional with help of [http://code.google.com/p/open-nars/ open-nars] developers.
+     # Run acceptance criteria examples from Target application.
+ # Architecture phase.
+   # *Target application integration architecture.*
+     # Develop complex use-cases for the integrated Target application and Menta.
+       # Develop sub-use-cases, intermediate layer to Menta use-cases.
+       # Develop Menta use-cases to fit intermediate layer use-cases.
+     # Develop KBServer client architecture according to the KBServer interface.
+   # *Core architecture phase.*
+     # Develop ontology for the Knowledge Base.
+     # Develop core components architecture.
+     # Develop interfaces of the core components.
+     # Develop activity of the core components taking in  account interfaces.
+ # Development phase.
+   # *Core development top-to-bottom, exploit mocks.*
+     # Develop the web-services interface to the storage = KBServer.
+     # Develop the NARS adapter
+       # Refactor NARS 1.4 to separate operation cycle from math algorithms.
+       # Develop ReasonerAdapter component that provides the Scala object interface to NARS 1.4 and controls the number of NARS cycles to run.
+     # Develop main component to run the workflow of Menta 0.2 = MentaController.
+     # Develop the communication component that provides the interface to Menta 0.2 = Communicator.
+     # Develop the SolutionGenerator component.
+     # Develop Learner.
+     # Develop Translator.
+     # Develop SolutionGenerator.SolutionChecker component.
+     # Develop Learner.Trainer component.
+       # Integrate Learner.Trainer with Learner.
+     # Develop Learner.Trainer.Associator component.
+       # Integrate Learner.Trainer.Associator with Learner.Trainer.
+     # Develop Learner.Trainer.Generaliser component.
+       # Integrate Learner.Trainer.Generaliser with Learner.Trainer.
+     # Develop Learner.Trainer.Specificator component.
+       # Integrate Learner.Trainer.Specificator with Learner.Trainer.
+     # Develop Learner.AnalogyDetector component.
+       # Integrate Learner.AnalogyDetector with Learner.
+     # Develop Communicator.RequestBuilder component.
+       # Integrate Communicator.RequestBuilder with Communicator.
+     # Develop Communicator.ResponseAnalyser component.
+       # Integrate Communicator.ResponseAnalyser with Communicator.
+   # *Target application integration development.*
+     # Client development.
+       # Develop interface for the HowTo CRUD.
+       # Develop interface for the Requirements CRUD.
+       # Develop interface to run the SolutionGenerator and review the report and provide the feedback.
+
+= Product component solution analysis. =
+The analysis of three components was run:
+ # Storage, the analysis of RDF storage and Structured storages must be crated, based on following list in [http://code.google.com/p/menta/wiki/KBServer KBServer] document.
+ # Probabilistic reasoner, [http://code.google.com/p/menta/wiki/ProbabilisticResonersAnalysis analysis document], currently only [http://code.google.com/p/open-nars/ NARS] and [http://wiki.opencog.org/w/Probabilistic_Logic_Networks PLN] available and alive.
+ # Genetic algorithm framework, analysis document, fastest is [http://cs.gmu.edu/~eclab/projects/ecj/ ecj] framework.
+
+= Design the product component. =
+ Menta 0.2 functional block diagram that conform with the technical requirements of the system plan.
+
+== Design architecture. ==
+ # System must be capable of:
+   # Communicate with human expert:
+     # Process the HowTo
+       # Create HowTo.
+       # Validate the HowTo.
+       # Add HowTo in to Knowledge Base.
+       # Remove HowTo from Knowledge Base.
+     # Process the Requirement.
+       # Create new Requirement.
+       # Validate Requirement.
+       # Add created Requirement into Knowledge Base.
+       # Remove Requirement from Knowledge Base.
+     # Process the request to generate the solution.
+       # Pick up the requirements from request.
+       # Validate Requirements.
+       # Create the Requirements in  Knowledge Base.
+     # Generate Confirmation Request.
+       # Generate the Solution Report.
+       # Generate Confirmation request based on Solution Report.
+     # Analyse Confirmation Response.
+       # If  Confirmation Response contains positive answer Stop the process run learning process.
+       # If Confirmation Response contains negative answer update the Requirement and rerun the Solution generation.
+   # Generate solution according to the Requirements.
+     # Generate the Solution if could not find previously learned.
+     # Check the solution according to Requirements.
+   # Learn previously confirmed Solutions.
+     # Store association of the Requirements and confirmed Solution.
+     # Find by analogy the previously learned Solution.
+     # Create reusable HowTo based on generated Solution.
+     # Generalise the generated HowTo.
+     # Specialize the generated HowTo.
+   # Analyse the spiral process approaching to the human expert satisfaction.
+     # Generate the report for the Solution regeneration according to Requirements.
+
+== Logical solution. ==
+
+=== Component diagram. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Integration.png
+
+=== Collaboration diagram. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Integration%20collaboration.png
+
+== Physical solution. ==
+
+Please refer to [http://code.google.com/p/menta/wiki/DesignSpecification02 design specification of Menta 0.2]

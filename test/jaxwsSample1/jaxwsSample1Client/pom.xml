@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+    <artifactId>jaxwsSample1</artifactId>
+    <groupId>com.mycompany</groupId>
+    <version>1.0</version>
+  </parent>
+    <groupId>jaxwsSample1</groupId>
+    <artifactId>jaxwsSample1Client</artifactId>
+    <packaging>jar</packaging>
+    <name>jaxwsSample1Client WebService Client Project with WSDL file</name>
+    <version>1.0</version>
+
+    <!-- Please use pom_2.xml or this (pom.xml) file to generate the client from a webservice. pom_1.xml is in
+    SubVersion-Repo\mycompany-archetype-j2ee1.5-jaxws\src\main\resources\archetype-resources\__rootArtifactId__Client
+    -->
+    <build>
+        <plugins>
+
+            <!-- NOTE:
+            The below pugin (maven-antrun-plugin) can be avoided if .wsdl file is available. Continute using jaxws-maven-plugin to use wsimport on wsdl file for generating stubs.
+            The plugin is used to get the remote wsdl file and copy into this project (client) build directory so that jaxws-maven-plugin can use wsimport on local version of .wsdl
+            -->
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>initialize</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <!-- Delete ${project.build.directory} -->
+                                <delete dir="${project.build.directory}" />
+
+                                <!-- Delete ${project.build.directory} -->
+                                <mkdir dir="${project.build.directory}" />
+
+                                <!--
+                                 Get WSDL file from remote/local location and copy to ${project.build.directory}  directory.
+                                 In Dev/Test environments A WebService can generate wsdl on demand. look for <genWsdl>true</genWsdl> in pom.xml of Service.
+
+                                 Example 1.
+                                <get src="http://localhost:8080/testing/AppWSService?wsdl"
+                                     dest="${project.build.directory}/AppWSService.wsdl" />
+
+
+                                 In Production env it is discouraged to have wsdl generated from a WebService.
+                                 Change to <genWsdl>false</genWsdl> in pom.xml of Service.
+                                 So get access to .wsdl file and copy it to build/temp directory fo WSClient.
+                                 Example 2.
+                                <get src="file:///C:/YAMAN_PROJECTS/NetBeans_Workspace/test/testWS/target/jaxws/wsgen/wsdl/AppWSService.wsdl"
+                                     dest="${project.build.directory}/AppWSService.wsdl" />
+                                 -->
+
+                                <get src="http://localhost:8282/jaxwsSample1/AppWSService?wsdl" dest="${project.build.directory}/AppWSService.wsdl" />
+                                <get src="http://localhost:8282/jaxwsSample1/AppWSService?xsd=1" dest="${project.build.directory}/AppWSService_schema1.xsd" />
+
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                </configuration>
+            </plugin>
+
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>jaxws-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>wsimport</goal>
+                        </goals>
+                        <configuration>
+                            <!-- the WSDL file directory -->
+                            <wsdlDirectory>${project.build.directory}</wsdlDirectory>
+                            <wsdlFiles>
+                                <!-- the WSDL file name -->
+                                <wsdlFile>AppWSService.wsdl</wsdlFile>
+                            </wsdlFiles>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+    <distributionManagement>
+    </distributionManagement>
+</project>

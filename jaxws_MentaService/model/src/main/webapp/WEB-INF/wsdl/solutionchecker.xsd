@@ -1,0 +1,39 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/solutiongenerator/solutionchecker"
+        targetNamespace="http://www.menta.org/model/solutiongenerator/solutionchecker"
+        xmlns:howTo="http://www.menta.org/model/howTo"
+        xmlns:util="http://www.menta.org/util"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:import namespace="http://www.menta.org/model/howTo" schemaLocation="howTo.xsd"/>
+    <xs:import namespace="http://www.menta.org/util" schemaLocation="util.xsd" />
+
+   <!-- SoulutionChecker -->
+    <xs:complexType name="Rule">
+        <xs:sequence>
+            <xs:element name="howTo" type="howTo:HowTo"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RuleChange">
+        <xs:complexContent>
+            <xs:extension base="Rule"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RuleChangeSet">
+        <xs:sequence>
+            <xs:element name="ruleChange" type="RuleChange" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Test">
+        <xs:sequence>
+            <xs:element name="solution" type="howTo:Solution" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="result" type="util:FrequencyConfidenceNegationTriple" minOccurs="1" maxOccurs="1" />
+            <xs:element name="duration" type="xs:duration" minOccurs="1" maxOccurs="1" />
+            <xs:element name="rule" type="Rule" minOccurs="1" maxOccurs="1" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

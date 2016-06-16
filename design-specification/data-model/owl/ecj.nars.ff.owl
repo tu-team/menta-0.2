@@ -1,0 +1,2765 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY menta "http://menta.ecj.nars.FitnessFunction#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ProblemSolutionGeneration "http://menta/ontologies/2010/01/ProblemSolutionGeneration#" >
+    <!ENTITY ApplicationDescriptionLanguage "http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#" >
+]>
+
+
+<rdf:RDF xmlns="http://menta.ecj.nars.FitnessFunction#"
+     xml:base="http://menta.ecj.nars.FitnessFunction"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:menta="http://menta.ecj.nars.FitnessFunction#"
+     xmlns:ApplicationDescriptionLanguage="http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ProblemSolutionGeneration="http://menta/ontologies/2010/01/ProblemSolutionGeneration#">
+    <owl:Ontology rdf:about="">
+        <owl:imports rdf:resource="http://menta/ontologies/2010/01/ApplicationDescriptionLanguage"/>
+        <owl:imports rdf:resource="http://menta/ontologies/2010/01/ProblemSolutionGeneration"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.Scala.HasOperator -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;class.Scala.HasOperator">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.Scala.HasSequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;class.Scala.HasSequence">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#dragonPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;dragonPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#applicationDescriptionLanguagePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#expressionProperties -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;expressionProperties">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#fileProperties -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;fileProperties">
+        <rdfs:subPropertyOf rdf:resource="#filePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAbsoluteAddress -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasAbsoluteAddress">
+        <rdfs:subPropertyOf rdf:resource="#filePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAddress.Atom.Dragon -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasAddress.Atom.Dragon">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAddressValue.String.LiteralConstant.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasAddressValue.String.LiteralConstant.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAtom -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasAtom">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAttribute.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasAttribute.UMLClass">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasBranch.Atom.Dragon -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasBranch.Atom.Dragon">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasBranchExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasBranchExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasBranchName.Atom.Dragon -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasBranchName.Atom.Dragon">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasClass.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasClass.UMLClass">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasClass.UMLPackage -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasClass.UMLPackage">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasClassName.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasClassName.Atom.Expression">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasDurationExperession.Integer.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasDurationExperession.Integer.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasFile -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasFile">
+        <rdfs:subPropertyOf rdf:resource="#applicationPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasFirst.Element.Operand.Sequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasFirst.Element.Operand.Sequence">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasFirst.Sequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasFirst.Sequence">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasIncrementExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasIncrementExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasInitiationExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasInitiationExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasInsertBlockName.String.LiteralConstan.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasInsertBlockName.String.LiteralConstan.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasInstantiation.UMLClassDiagram -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasInstantiation.UMLClassDiagram">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLast.Element.Operand.Sequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasLast.Element.Operand.Sequence">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLast.Sequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasLast.Sequence">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasListExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasListExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLogicalExpression.Boolean.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasLogicalExpression.Boolean.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasMethod">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasName.String.LiteralConstant.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasName.String.LiteralConstant.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasName.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasName.UMLClass">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasNext.Element.OperandSequence.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasNext.Element.OperandSequence.Expression">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasNext.Sequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasNext.Sequence">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasObjectName.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasObjectName.Atom.Expression">
+        <rdfs:subPropertyOf rdf:resource="#applicationDescriptionLanguagePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasOperand.Compound.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasOperand.Compound.Expression">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasOperandSequence.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasOperandSequence.Expression">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasOperator">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasParameterName.StringLiteral.Constant.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasParameterName.StringLiteral.Constant.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasParameterSequence.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasParameterSequence.Atom.Expression">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasParameterType.String.LiteralConstan.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasParameterType.String.LiteralConstan.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasProject -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasProject">
+        <rdfs:subPropertyOf rdf:resource="#applicationPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasRelativeAddress -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasRelativeAddress">
+        <rdfs:subPropertyOf rdf:resource="#filePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasSequence.Dragon -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasSequence.Dragon">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasStringRepresentation -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasStringRepresentation">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasTerminationExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasTerminationExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasTerminatoionExpression.Boolean.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasTerminatoionExpression.Boolean.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasText.String.LiteralConstant.Simple.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasText.String.LiteralConstant.Simple.Atom.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasType.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasType.UMLClass">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasValue.Compound.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasValue.Compound.Atom.Expression">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasValueExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasValueExpression.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasVariableName.String.LiteralConstant.Expression -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasVariableName.String.LiteralConstant.Expression">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasVariant.Simple.Atom -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasVariant.Simple.Atom">
+        <rdfs:subPropertyOf rdf:resource="&ApplicationDescriptionLanguage;dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasVisibility.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;hasVisibility.UMLClass">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#includesPackage.UMLPackage -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;includesPackage.UMLPackage">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#private.Scala.HasOperator -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;private.Scala.HasOperator">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#relationships.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;relationships.UMLClass">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#umlProperties -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;umlProperties">
+        <rdfs:subPropertyOf rdf:resource="#uMLGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#visibility.Scala.HasFirst.Element.Operand.Sequence -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;visibility.Scala.HasFirst.Element.Operand.Sequence">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#visibility.Scala.HasOperator -->
+
+    <owl:ObjectProperty rdf:about="&ApplicationDescriptionLanguage;visibility.Scala.HasOperator">
+        <rdfs:subPropertyOf rdf:resource="#expressionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DB.hasColumn -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;DB.hasColumn">
+        <rdfs:subPropertyOf rdf:resource="#abstractApplicationArcitectureGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DB.hasColumnType -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;DB.hasColumnType">
+        <rdfs:subPropertyOf rdf:resource="#abstractApplicationArcitectureGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasAction -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasAction">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasBehaviour -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasBehaviour">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasBusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasBusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasBusinessReq -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasBusinessReq">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasCondition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasCurrentBehaviour -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasCurrentBehaviour">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDataToAdd.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasDataToAdd.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDescription -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasDescription">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDescripton.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasDescripton.BusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDestination.AddField.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasDestination.AddField.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDestinationName -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasDestinationName">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasElements -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasElements">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasElements.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasElements.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasEpressionToDelete -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasEpressionToDelete">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasExpression -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasExpression">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasExpression.Select.First -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasExpression.Select.First">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFieldName -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFieldName">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstAction.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFirstAction.BusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstElement.Sequence.Condition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFirstElement.Sequence.Condition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstLexem.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFirstLexem.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstStatement -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFirstStatement">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstStatement.SQL.Select.First -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFirstStatement.SQL.Select.First">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowing -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFollowing">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFollowingLexem">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFollowingLexem.SQL">
+        <rdfs:subPropertyOf rdf:resource="#sQLPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL.Select.Group -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFollowingLexem.SQL.Select.Group">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFunctionalReq -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasFunctionalReq">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasHeadLexem -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasHeadLexem">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasHeadLexem.SQL -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasHeadLexem.SQL">
+        <rdfs:subPropertyOf rdf:resource="#sQLPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasHowTo.AddFieldToWebForm -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasHowTo.AddFieldToWebForm">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasIdentifier">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasIdentifier.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasIdentifier.BusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasIntendedBehaviour.CR -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasIntendedBehaviour.CR">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLastAction.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasLastAction.BusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLastElement.Sequence.Condition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasLastElement.Sequence.Condition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLexemSequence -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasLexemSequence">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLexemSequence.SQL -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasLexemSequence.SQL">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLexemSequence.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasLexemSequence.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNextAction.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasNextAction.BusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNextElement.Condition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasNextElement.Condition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNonFunctionalReq -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasNonFunctionalReq">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNonFunctionalReq.ReqSpec -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasNonFunctionalReq.ReqSpec">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasObject.AddField.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasObject.AddField.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperand -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasOperand">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperand.Condition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasOperand.Condition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperandSequence.Condition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasOperandSequence.Condition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasOperator">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperator.Condition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasOperator.Condition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasPattern.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasPattern.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#sQLPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasPostCondition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasPostCondition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasPrecondition">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasProgrammingLanguage -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasProgrammingLanguage">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasProperty">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSQLFollowing -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasSQLFollowing">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSQLOperator -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasSQLOperator">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSeparator -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasSeparator">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSeparator.SQL.Comma -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasSeparator.SQL.Comma">
+        <rdfs:subPropertyOf rdf:resource="#abstractProgramSyntaxPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSequence.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasSequence.BusinessProcess">
+        <rdfs:subPropertyOf rdf:resource="#requestPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasStatement.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasStatement.SQL.Select">
+        <rdfs:subPropertyOf rdf:resource="#patternPropertiesGroup"/>
+        <rdfs:subPropertyOf rdf:resource="#sQLPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasValue -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;hasValue">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#insteadOf -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;insteadOf">
+        <rdfs:subPropertyOf rdf:resource="#patternPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probability -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probability">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyHasMethod -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probablyHasMethod">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyHasNormalization -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probablyHasNormalization">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyHasValidation -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probablyHasValidation">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyIncludes -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probablyIncludes">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyRequests -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probablyRequests">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyRequiresRetrivalUpdate -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;probablyRequiresRetrivalUpdate">
+        <rdfs:subPropertyOf rdf:resource="#probabilityGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#references -->
+
+    <owl:ObjectProperty rdf:about="&ProblemSolutionGeneration;references">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#abstractApplicationArcitectureGroup -->
+
+    <owl:ObjectProperty rdf:about="#abstractApplicationArcitectureGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#abstractProgramSyntaxPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#abstractProgramSyntaxPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#applicationDescriptionLanguagePropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#applicationDescriptionLanguagePropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#applicationPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#applicationPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#applicationDescriptionLanguagePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#behaviourPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#behaviourPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#conditionPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#conditionPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#behaviourPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#expressionPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#expressionPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#applicationDescriptionLanguagePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#filePropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#filePropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#applicationDescriptionLanguagePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#fitnessFuntionPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#fitnessFuntionPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#forAllAddFieldGroup -->
+
+    <owl:ObjectProperty rdf:about="#forAllAddFieldGroup">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasArgument -->
+
+    <owl:ObjectProperty rdf:about="#hasArgument">
+        <rdfs:subPropertyOf rdf:resource="#narseseGrammarGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasBody -->
+
+    <owl:ObjectProperty rdf:about="#hasBody">
+        <rdfs:subPropertyOf rdf:resource="#forAllAddFieldGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasInstance -->
+
+    <owl:ObjectProperty rdf:about="#hasInstance">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasLeftTerm -->
+
+    <owl:ObjectProperty rdf:about="#hasLeftTerm">
+        <rdfs:subPropertyOf rdf:resource="#hasArgument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasNarseseOperation -->
+
+    <owl:ObjectProperty rdf:about="#hasNarseseOperation">
+        <rdfs:subPropertyOf rdf:resource="#narseseGrammarGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasOperation -->
+
+    <owl:ObjectProperty rdf:about="#hasOperation">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasParameter -->
+
+    <owl:ObjectProperty rdf:about="#hasParameter">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="#hasProperty">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasRange -->
+
+    <owl:ObjectProperty rdf:about="#hasRange">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasRelation -->
+
+    <owl:ObjectProperty rdf:about="#hasRelation">
+        <rdfs:subPropertyOf rdf:resource="#narseseGrammarGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasRequest -->
+
+    <owl:ObjectProperty rdf:about="#hasRequest">
+        <rdfs:subPropertyOf rdf:resource="#hypothesisPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasRightTerm -->
+
+    <owl:ObjectProperty rdf:about="#hasRightTerm">
+        <rdfs:subPropertyOf rdf:resource="#hasArgument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="#hasTarget">
+        <rdfs:label
+            >relation with precondition?</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#forAllAddFieldGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#howToPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#howToPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hypothesisPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#hypothesisPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#narseseGrammarGroup -->
+
+    <owl:ObjectProperty rdf:about="#narseseGrammarGroup">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#patternPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#patternPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#probabilityGroup -->
+
+    <owl:ObjectProperty rdf:about="#probabilityGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#requestPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#requestPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#solutionGenerationGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#sQLPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#sQLPropertiesGroup">
+        <rdfs:subPropertyOf rdf:resource="#howToPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#solutionGenerationGroup -->
+
+    <owl:ObjectProperty rdf:about="#solutionGenerationGroup">
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#thisConjuctionWith -->
+
+    <owl:ObjectProperty rdf:about="#thisConjuctionWith">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#thisImplyies -->
+
+    <owl:ObjectProperty rdf:about="#thisImplyies">
+        <rdfs:subPropertyOf rdf:resource="#fitnessFuntionPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#uMLGroup -->
+
+    <owl:ObjectProperty rdf:about="#uMLGroup">
+        <rdfs:subPropertyOf rdf:resource="#applicationDescriptionLanguagePropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#hasClosure -->
+
+    <owl:DatatypeProperty rdf:about="#hasClosure">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#isQuestion -->
+
+    <owl:DatatypeProperty rdf:about="#isQuestion">
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#statementsCount -->
+
+    <owl:DatatypeProperty rdf:about="#statementsCount">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="&owl;topDataProperty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ApplicationGroup -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;ApplicationGroup">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#AtomSequence.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;AtomSequence.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Choice.Atom.Dragon -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Choice.Atom.Dragon">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#DragonGroup -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;DragonGroup">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Element.AtomSequence.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;AtomSequence.Expression"/>
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Expression"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ExpressionGroup -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;ExpressionGroup">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#FileGroup -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;FileGroup">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Functional.Simple.Atoms -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Functional.Simple.Atoms"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Item.Seq -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Item.Seq">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Logical.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Logical.Expr">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Package.UMLPackage -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Package.UMLPackage">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ApplicationDescriptionLanguage;includesPackage.UMLPackage"/>
+                <owl:allValuesFrom rdf:resource="&ApplicationDescriptionLanguage;Package.UMLPackage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ProgrammingLanguageGroup -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;ProgrammingLanguageGroup">
+        <rdfs:subClassOf rdf:resource="#AplicationDescriptionLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Choice.Atom.Dragon.AtomSequence.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.Choice.Atom.Dragon.AtomSequence.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Comment.Atom.Dragon.AtomSequence.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.Comment.Atom.Dragon.AtomSequence.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Comment.Simple.Atom.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.Comment.Simple.Atom.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.CommentText.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.CommentText.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.CycleLoop.Icon.Atom.Dragon.AtomSequence.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.CycleLoop.Icon.Atom.Dragon.AtomSequence.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.If.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.If.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.LeftBracket.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.LeftBracket.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.LeftCurlyBracket.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.LeftCurlyBracket.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.ListElement.Assignment.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.ListElement.Assignment.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Match.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.Match.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Question.Atom.Dragon.AtomSequence.Expression -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.Question.Atom.Dragon.AtomSequence.Expression">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.RightBracket.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.RightBracket.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.RightCurlyBracket.Operator.Atom.Expr -->
+
+    <owl:Class rdf:about="&ApplicationDescriptionLanguage;Scala.RightCurlyBracket.Operator.Atom.Expr">
+        <rdfs:subClassOf rdf:resource="&ApplicationDescriptionLanguage;Element.AtomSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Action -->
+
+    <owl:Class rdf:about="&ProblemSolutionGeneration;Action"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BugReportGroup -->
+
+    <owl:Class rdf:about="&ProblemSolutionGeneration;BugReportGroup">
+        <rdfs:subClassOf rdf:resource="#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#CRGroup -->
+
+    <owl:Class rdf:about="&ProblemSolutionGeneration;CRGroup">
+        <rdfs:subClassOf rdf:resource="#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ReqSpecGroup -->
+
+    <owl:Class rdf:about="&ProblemSolutionGeneration;ReqSpecGroup">
+        <rdfs:subClassOf rdf:resource="#Request"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#RequestGroup -->
+
+    <owl:Class rdf:about="&ProblemSolutionGeneration;RequestGroup"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SolutionGenerationGroup -->
+
+    <owl:Class rdf:about="&ProblemSolutionGeneration;SolutionGenerationGroup"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AddField -->
+
+    <owl:Class rdf:about="#AddField">
+        <rdfs:subClassOf rdf:resource="#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AllExpectedModulesMustBeProcessed -->
+
+    <owl:Class rdf:about="#AllExpectedModulesMustBeProcessed">
+        <rdfs:subClassOf rdf:resource="#AllExpectedModulesMustBeProcessed_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBody"/>
+                <owl:allValuesFrom rdf:resource="#LocalVariableModule_01"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasClosure"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#statementsCount"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#isQuestion"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AllExpectedModulesMustBeProcessed_Group -->
+
+    <owl:Class rdf:about="#AllExpectedModulesMustBeProcessed_Group">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AllModulesMustRelateToTheCustomer -->
+
+    <owl:Class rdf:about="#AllModulesMustRelateToTheCustomer">
+        <rdfs:subClassOf rdf:resource="#AllModulesMustRelateToTheCustomer_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasClosure"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTarget"/>
+                <owl:allValuesFrom rdf:resource="#Genotype"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBody"/>
+                <owl:allValuesFrom rdf:resource="#LocalVariableGenotype_02"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#thisImplyies"/>
+                <owl:allValuesFrom rdf:resource="#SelfOk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#statementsCount"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AllModulesMustRelateToTheCustomer_Group -->
+
+    <owl:Class rdf:about="#AllModulesMustRelateToTheCustomer_Group">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AllOperationsMustBe_AddField -->
+
+    <owl:Class rdf:about="#AllOperationsMustBe_AddField">
+        <rdfs:subClassOf rdf:resource="#AllOperationsMustBe_AddField_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBody"/>
+                <owl:allValuesFrom rdf:resource="#LocalVariableGenotype_01"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#thisImplyies"/>
+                <owl:allValuesFrom rdf:resource="#SelfOk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasClosure"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasTarget"/>
+                <owl:allValuesFrom rdf:resource="#Genotype"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#statementsCount"/>
+                <owl:allValuesFrom rdf:resource="&xsd;int"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AllOperationsMustBe_AddField_Group -->
+
+    <owl:Class rdf:about="#AllOperationsMustBe_AddField_Group">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AnonymousTermAsPlaceHolder -->
+
+    <owl:Class rdf:about="#AnonymousTermAsPlaceHolder">
+        <rdfs:subClassOf rdf:resource="#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#AplicationDescriptionLanguageGroup -->
+
+    <owl:Class rdf:about="#AplicationDescriptionLanguageGroup"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ArchitectureGroup -->
+
+    <owl:Class rdf:about="#ArchitectureGroup">
+        <rdfs:subClassOf rdf:resource="#FitnessFunctionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CombineResults_Group -->
+
+    <owl:Class rdf:about="#CombineResults_Group">
+        <rdfs:subClassOf rdf:resource="#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CombineTheResults_01 -->
+
+    <owl:Class rdf:about="#CombineTheResults_01">
+        <rdfs:subClassOf rdf:resource="#CombineResults_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#statementsCount"/>
+                <owl:allValuesFrom rdf:resource="&xsd;boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasBody"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#SelfNegation"/>
+                            <rdf:Description rdf:about="#SelfOk"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CombineTheResults_02 -->
+
+    <owl:Class rdf:about="#CombineTheResults_02">
+        <rdfs:subClassOf rdf:resource="#CombineResults_Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CompoundTerm -->
+
+    <owl:Class rdf:about="#CompoundTerm">
+        <rdfs:subClassOf rdf:resource="#Term"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNarseseOperation"/>
+                <owl:allValuesFrom rdf:resource="#NarseseOperation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ConcurrentImplication -->
+
+    <owl:Class rdf:about="#ConcurrentImplication">
+        <rdfs:subClassOf rdf:resource="#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Conjunction -->
+
+    <owl:Class rdf:about="#Conjunction">
+        <rdfs:subClassOf rdf:resource="#NarseseOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Contains -->
+
+    <owl:Class rdf:about="#Contains">
+        <rdfs:subClassOf rdf:resource="#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Counter -->
+
+    <owl:Class rdf:about="#Counter">
+        <rdfs:subClassOf rdf:resource="#GenotypeDefGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CreateCustomer -->
+
+    <owl:Class rdf:about="#CreateCustomer">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CreateCustomerServlet -->
+
+    <owl:Class rdf:about="#CreateCustomerServlet">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Customer -->
+
+    <owl:Class rdf:about="#Customer">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasParameter"/>
+                        <owl:allValuesFrom rdf:resource="#CreateCustomer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperty"/>
+                        <owl:allValuesFrom rdf:resource="#Linked"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasParameter"/>
+                        <owl:allValuesFrom rdf:resource="#CreateCustomerServlet"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperty"/>
+                        <owl:allValuesFrom rdf:resource="#Linked"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasParameter"/>
+                        <owl:allValuesFrom rdf:resource="#ListCustomersServlet"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperty"/>
+                        <owl:allValuesFrom rdf:resource="#Linked"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasParameter"/>
+                        <owl:allValuesFrom rdf:resource="#ListCustomers"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperty"/>
+                        <owl:allValuesFrom rdf:resource="#Linked"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#DependentVariable -->
+
+    <owl:Class rdf:about="#DependentVariable">
+        <rdfs:subClassOf rdf:resource="#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ExternalVariable -->
+
+    <owl:Class rdf:about="#ExternalVariable">
+        <rdfs:subClassOf rdf:resource="#GenotypeDefGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRange"/>
+                <owl:allValuesFrom rdf:resource="#Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#FitnessFunctionGroup -->
+
+    <owl:Class rdf:about="#FitnessFunctionGroup"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#FutureEvent -->
+
+    <owl:Class rdf:about="#FutureEvent">
+        <rdfs:subClassOf rdf:resource="#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Genotype -->
+
+    <owl:Class rdf:about="#Genotype">
+        <rdfs:subClassOf rdf:resource="#GenotypeDefGroup"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasParameter"/>
+                        <owl:allValuesFrom rdf:resource="#IncomingModule"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasProperty"/>
+                        <owl:allValuesFrom rdf:resource="#Contains"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#GenotypeDefGroup -->
+
+    <owl:Class rdf:about="#GenotypeDefGroup">
+        <rdfs:subClassOf rdf:resource="#FitnessFunctionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#GoalGroup -->
+
+    <owl:Class rdf:about="#GoalGroup">
+        <rdfs:subClassOf rdf:resource="#FitnessFunctionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#GoalToBeRealized -->
+
+    <owl:Class rdf:about="#GoalToBeRealized">
+        <rdfs:subClassOf rdf:resource="#Sentence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Hypothesis -->
+
+    <owl:Class rdf:about="#Hypothesis">
+        <rdfs:subClassOf rdf:resource="#HypothesisGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ProblemSolutionGeneration;hasAction"/>
+                <owl:someValuesFrom rdf:resource="&ProblemSolutionGeneration;Action"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRequest"/>
+                <owl:someValuesFrom rdf:resource="&ProblemSolutionGeneration;RequestGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#HypothesisGroup -->
+
+    <owl:Class rdf:about="#HypothesisGroup">
+        <rdfs:subClassOf rdf:resource="&ProblemSolutionGeneration;SolutionGenerationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#IncomingModule -->
+
+    <owl:Class rdf:about="#IncomingModule">
+        <rdfs:subClassOf rdf:resource="#GenotypeDefGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:allValuesFrom rdf:resource="#Counter"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOperation"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="#AddField"/>
+                            <rdf:Description rdf:about="#RemoveField"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:allValuesFrom rdf:resource="#ExternalVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#IndependentVariable -->
+
+    <owl:Class rdf:about="#IndependentVariable">
+        <rdfs:subClassOf rdf:resource="#Variable"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Inheritance -->
+
+    <owl:Class rdf:about="#Inheritance">
+        <rdfs:subClassOf rdf:resource="#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Instance -->
+
+    <owl:Class rdf:about="#Instance">
+        <rdfs:subClassOf rdf:resource="#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#JudgmentToBeRemembered -->
+
+    <owl:Class rdf:about="#JudgmentToBeRemembered">
+        <rdfs:subClassOf rdf:resource="#Sentence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Linked -->
+
+    <owl:Class rdf:about="#Linked">
+        <rdfs:subClassOf rdf:resource="#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ListCustomers -->
+
+    <owl:Class rdf:about="#ListCustomers">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ListCustomersServlet -->
+
+    <owl:Class rdf:about="#ListCustomersServlet">
+        <rdfs:subClassOf rdf:resource="#Module"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ListElement -->
+
+    <owl:Class rdf:about="#ListElement">
+        <rdfs:subClassOf rdf:resource="#NarseseGrammarGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#LocalVariableCustomer_01 -->
+
+    <owl:Class rdf:about="#LocalVariableCustomer_01">
+        <rdfs:subClassOf rdf:resource="#AllModulesMustRelateToTheCustomer_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:allValuesFrom rdf:resource="#VariableModule"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="#Linked"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#LocalVariableGenotype_01 -->
+
+    <owl:Class rdf:about="#LocalVariableGenotype_01">
+        <rdfs:subClassOf rdf:resource="#AllOperationsMustBe_AddField_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="#Contains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:allValuesFrom rdf:resource="#VariableModuleWithNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#LocalVariableGenotype_02 -->
+
+    <owl:Class rdf:about="#LocalVariableGenotype_02">
+        <rdfs:subClassOf rdf:resource="#AllModulesMustRelateToTheCustomer_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#thisConjuctionWith"/>
+                <owl:allValuesFrom rdf:resource="#LocalVariableCustomer_01"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:allValuesFrom rdf:resource="#VariableModuleWithNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="#VariableAction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#LocalVariableModule_01 -->
+
+    <owl:Class rdf:about="#LocalVariableModule_01">
+        <rdfs:subClassOf rdf:resource="#AllExpectedModulesMustBeProcessed_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#thisConjuctionWith"/>
+                <owl:allValuesFrom rdf:resource="#LocalVariableModule_02"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="#Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#LocalVariableModule_02 -->
+
+    <owl:Class rdf:about="#LocalVariableModule_02">
+        <rdfs:subClassOf rdf:resource="#AllExpectedModulesMustBeProcessed_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="#Processed"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#LocalVariableModulesToProcess -->
+
+    <owl:Class rdf:about="#LocalVariableModulesToProcess">
+        <rdfs:subClassOf rdf:resource="#AllExpectedModulesMustBeProcessed_Group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRange"/>
+                <owl:allValuesFrom rdf:resource="#Module"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:onClass rdf:resource="#Processed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Module -->
+
+    <owl:Class rdf:about="#Module">
+        <rdfs:subClassOf rdf:resource="#ArchitectureGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#NarseseGrammarGroup -->
+
+    <owl:Class rdf:about="#NarseseGrammarGroup"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#NarseseOperation -->
+
+    <owl:Class rdf:about="#NarseseOperation">
+        <rdfs:subClassOf rdf:resource="#NarseseGrammarGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Negation -->
+
+    <owl:Class rdf:about="#Negation">
+        <rdfs:subClassOf rdf:resource="#NarseseOperation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Ok -->
+
+    <owl:Class rdf:about="#Ok">
+        <rdfs:subClassOf rdf:resource="#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Operation -->
+
+    <owl:Class rdf:about="#Operation">
+        <rdfs:subClassOf rdf:resource="#ArchitectureGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Processed -->
+
+    <owl:Class rdf:about="#Processed">
+        <rdfs:subClassOf rdf:resource="#Property"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Property -->
+
+    <owl:Class rdf:about="#Property">
+        <rdfs:subClassOf rdf:resource="#FitnessFunctionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#QuestionToBeAnswered -->
+
+    <owl:Class rdf:about="#QuestionToBeAnswered">
+        <rdfs:subClassOf rdf:resource="#Sentence"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Relation -->
+
+    <owl:Class rdf:about="#Relation">
+        <rdfs:subClassOf rdf:resource="#NarseseGrammarGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#RemoveField -->
+
+    <owl:Class rdf:about="#RemoveField">
+        <rdfs:subClassOf rdf:resource="#Operation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Request -->
+
+    <owl:Class rdf:about="#Request">
+        <rdfs:subClassOf rdf:resource="&ProblemSolutionGeneration;RequestGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#RulesGroup -->
+
+    <owl:Class rdf:about="#RulesGroup">
+        <rdfs:subClassOf rdf:resource="#FitnessFunctionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#SelfNegation -->
+
+    <owl:Class rdf:about="#SelfNegation">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNarseseOperation"/>
+                <owl:allValuesFrom rdf:resource="#Negation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasArgument"/>
+                <owl:allValuesFrom rdf:resource="#SelfOk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#SelfOk -->
+
+    <owl:Class rdf:about="#SelfOk">
+        <rdfs:subClassOf rdf:resource="#GoalGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="#Ok"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Sentence -->
+
+    <owl:Class rdf:about="#Sentence">
+        <rdfs:subClassOf rdf:resource="#NarseseGrammarGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Similarity -->
+
+    <owl:Class rdf:about="#Similarity">
+        <rdfs:subClassOf rdf:resource="#Relation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Statement -->
+
+    <owl:Class rdf:about="#Statement">
+        <rdfs:subClassOf rdf:resource="#NarseseGrammarGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRightTerm"/>
+                <owl:allValuesFrom rdf:resource="#Term"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLeftTerm"/>
+                <owl:allValuesFrom rdf:resource="#Term"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasRelation"/>
+                <owl:allValuesFrom rdf:resource="#Relation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Term -->
+
+    <owl:Class rdf:about="#Term">
+        <rdfs:subClassOf rdf:resource="#NarseseGrammarGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Variable -->
+
+    <owl:Class rdf:about="#Variable">
+        <rdfs:subClassOf rdf:resource="#Term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#VariableAction -->
+
+    <owl:Class rdf:about="#VariableAction">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInstance"/>
+                <owl:allValuesFrom rdf:resource="#IndependentVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#VariableModule -->
+
+    <owl:Class rdf:about="#VariableModule">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInstance"/>
+                <owl:allValuesFrom rdf:resource="#IndependentVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#VariableModuleWithNumber -->
+
+    <owl:Class rdf:about="#VariableModuleWithNumber">
+        <rdfs:subClassOf rdf:resource="#VariableModule"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasOperation"/>
+                <owl:allValuesFrom rdf:resource="#AddField"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasParameter"/>
+                <owl:allValuesFrom rdf:resource="#VariableNumber"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#VariableNumber -->
+
+    <owl:Class rdf:about="#VariableNumber">
+        <rdfs:subClassOf rdf:resource="#RulesGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasInstance"/>
+                <owl:allValuesFrom rdf:resource="#IndependentVariable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Word -->
+
+    <owl:Class rdf:about="#Word">
+        <rdfs:subClassOf rdf:resource="#Term"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#1 -->
+
+    <owl:Thing rdf:about="#1"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#2 -->
+
+    <owl:Thing rdf:about="#2"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#3 -->
+
+    <owl:Thing rdf:about="#3"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CreateCustomer -->
+
+    <owl:Thing rdf:about="#CreateCustomer"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#CreateCustomerServlet -->
+
+    <owl:Thing rdf:about="#CreateCustomerServlet"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#Customer -->
+
+    <owl:Thing rdf:about="#Customer"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#List -->
+
+    <owl:Thing rdf:about="#List">
+        <hasArgument rdf:resource="#List"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ListCustomerServlet -->
+
+    <owl:Thing rdf:about="#ListCustomerServlet"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ListCustomers -->
+
+    <owl:Thing rdf:about="#ListCustomers"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#X -->
+
+    <owl:Thing rdf:about="#X">
+        <rdfs:comment>Variable</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#addField -->
+
+    <owl:Thing rdf:about="#addField"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#conjunction -->
+
+    <owl:Thing rdf:about="#conjunction">
+        <rdfs:comment>&amp;&amp;</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#contains -->
+
+    <owl:Thing rdf:about="#contains"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#exp1 -->
+
+    <owl:Thing rdf:about="#exp1">
+        <hasArgument rdf:resource="#ListCustomers"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#instance -->
+
+    <owl:Thing rdf:about="#instance">
+        <rdfs:comment>{--</rdfs:comment>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#linked -->
+
+    <owl:Thing rdf:about="#linked"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#ok -->
+
+    <owl:Thing rdf:about="#ok"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#product -->
+
+    <owl:Thing rdf:about="#product">
+        <hasArgument rdf:resource="#List"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#removeField -->
+
+    <owl:Thing rdf:about="#removeField"/>
+    
+
+
+    <!-- http://menta.ecj.nars.FitnessFunction#simpleList -->
+
+    <owl:Thing rdf:about="#simpleList"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

@@ -1,0 +1,91 @@
+﻿ cosmicdustman (18:24:19 25/03/2011)
+scala.collection.immutable.Set
+
+ nantuko (18:24:37 25/03/2011)
+не очень понимаю
+
+ cosmicdustman (18:24:37 25/03/2011)
+ээх прийдется перегрузить скальный сет 
+
+ nantuko (18:25:47 25/03/2011)
+Caused by: com.sun.xml.bind.v2.runtime.IllegalAnnotationsException: 15 counts of IllegalAnnotationExceptions
+menta.model.translator.Report does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.translator.Report
+                at menta.model.translator.SolutionReport
+                at private menta.model.translator.SolutionReport menta.jaxws_asm.GetSolutionReportResponse._return
+                at menta.jaxws_asm.GetSolutionReportResponse
+menta.model.conversation.Response does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.conversation.Response
+                at private menta.model.conversation.Response menta.jaxws_asm.CreateRequest.arg0
+                at menta.jaxws_asm.CreateRequest
+menta.model.conversation.ConversationAct does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.conversation.ConversationAct
+                at menta.model.conversation.Response
+                at private menta.model.conversation.Response menta.jaxws_asm.CreateRequest.arg0
+                at menta.jaxws_asm.CreateRequest
+menta.model.conversation.ConversationAny does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.conversation.ConversationAny
+                at menta.model.conversation.ConversationAct
+                at menta.model.conversation.Response
+                at private menta.model.conversation.Response menta.jaxws_asm.CreateRequest.arg0
+                at menta.jaxws_asm.CreateRequest
+scala.collection.immutable.Set is an interface, and JAXB can't handle interfaces.
+        this problem is related to the following location:
+                at scala.collection.immutable.Set
+                at private scala.collection.immutable.Set menta.jaxws_asm.CreateRequest.arg1
+                at menta.jaxws_asm.CreateRequest
+scala.collection.immutable.Set does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at scala.collection.immutable.Set
+                at private scala.collection.immutable.Set menta.jaxws_asm.CreateRequest.arg1
+                at menta.jaxws_asm.CreateRequest
+menta.model.howto.HowTo is an interface, and JAXB can't handle interfaces.
+        this problem is related to the following location:
+                at menta.model.howto.HowTo
+                at private menta.model.howto.HowTo menta.jaxws_asm.AddHowTo.arg0
+                at menta.jaxws_asm.AddHowTo
+menta.model.howto.HowTo does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.howto.HowTo
+                at private menta.model.howto.HowTo menta.jaxws_asm.AddHowTo.arg0
+                at menta.jaxws_asm.AddHowTo
+menta.model.howto.ActionIndividual does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.howto.ActionIndividual
+                at private menta.model.howto.ActionIndividual menta.jaxws_asm.SelectActionIndividualResponse._return
+                at menta.jaxws_asm.SelectActionIndividualResponse
+menta.model.howto.classifier.Classifier is an interface, and JAXB can't handle interfaces.
+        this problem is related to the following location:
+                at menta.model.howto.classifier.Classifier
+                at private menta.model.howto.classifier.Classifier menta.jaxws_asm.AddClassifier.arg0
+                at menta.jaxws_asm.AddClassifier
+menta.model.howto.classifier.Classifier does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.howto.classifier.Classifier
+                at private menta.model.howto.classifier.Classifier menta.jaxws_asm.AddClassifier.arg0
+                at menta.jaxws_asm.AddClassifier
+menta.model.translator.HistoricalReport does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.translator.HistoricalReport
+                at private menta.model.translator.HistoricalReport menta.jaxws_asm.GetHistoricalReportResponse._return
+                at menta.jaxws_asm.GetHistoricalReportResponse
+menta.model.learner.AbstractAssociation does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.learner.AbstractAssociation
+                at private menta.model.learner.AbstractAssociation menta.jaxws_asm.AddAssociation.arg0
+                at menta.jaxws_asm.AddAssociation
+menta.model.conversation.ConfirmationResponse does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.conversation.ConfirmationResponse
+                at private menta.model.conversation.ConfirmationResponse menta.jaxws_asm.ConfirmSolution.arg1
+                at menta.jaxws_asm.ConfirmSolution
+menta.model.translator.EvolutionReport does not have a no-arg default constructor.
+        this problem is related to the following location:
+                at menta.model.translator.EvolutionReport
+                at private menta.model.translator.EvolutionReport menta.jaxws_asm.GetEvolutionReportResponse._return
+                at menta.jaxws_asm.GetEvolutionReportResponse
+

@@ -1,0 +1,5 @@
+#summary Ontology model for Menta 0.2.
+
+Data model to be implemented as OWL and persisted in the Storage. From the programming perspective all the entities are represented as [http://code.google.com/p/menta/wiki/Knowledge Knowledge] descendants.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/OWL.png

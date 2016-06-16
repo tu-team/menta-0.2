@@ -1,0 +1,17 @@
+#summary SolutionGenerator component specification for Menta 0.2.
+
+= Solution generator. =
+Is main component to generate the solution that satisfies the AcceptanceCriteria.
+Current implementation exploits the [http://cs.gmu.edu/~eclab/projects/ecj/ ecj] genetic algorithm and the SolutionChecker component as fitness function.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20solutiongenerator.png
+
+== Component diagram. ==
+SolutionChecker.
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component%20solutiongenerator.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/SolutionGenerator.apply.png
+
+Solution should be generated taking in account the Scope of used HowTo.

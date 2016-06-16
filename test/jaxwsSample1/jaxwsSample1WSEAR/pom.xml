@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>jaxwsSample1</artifactId>
+    <groupId>com.mycompany</groupId>
+    <version>1.0</version>
+  </parent>
+  <groupId>jaxwsSample1</groupId>
+  <artifactId>jaxwsSample1WSEAR</artifactId>
+  <packaging>ear</packaging>
+  <name>jaxwsSample1WSEAR WebService EAR Project</name>
+  <version>1.0</version>
+
+  <build>
+  <plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.1</version>
+        <configuration>
+          <source>1.5</source>
+          <target>1.5</target>
+        </configuration>
+      </plugin>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-ear-plugin</artifactId>
+      <version>2.4</version>
+      <configuration>
+        <generateApplicationXml>true</generateApplicationXml>
+        <!-- application.xml version (JEE1.5) -->
+	<version>5</version>
+        <modules>
+          <webModule>
+            <groupId>menta</groupId>
+            <artifactId>model</artifactId>
+            <contextRoot>/jaxwsSample1</contextRoot>
+          </webModule>
+        </modules>
+      </configuration>
+    </plugin>
+  </plugins>
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>menta</groupId>
+      <artifactId>model</artifactId>
+      <version>${menta.version}</version>
+      <type>war</type>
+    </dependency>
+  </dependencies>
+  <distributionManagement>
+     
+  </distributionManagement>
+</project>

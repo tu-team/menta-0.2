@@ -1,0 +1,69 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/conversation"
+        targetNamespace="http://www.menta.org/model/conversation"
+        xmlns:customer="http://www.menta.org/model/subscribercontroller"
+        xmlns:solutionchecker="http://www.menta.org/model/solutiongenerator/solutionchecker"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        jaxb:version="2.0">
+    <xs:annotation>
+        <xs:appinfo>
+            <jaxb:schemaBindings>
+                <jaxb:package name="menta.model.conversation"/>
+            </jaxb:schemaBindings>
+        </xs:appinfo>
+    </xs:annotation>
+
+    <xs:import namespace="http://www.menta.org/model/subscribercontroller" schemaLocation="subscribercontroller.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/solutiongenerator/solutionchecker"
+               schemaLocation="solutionchecker.xsd"/>
+
+    <xs:element name="aaa" type="ConversationAny"/>
+
+    <xs:complexType name="ConversationAny">
+        <xs:sequence>
+            <xs:element name="author" type="customer:Customer" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Conversation">
+        <xs:complexContent>
+            <xs:extension base="ConversationAny">
+                <xs:sequence>
+                    <xs:element name="conversationAct" type="ConversationAct" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="subscriber" type="customer:Customer" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ConversationAct">
+        <xs:complexContent>
+            <xs:extension base="ConversationAny">
+                <xs:sequence>
+                    <xs:element name="conversation" type="Conversation" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="dateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Response">
+        <xs:complexContent>
+            <xs:extension base="ConversationAct"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="StartGenerationResponse">
+        <xs:complexContent>
+            <xs:extension base="Response">
+                <xs:sequence>
+                    <xs:element name="requirementChangeSet" type="solutionchecker:RuleChangeSet" minOccurs="1"
+                                maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+</xs:schema>

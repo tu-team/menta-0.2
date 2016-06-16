@@ -1,0 +1,26 @@
+#summary ResponseAnalyser component specification for Menta 0.2.
+
+= ResponseAnalyser. =
+  * Creates conversation with requirements in form of HowTo-s.
+  * Updates requirements of the specified conversation.
+  * Stop conversation.
+
+== Interface diagram. ==
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20responseanalyser.png
+
+== Activity diagram. ==
+=== ResponseAnalyser.apply(conversationURI, response). ===
+Updates requirements of specified conversation.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/ResponseAnalyser.apply(communicationURI,%20response).png
+
+=== ResponseAnalyser.apply(response). ===
+Creates conversation with specified requirements.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/ResponseAnalyser.apply(response).png
+
+=== ResponseAnalyser.stop. ===
+Stop conversation.
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/ResponseAnalyser.stop.png

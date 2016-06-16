@@ -1,0 +1,55 @@
+<xs:schema
+        xmlns="http://www.menta.org/model"
+        targetNamespace="http://www.menta.org/model"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        >
+    <xs:complexType name="Knowledge">
+        <xs:sequence>
+            <xs:element name="uri" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="KnowledgeIndividual">
+        <xs:complexContent>
+            <xs:extension base="Knowledge">
+                <xs:sequence>
+                    <xs:element name="type" type="KnowledgeClass" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="property" type="KnowledgeIndividualProperty" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="KnowledgeClass">
+        <xs:complexContent>
+            <xs:extension base="Knowledge">
+                <xs:sequence>
+                    <xs:element name="subClass" type="KnowledgeClass" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="superClass" type="KnowledgeClass" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="property" type="KnowledgeClassProperty" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="individual" type="KnowledgeIndividual" minOccurs="0" maxOccurs="unbounded" />
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="KnowledgeIndividualProperty">
+        <xs:complexContent>
+            <xs:extension base="Knowledge">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="value" type="KnowledgeIndividual" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="KnowledgeClassProperty">
+        <xs:complexContent>
+            <xs:extension base="Knowledge">
+                <xs:sequence>
+                    <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="value" type="KnowledgeClass" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

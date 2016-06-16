@@ -1,0 +1,6 @@
+#summary #summary MentaController component specification for Menta 0.2.
+
+= Domain model. =
+
+== Concept diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Concept%20model.png

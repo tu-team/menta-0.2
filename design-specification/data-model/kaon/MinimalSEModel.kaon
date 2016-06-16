@@ -1,0 +1,394 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY kaon 'http://kaon.semanticweb.org/2001/11/kaon-lexical#'>
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-root" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-root.xml"?>
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-lexical" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-lexical.xml"?>
+
+<?model-attribute key="OIModel.version" value="127"?>
+
+<rdf:RDF xml:base="http://menta/ontologies/2010/1/MinimalSEModel"
+    xmlns:rdf="&rdf;"
+    xmlns:kaon="&kaon;"
+    xmlns:rdfs="&rdfs;">
+
+<rdfs:Class rdf:ID="Application">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="AuthenticationGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Button.Control">
+    <rdfs:subClassOf rdf:resource="#Control"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Class">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Command">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CommandParameter">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Connection">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Control">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Database">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="DatabaseStructureGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Field">
+    <rdfs:subClassOf rdf:resource="#MemberGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Form">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Login">
+    <rdfs:subClassOf rdf:resource="#AuthenticationGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="MemberGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Method">
+    <rdfs:subClassOf rdf:resource="#MemberGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="MethodParameter">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Panel.Control">
+    <rdfs:subClassOf rdf:resource="#Control"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Password">
+    <rdfs:subClassOf rdf:resource="#AuthenticationGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Property">
+    <rdfs:subClassOf rdf:resource="#MemberGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StoredProcedure">
+    <rdfs:subClassOf rdf:resource="#DatabaseStructureGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Table">
+    <rdfs:subClassOf rdf:resource="#DatabaseStructureGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="TableField">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="TextBox.Control">
+    <rdfs:subClassOf rdf:resource="#Control"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UI">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="User">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UserControl%3AControl">
+    <rdfs:subClassOf rdf:resource="#Control"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UserName">
+    <rdfs:subClassOf rdf:resource="#AuthenticationGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="View">
+    <rdfs:subClassOf rdf:resource="#DatabaseStructureGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="WebForm">
+    <rdfs:subClassOf rdf:resource="#Form"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="WindowForm">
+    <rdfs:subClassOf rdf:resource="#Form"/>
+</rdfs:Class>
+<rdf:Property rdf:ID="authenticate">
+    <rdfs:domain rdf:resource="#User"/>
+    <rdfs:range rdf:resource="#AuthenticationGroup"/>
+    <rdfs:range rdf:resource="#Login"/>
+    <rdfs:range rdf:resource="#Password"/>
+    <rdfs:range rdf:resource="#UserName"/>
+</rdf:Property>
+<rdf:Property rdf:ID="connectToDB">
+    <rdfs:domain rdf:resource="#Connection"/>
+    <rdfs:range rdf:resource="#Database"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasClasses">
+    <rdfs:domain rdf:resource="#Application"/>
+    <rdfs:range rdf:resource="#Class"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasCommandsToDB">
+    <rdfs:domain rdf:resource="#Application"/>
+    <rdfs:range rdf:resource="#Command"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasConnection">
+    <rdfs:domain rdf:resource="#Command"/>
+    <rdfs:range rdf:resource="#Connection"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasControls">
+    <rdfs:domain rdf:resource="#Form"/>
+    <rdfs:range rdf:resource="#Control"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFields">
+    <rdfs:domain rdf:resource="#Table"/>
+    <rdfs:range rdf:resource="#TableField"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasForm">
+    <rdfs:domain rdf:resource="#UI"/>
+    <rdfs:range rdf:resource="#Form"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasMembers">
+    <rdfs:domain rdf:resource="#Class"/>
+    <rdfs:range rdf:resource="#Field"/>
+    <rdfs:range rdf:resource="#MemberGroup"/>
+    <rdfs:range rdf:resource="#Method"/>
+    <rdfs:range rdf:resource="#Property"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasMethodParameters">
+    <rdfs:domain rdf:resource="#Method"/>
+    <rdfs:range rdf:resource="#MethodParameter"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasParameters">
+    <rdfs:domain rdf:resource="#Command"/>
+    <rdfs:range rdf:resource="#CommandParameter"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasStructure">
+    <rdfs:domain rdf:resource="#Database"/>
+    <rdfs:range rdf:resource="#DatabaseStructureGroup"/>
+    <rdfs:range rdf:resource="#StoredProcedure"/>
+    <rdfs:range rdf:resource="#Table"/>
+    <rdfs:range rdf:resource="#View"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasUI">
+    <rdfs:domain rdf:resource="#Application"/>
+    <rdfs:range rdf:resource="#UI"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasUser">
+    <rdfs:domain rdf:resource="#Application"/>
+    <rdfs:range rdf:resource="#User"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264664788852-253772074"
+    kaon:value="User">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#User"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264664999277-238642004"
+    kaon:value="Class">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Class"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264668435805-1481454806"
+    kaon:value="authenticate">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#authenticate"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264668513306-1414374620"
+    kaon:value="AuthenticationGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#AuthenticationGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264668988656-1137667366"
+    kaon:value="Password">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Password"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264669006062-1214155368"
+    kaon:value="UserName">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UserName"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264669017422-633677860"
+    kaon:value="Login">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Login"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264669703290-765855736"
+    kaon:value="Database">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Database"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264669845839-92383866"
+    kaon:value="hasStructure">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasStructure"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264670006731-1904336632"
+    kaon:value="DatabaseStructureGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DatabaseStructureGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264670050466-1950729635"
+    kaon:value="Table">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Table"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264670244500-649448559"
+    kaon:value="View">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#View"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264670303485-27548007"
+    kaon:value="StoredProcedure">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StoredProcedure"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264678786906-1398800754"
+    kaon:value="UI">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UI"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264678873611-928907163"
+    kaon:value="hasForm">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasForm"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679003472-1103105545"
+    kaon:value="hasMembers">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasMembers"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679018206-1798677626"
+    kaon:value="MemberGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#MemberGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679056238-637858867"
+    kaon:value="Field">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Field"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679085941-235638384"
+    kaon:value="Method">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Method"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679097082-400109969"
+    kaon:value="Property">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Property"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679238990-1976892731"
+    kaon:value="Form">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Form"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679316054-285942112"
+    kaon:value="WebForm.Form">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#WebForm"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679428993-480405039"
+    kaon:value="WindowsForm.Form">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#WindowForm"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679470431-1164027750"
+    kaon:value="hasControls">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasControls"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679574057-256343100"
+    kaon:value="Control">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Control"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679589057-1247758617"
+    kaon:value="Button.Control">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Button.Control"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679629823-1704173681"
+    kaon:value="TextBox.Control">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#TextBox.Control"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264679710199-844771060"
+    kaon:value="Panel.Control">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Panel.Control"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264690911780-69385551"
+    kaon:value="UserControl.Control">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UserControl%3AControl"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264750503781-2134598033"
+    kaon:value="hasMethodParameters">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasMethodParameters"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264750523404-1546709097"
+    kaon:value="MethodParameter">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#MethodParameter"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264750627849-980211220"
+    kaon:value="Command">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Command"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264750672579-1066586011"
+    kaon:value="hasConnection">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasConnection"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264750687594-1123604168"
+    kaon:value="Connection">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Connection"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264750766154-1231745595"
+    kaon:value="CommandParameter">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CommandParameter"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264751237132-1674695944"
+    kaon:value="hasFields">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFields"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264751252648-402363503"
+    kaon:value="TableField">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#TableField"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265010112074-2129367784"
+    kaon:value="Application">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Application"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265027665100-1631070223"
+    kaon:value="hasUsers">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasUser"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265027958465-84214121"
+    kaon:value="hasParameters">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasParameters"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265028072186-749862831"
+    kaon:value="hasClasses">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasClasses"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265028323784-2008230201"
+    kaon:value="hasUI">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasUI"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265028417958-1294075631"
+    kaon:value="hasCommandsToDB">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasCommandsToDB"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265028508022-1627241818"
+    kaon:value="connectToDB">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#connectToDB"/>
+</kaon:Label>
+
+</rdf:RDF>

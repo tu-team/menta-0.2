@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>menta</groupId>
+    <artifactId>menta</artifactId>
+    <version>${menta.version}</version>
+    <name>Menta main component.</name>
+    <packaging>pom</packaging>
+    <inceptionYear>2011</inceptionYear>
+
+
+    <properties>
+        <!-- dependency versions -->
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+        <encoding>UTF-8</encoding>
+        <scala.version>2.8.1</scala.version>
+        <scala.plugin.version>2.9.1</scala.plugin.version>
+        <junit.version>4.8.1</junit.version>
+        <specs.version>1.6.6</specs.version>
+        <scalatest.version>1.2</scalatest.version>
+        <slf4j.version>1.5.8</slf4j.version>
+        <ecj.version>19</ecj.version>
+        <!-- menta versions -->
+        <menta.version>0.2</menta.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.15</version>
+            <type>jar</type>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <modules>
+        <module>lib</module>
+        <module>applicator</module>
+        <module>communicator</module>
+        <module>communicator.requestbuilder</module>
+        <module>communicator.responseanalyser</module>
+        <module>communicator.eventbuilder</module>
+        <module>controller</module>
+        <module>knowledgebaseserver</module>
+        <module>learner</module>
+        <module>learner.analogydetector</module>
+        <module>learner.trainer</module>
+        <module>learner.trainer.associator</module>
+        <module>learner.trainer.generaliser</module>
+        <module>learner.trainer.specificator</module>
+        <module>model</module>
+        <module>reasoneradapter</module>
+        <module>solutiongenerator</module>
+        <module>solutiongenerator.solutionchecker</module>
+        <module>solutiongenerator.solutionbuilder</module>
+        <module>subscribercontroller</module>
+        <module>translator</module>
+        <module>reasoner</module>
+        <module>controller.deploy</module>
+        <module>utilities</module>
+    </modules>
+</project>

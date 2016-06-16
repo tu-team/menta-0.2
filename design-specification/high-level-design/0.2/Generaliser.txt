@@ -1,0 +1,10 @@
+#summary Generaliser component specification for Menta 0.2.
+
+= Generaliser. =
+Replaces common parts of [http://code.google.com/p/menta/wiki/HowTo HowTos] with variables.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20generaliser.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Generaliser.apply.png

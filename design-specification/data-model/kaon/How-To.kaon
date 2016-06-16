@@ -1,0 +1,217 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY kaon 'http://kaon.semanticweb.org/2001/11/kaon-lexical#'>
+    <!ENTITY a 'http://menta/ontologies#'>
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-root" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-root.xml"?>
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-lexical" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-lexical.xml"?>
+
+<?model-attribute key="OIModel.version" value="57"?>
+
+<rdf:RDF xml:base="http://menta/ontologies"
+    xmlns:rdf="&rdf;"
+    xmlns:kaon="&kaon;"
+    xmlns:a="&a;"
+    xmlns:rdfs="&rdfs;">
+
+<rdfs:Class rdf:ID="HowTo.Action.Add">
+    <rdfs:subClassOf rdf:resource="#HowTo.ActionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowTo.Action.Remove">
+    <rdfs:subClassOf rdf:resource="#HowTo.ActionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowTo.ActionGroup">
+    <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowToAction.Add.AddApplication">
+    <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowToAction.Add.AddProperty">
+    <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+</rdfs:Class>
+<rdf:Description rdf:ID="HowToAction.Add.AddProperty.PatronimicField">
+    <rdf:type rdf:resource="#HowToAction.Add.AddProperty"/>
+</rdf:Description>
+<rdfs:Class rdf:ID="HowToAction.Add.Class">
+    <rdfs:subClassOf rdf:resource="#HowToAction.Add.Module"/>
+</rdfs:Class>
+<rdf:Description rdf:ID="HowToAction.Add.Class.Customer">
+    <rdf:type rdf:resource="#HowToAction.Add.Class"/>
+</rdf:Description>
+<rdfs:Class rdf:ID="HowToAction.Add.Method">
+    <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowToAction.Add.Module">
+    <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowToAction.Add.Project">
+    <rdfs:subClassOf rdf:resource="#HowTo.Action.Add"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="HowToGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Parameter.Object">
+    <rdfs:subClassOf rdf:resource="#ParametersGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Parameter.String">
+    <rdfs:subClassOf rdf:resource="#ParametersGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Parameter.String.Name">
+    <rdfs:subClassOf rdf:resource="#Parameter.String"/>
+</rdfs:Class>
+<rdf:Description rdf:ID="Parameter.String.Name.Patronimic">
+    <rdf:type rdf:resource="#Parameter.String.Name"/>
+</rdf:Description>
+<rdfs:Class rdf:ID="Parameter.String.Type">
+    <rdfs:subClassOf rdf:resource="#Parameter.String"/>
+</rdfs:Class>
+<rdf:Description rdf:ID="Parameter.String.Type.String">
+    <rdf:type rdf:resource="#Parameter.String"/>
+</rdf:Description>
+<rdfs:Class rdf:ID="ParametersGroup">
+    <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+</rdfs:Class>
+<rdf:Property rdf:ID="howToAction.hasParameter">
+    <rdfs:domain rdf:resource="#HowTo.ActionGroup"/>
+    <rdfs:range rdf:resource="#Parameter.Object"/>
+</rdf:Property>
+<rdf:Property rdf:ID="howToAction.hasParameter.Action2Parameter.Instance"/>
+<rdf:Property rdf:ID="howToAction.hasParameter.destination">
+    <rdfs:domain rdf:resource="#HowTo.Action.Add"/>
+    <rdfs:range rdf:resource="#Parameter.Object"/>
+    <rdfs:subPropertyOf rdf:resource="#howToAction.hasParameter"/>
+</rdf:Property>
+<rdf:Property rdf:ID="howToAction.hasParameter.object">
+    <rdfs:domain rdf:resource="#HowTo.Action.Add"/>
+    <rdfs:range rdf:resource="#Parameter.Object"/>
+    <rdfs:subPropertyOf rdf:resource="#howToAction.hasParameter"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1285814250821-1920880584"
+    kaon:value="HowToGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814293449-636458508"
+    kaon:value="HowTo.Action">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowTo.ActionGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814319364-333958392"
+    kaon:value="HowTo.Action.Add">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowTo.Action.Add"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814334039-412014085"
+    kaon:value="HowTo.Action.Remove">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowTo.Action.Remove"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814446498-453487330"
+    kaon:value="HowToAction.Add.Application">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.AddApplication"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814468347-2010545719"
+    kaon:value="HowToAction.Add.Project">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.Project"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814501999-104081659"
+    kaon:value="HowToAction.Add.Module">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.Module"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814514286-279443198"
+    kaon:value="HowToAction.Add.Class">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.Class"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814550878-1683852299"
+    kaon:value="HowToAction.Add.AddProperty">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.AddProperty"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285814565821-389433922"
+    kaon:value="HowToAction.Add.Method">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.Method"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1285814664466-1373557190">
+    <rdfs:domain rdf:resource="#HowToAction.Add.AddProperty"/>
+    <rdfs:range rdf:resource="#HowToAction.Add.Module"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1285814664466-207953623"
+    kaon:value="howToAction.appliedTo">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1285814664466-1373557190"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285824498239-2051520128"
+    kaon:value="ParametersGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ParametersGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285824521989-1713582827"
+    kaon:value="Parameter.String">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Parameter.String"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285824537630-1690790370"
+    kaon:value="Parameter.String.Name">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Parameter.String.Name"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285824618851-219437686"
+    kaon:value="Parameter.String.Type">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Parameter.String.Type"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285824695744-771582808"
+    kaon:value="howToAction.hasParameter">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#howToAction.hasParameter"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285825206788-148164240"
+    kaon:value="Parameter.String.Name.Patronimic">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Parameter.String.Name.Patronimic"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285825235258-2143692693"
+    kaon:value="Parameter.String.Type.String">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Parameter.String.Type.String"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285825267508-1998862507"
+    kaon:value="HowToAction.Add.AddProperty.PatronimicField">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.AddProperty.PatronimicField"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285825362370-321630675"
+    kaon:value="howToAction.hasParameter.Action2Parameter.Instance">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#howToAction.hasParameter.Action2Parameter.Instance"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1285825475545-350563689"
+    kaon:value="HowToAction.Add.Class.Customer">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#HowToAction.Add.Class.Customer"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1286200679259-635091793"
+    kaon:value="Parameter.Object">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Parameter.Object"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1286200841011-790373265"
+    kaon:value="howToAction.hasParameter.destination">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#howToAction.hasParameter.destination"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1286200862168-1781402299"
+    kaon:value="howToAction.hasParameter.object">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#howToAction.hasParameter.object"/>
+</kaon:Label>
+
+</rdf:RDF>

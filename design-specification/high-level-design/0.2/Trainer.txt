@@ -1,0 +1,19 @@
+#summary Trainer component specification for Menta 0.2.
+
+= Trainer. =
+Is workflow component that invokes Associator, Specificator, Generaliser sequentially.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20trainer.png
+
+== Component diagram. ==
+
+Components:
+  # [http://code.google.com/p/menta/wiki/Associator Associator].
+  # [http://code.google.com/p/menta/wiki/Generaliser Generaliser].
+  # [http://code.google.com/p/menta/wiki/Specificator Specificator].
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component%20trainer.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Trainer.apply.png

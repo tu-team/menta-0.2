@@ -1,0 +1,56 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/learner"
+        targetNamespace="http://www.menta.org/model/learner"
+        xmlns:solutionchecker="http://www.menta.org/model/solutiongenerator/solutionchecker"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:howTo="http://www.menta.org/model/howTo"
+        >
+    <xs:import namespace="http://www.menta.org/model/solutiongenerator/solutionchecker"
+               schemaLocation="solutionchecker.xsd"/>
+    <xs:import namespace="http://www.menta.org/model/howTo" schemaLocation="howTo.xsd"/>
+
+    <xs:complexType name="AbstractAssociation">
+        <xs:sequence>
+            <xs:element name="superAssociation" type="AbstractAssociation" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="rule" type="solutionchecker:Rule" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="PartialAssociation">
+        <xs:complexContent>
+            <xs:extension base="AbstractAssociation">
+                <xs:sequence>
+                    <xs:element name="howTo" type="howTo:HowTo" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="solution" type="howTo:Solution" minOccurs="1" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="EventSequence">
+        <xs:sequence>
+            <xs:element name="firstElement" type="EventSequenceElement" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EventSequenceElement">
+        <xs:sequence>
+            <xs:element name="nextElement" type="EventSequenceElement" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="value" type="Event" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Event">
+        <xs:sequence>
+            <xs:element name="dateTime" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="association" type="AbstractAssociation" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="History">
+        <xs:sequence>
+            <xs:element name="howTo-s" type="EventSequence" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

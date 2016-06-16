@@ -1,0 +1,16 @@
+1. global variables
+2. Differentatae math modules: Concept, Stamp, BudgetFunctions, ComositionalRules,
+MatchingRules, RuleTables, StructuralRules, SyllogisticRules, TruthFunctions, UtilityFunctions
+
+global timer process each time
+
+Concept Current
+We have a main static class Memory, which save everything and process all workflows. Many class
+depends on memory
+
+
+Concept refactor
+We can differentate all math modules. To work together and use workflow we can use Bus pattern
+The best to produce a common plugin interface, but this hard work, because of modules' different
+One suggest is to use call somthething like this Call("MethodName", prmsArray). This to make 
+workflow script availible

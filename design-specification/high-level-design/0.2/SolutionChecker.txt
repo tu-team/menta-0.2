@@ -1,0 +1,10 @@
+#summary SolutionChecker component specification for Menta 0.2.
+
+= SolutionChecker. =
+Is used in SolutionGenerator to calculate the probability that generated Solution fits the AcceptanceCriteria.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20sotionchecker.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/SolutionChecker.apply.png

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+		xmlns="http://www.menta.org/WSSchema"
+        targetNamespace="http://www.menta.org/WSSchema"
+        xmlns:tns="http://www.menta.org/WSSchema"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="MentaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="in" type="HowTo"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MentaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="StringArgument" type="xs:string"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="HowTo">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="classifier" type="Classifier" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ActionClass">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="superClass" type="ActionClass" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="parameter" type="HowTo" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="mandatoryParameters" type="Cardinality" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AddClass">
+        <xs:complexContent>
+            <xs:extension base="ActionClass"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RemoveClass">
+        <xs:complexContent>
+            <xs:extension base="ActionClass"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ActionIndividual">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="actionClass" type="ActionClass" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="parameter" type="HowTo" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="destination" type="ActionIndividual" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="AddIndividual">
+        <xs:complexContent>
+            <xs:extension base="ActionIndividual">
+                <xs:sequence>
+                    <xs:element name="actionClass1" type="AddClass"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="RemoveIndividual">
+        <xs:complexContent>
+            <xs:extension base="ActionIndividual">
+                <xs:sequence>
+                    <xs:element name="actionClass1" type="AddClass"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Cardinality">
+        <xs:all>
+            <xs:element name="cardinality" minOccurs="1" maxOccurs="1" type="xs:integer"/>
+            <xs:element name="set" type="HowTo"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="Classifier">
+        <xs:sequence>
+            <xs:element name="superClassifiers" type="Cardinality" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="subClassifiers" type="Cardinality" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Terminal types -->
+    <xs:complexType name="StringLiteral">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumberLiteral">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:float"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Reference">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="HowTo"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

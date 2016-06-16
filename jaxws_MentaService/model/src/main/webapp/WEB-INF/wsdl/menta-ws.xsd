@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+        xmlns="http://www.menta.org/model"
+        targetNamespace="http://www.menta.org/model"
+        xmlns:conversation="http://www.menta.org/model/conversation"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import namespace="http://www.menta.org/model/conversation" schemaLocation="conversation.xsd"/>
+
+    <xs:element name="MentaRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="in" type="conversation:StartGenerationResponse"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MentaRequestAdd">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="in" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="MentaResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="StringArgument" type="xs:string"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

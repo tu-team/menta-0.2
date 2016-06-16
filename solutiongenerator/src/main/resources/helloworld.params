@@ -1,0 +1,44 @@
+verbosity    = 0
+
+breedthreads = 1
+evalthreads  = 1
+seed.0       = 4357
+
+state  = ec.simple.SimpleEvolutionState
+
+pop    = ec.Population
+init   = ec.simple.SimpleInitializer
+finish = ec.simple.SimpleFinisher
+breed  = ec.simple.SimpleBreeder
+eval   = ec.simple.SimpleEvaluator
+stat   = ec.simple.SimpleStatistics
+exch   = ec.simple.SimpleExchanger
+
+generations             = 100
+quit-on-run-complete    = true
+checkpoint              = false
+prefix                  = ec
+checkpoint-modulo       = 1
+
+stat.file       = $out.stat
+
+pop.subpops     = 1
+pop.subpop.0    = ec.Subpopulation
+
+pop.subpop.0.size                  = 100
+pop.subpop.0.duplicate-retries     = 0
+pop.subpop.0.species               = ec.vector.GeneVectorSpecies
+pop.subpop.0.species.ind           = ec.vector.GeneVectorIndividual
+pop.subpop.0.species.fitness       = ec.simple.SimpleFitness
+
+# Place on one line
+pop.subpop.0.species.gene  = simple.CharVectorGene
+# Place on one line
+pop.subpop.0.species.gene.alphabet = abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY Z,!
+#
+# Hello, world! is 13 characters long
+#
+pop.subpop.0.species.genome-size    = 13
+pop.subpop.0.species.crossover-type = two
+pop.subpop.0.species.crossover-prob = 1.0
+pop.subpop.0.species.mutation-prob  = 0.05

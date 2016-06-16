@@ -1,0 +1,20 @@
+#summary Translator component specification for Menta 0.2.
+
+= Translator. =
+  * Translates the inbound [http://code.google.com/p/menta/wiki/Knowledge Knowledge] in descendants of [http://code.google.com/p/menta/wiki/DomainModel Report].
+  * Translates file resources specified by sourceURI in HowTo-s.
+  * Creates patch from specification Solution.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20translator.png
+
+== Activity diagrams . ==
+
+=== Translator.apply(Knowledge). ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Translator.apply(Knowledge).png
+
+=== Translator.apply(sourceURI). ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Translator.apply(sourceURI).png
+
+=== Translator.createPatch. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Translator.createPatch.png

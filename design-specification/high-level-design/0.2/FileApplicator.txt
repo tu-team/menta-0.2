@@ -1,0 +1,10 @@
+#summary FileApplicator component specification for Menta 0.2.
+
+= FileApplicator. =
+Creates the patch and applies it over the file representation of application.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20fileapplicator.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/FileApplicator.apply.png

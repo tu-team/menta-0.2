@@ -1,0 +1,10 @@
+#summary Specificator component specification for Menta 0.2.
+
+= Specificator. =
+Associates parts of the Solution with parts of the [http://code.google.com/p/menta/wiki/AcceptanceCriteria AcceptanceCriteria].
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20specificator.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Specificator.apply.png

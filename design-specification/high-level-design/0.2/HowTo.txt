@@ -1,0 +1,36 @@
+#summary HowTo model specification for Menta 0.2.
+
+= HowTo =
+The main idea is using *how-to* for describing architecture in knowledge base. *How-to* is scenario with changes for certain subject, let's name it *vector*. Therefore each application in knowledge base can be described by these systems of vectors.
+
+HowTo is main concept of the domain model. HowTo is the function that modifies the current architecture.
+Examples:
+  # Add class
+  # Add method
+  # Add name
+  # Add action of method
+  # ...
+Please see [http://code.google.com/p/menta/wiki/OntologyModel Ontology model HowToGroup] for further examples.
+
+== Concept diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Concept%20howto.png
+
+=== ActionClass. ===
+Is the template to create actual HowTo.
+Properties:
+  * superClass = is parent class for the hierarchy purposes.
+  * parameters = is the List of possible inbound parameters.
+  * mandatoryParameters = is Set of the parameters that must be specified at least one.
+
+=== ActionInstance. ===
+Is actual HowTo, for example the acutal definition of the Class in Package.
+Properties:
+  * actionClass = is reference to the ActionClass.
+  * parameters = is the List of the actual values.
+
+== OWL mapping. ==
+As HowTo classes (ActionClass-es) are dynamic, could be(should be) added in the system by the Expert(user) we have to store them as instances of the ActionClass and HowTo individuals (ActionInstance-s) as instances of ActionInstance.
+As for the rest [http://code.google.com/p/menta/wiki/DomainModel model] individuals are represented as intstances of proper classes of the Domain Model.
+
+== Examples in meta-language. ==
+[http://menta.googlecode.com/hg/model/src/main/scala/menta/model/howto/examples.txt Please see examples of HowTo definitions and invocations in menta-language]

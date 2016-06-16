@@ -1,0 +1,19 @@
+# HowTo-s invocations:
+AddIndividual(
+ actionClass = AddImplication
+  parameters = [
+   AddInheritance(
+    parameters = [
+     AddVariable(AddName("module")),
+     StringLiteral("addField")
+    ]
+   ),
+   AddInheritance(
+    parameters = [
+     StringLiteral("Self"),
+     StringLiteral("Ok")
+    ]
+   )
+  ]
+ )
+)

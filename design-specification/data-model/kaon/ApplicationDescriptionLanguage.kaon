@@ -1,0 +1,1649 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+    <!ENTITY kaon 'http://kaon.semanticweb.org/2001/11/kaon-lexical#'>
+    <!ENTITY a 'http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#'>
+    <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+]>
+
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-root" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-root.xml"?>
+<?include-rdf logicalURI="http://kaon.semanticweb.org/2001/11/kaon-lexical" physicalURI="jar:file:/C:/kaon/lib/kaonapi.jar!/edu/unika/aifb/kaon/api/res/kaon-lexical.xml"?>
+
+<?model-attribute key="OIModel.version" value="475"?>
+
+<rdf:RDF xml:base="http://menta/ontologies/2010/01/ApplicationDescriptionLanguage"
+    xmlns:rdf="&rdf;"
+    xmlns:kaon="&kaon;"
+    xmlns:a="&a;"
+    xmlns:rdfs="&rdfs;">
+
+<rdfs:Class rdf:ID="Action.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Address.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Application">
+    <rdfs:subClassOf rdf:resource="#ApplicationGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ApplicationGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Assignment.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Attribute.UMLClass">
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Branch.SilhouetteLoop.Atom.Dragon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="BranchName.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Case.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Choise.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Class.Scala.AtomSequence.Expression">
+    <rdfs:subClassOf rdf:resource="#OperandSequence.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Class.Scala.Element.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Element.OperandSequence.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Class.Scala.Expression">
+    <rdfs:subClassOf rdf:resource="#Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Class.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdf:Property rdf:ID="ClassLevel.Relationships">
+    <rdfs:subPropertyOf rdf:resource="#relationships.UMLClass"/>
+</rdf:Property>
+<rdfs:Class rdf:ID="Classifier.Scope">
+    <rdfs:subClassOf rdf:resource="#Scope.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Comment.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CompoundAtomsGroup">
+    <rdfs:subClassOf rdf:resource="#DragonAtomsGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Condition">
+    <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Constant.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Simple.Atoms.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="CycleLoop.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Def.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Default.Scala.Operator.Compound.Atoms">
+    <rdfs:subClassOf rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Directory">
+    <rdfs:subClassOf rdf:resource="#File"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="DragonAtomsGroup">
+    <rdfs:subClassOf rdf:resource="#DragonGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="DragonGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Element.OperandSequence.Expression">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Else.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Empty.Atom.Group">
+    <rdfs:subClassOf rdf:resource="#CompoundAtomsGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="End.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="EndBlock.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Expression">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ExpressionGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="File">
+    <rdfs:subClassOf rdf:resource="#FileGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="FileGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="For.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ForComprehensionStart.Atom.Scala.Dragon">
+    <rdfs:subClassOf rdf:resource="#ForLoopStart.Icon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ForLoop.Atom">
+    <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ForLoopEnd.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ForLoopStart.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="FormalParameter.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Functional.Simple.Atoms">
+    <rdfs:subClassOf rdf:resource="#SimpleAtomsGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Header.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Identifier.Simple.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Simple.Atoms.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="If.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Import.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Input.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Insert.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Instance.Scope">
+    <rdfs:subClassOf rdf:resource="#Scope.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Item.Sequence">
+    <rdfs:subClassOf rdf:resource="#SequenceGroup.Dragon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Left.Comment.Icon">
+    <rdfs:subClassOf rdf:resource="#Comment.Icon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="LeftBracket.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Logical.Expression">
+    <rdfs:subClassOf rdf:resource="#Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Match.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="MethodInvokation.Compound">
+    <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="MethodSignature.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="New.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Numeric.LiteralConstant.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Constant.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Object.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operand.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="OperandSequence.Expression">
+    <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Operator.Simple.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Output.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Package.UMLPackage">
+    <rdfs:subClassOf rdf:resource="#UMLPackage"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Package.Visibility">
+    <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ParallelProcess.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Pause.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Peroiod.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Private.Scala.Expression">
+    <rdfs:subClassOf rdf:resource="#Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Private.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Private.Visibility">
+    <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="ProgrammingLanguageGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Project">
+    <rdfs:subClassOf rdf:resource="#ApplicationGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Protected.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Protected.Visibility">
+    <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Public.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Public.Visibility">
+    <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Question.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Right.Comment.Icon">
+    <rdfs:subClassOf rdf:resource="#Comment.Icon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="RightBracket.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="RightSquareBracket.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Attribute.UMLClass">
+    <rdfs:subClassOf rdf:resource="#Attribute.UMLClass"/>
+    <rdfs:subClassOf rdf:resource="#Scope.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Class.UMLClass">
+    <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Identifier.Simple.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Identifier.Simple.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Method.UMLClass">
+    <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+    <rdfs:subClassOf rdf:resource="#UML.Method"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Operator.Simple.Atom.Expression"/>
+    <rdfs:subClassOf rdf:resource="#Scala.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Package.UMLPackage">
+    <rdfs:subClassOf rdf:resource="#Package.UMLPackage"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Type.UMLClass">
+    <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+    <rdfs:subClassOf rdf:resource="#Type.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.UMLClass">
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scala.Visibility.UMLClass">
+    <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+    <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Scope.UMLClass">
+    <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Sequence.Dragon">
+    <rdfs:subClassOf rdf:resource="#SequenceGroup.Dragon"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SequenceGroup.Dragon">
+    <rdfs:subClassOf rdf:resource="#DragonGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Shelf.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SilhouetteLoop.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Simple.Atoms.Expression">
+    <rdfs:subClassOf rdf:resource="#Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SimpleAtomsGroup">
+    <rdfs:subClassOf rdf:resource="#DragonAtomsGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SimpleLoop.Atom">
+    <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SquareBracket.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StartBlock.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="StartTimer.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="String.Constant.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Constant.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Switch.Atom">
+    <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="SwitchingLoop.Atom">
+    <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Throw.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="TimerSynchronizer.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Trait.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Type.UMLClass">
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UML.Method">
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UMLClass">
+    <rdfs:subClassOf rdf:resource="#UMLGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UMLClass.UMLClass">
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UMLGroup">
+    <rdfs:subClassOf rdf:resource="&kaon;Root"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="UMLPackage">
+    <rdfs:subClassOf rdf:resource="#UMLGroup"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Val.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Var.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Variant.Icon">
+    <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Visibility.Scala.Element.Atom.Expressien">
+    <rdfs:subClassOf rdf:resource="#Element.OperandSequence.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Visibility.Scala.Operator.Compound.Atoms">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Visibility.UMLClass">
+    <rdfs:subClassOf rdf:resource="#UMLClass"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="While.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Yield.Scala.Operator.Compound.Atom.Expression">
+    <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdfs:Class>
+<rdf:Property rdf:ID="aggregate.Relatonship">
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:subPropertyOf rdf:resource="#instanceLevel.Relationships"/>
+</rdf:Property>
+<rdf:Property rdf:ID="associates.Relationship">
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:subPropertyOf rdf:resource="#instanceLevel.Relationships"/>
+</rdf:Property>
+<rdf:Description rdf:ID="class.ClassDeclaration.Operand.Compound.Atom.Expression">
+    <rdf:type rdf:resource="#Operand.Compound.Atom.Expression"/>
+</rdf:Description>
+<rdf:Description rdf:ID="class.classDeclaration.Element.Operand.Expression">
+    <rdf:type rdf:resource="#Element.OperandSequence.Expression"/>
+</rdf:Description>
+<a:Expression rdf:ID="class.classDeclaration.Expression"/>
+<a:Expression rdf:ID="classDeclaration.Scala.Expression">
+    <a:i-1263593625722-1704396906 rdf:resource="#classDeclaration.Scala.OperandSequence"/>
+</a:Expression>
+<rdf:Description rdf:ID="classDeclaration.Scala.OperandSequence">
+    <a:i-1263593516912-1734263549 rdf:resource="#class.classDeclaration.Element.Operand.Expression"/>
+    <rdf:type rdf:resource="#OperandSequence.Expression"/>
+</rdf:Description>
+<rdf:Property rdf:ID="compose.Relationship">
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:subPropertyOf rdf:resource="#instanceLevel.Relationships"/>
+</rdf:Property>
+<rdf:Description rdf:ID="firstClassName.Scala.Identifier.Simple.Atom.Expression">
+    <rdf:type rdf:resource="#Scala.Identifier.Simple.Atom.Expression"/>
+</rdf:Description>
+<rdf:Property rdf:ID="generalize.Relationship">
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:subPropertyOf rdf:resource="#ClassLevel.Relationships"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasAtom">
+    <rdfs:domain rdf:resource="#Item.Sequence"/>
+    <rdfs:range rdf:resource="#DragonAtomsGroup"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasAttribute.UMLClass">
+    <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:range rdf:resource="#Attribute.UMLClass"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasClass.UMLClass">
+    <rdfs:domain rdf:resource="#Type.UMLClass"/>
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasFirst.Sequence">
+    <rdfs:domain rdf:resource="#Sequence.Dragon"/>
+    <rdfs:range rdf:resource="#Item.Sequence"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasLast.Sequence">
+    <rdfs:domain rdf:resource="#Sequence.Dragon"/>
+    <rdfs:range rdf:resource="#Item.Sequence"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasMethod">
+    <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:range rdf:resource="#UML.Method"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasNext.Sequence">
+    <rdfs:domain rdf:resource="#Item.Sequence"/>
+    <rdfs:range rdf:resource="#Item.Sequence"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasSequence.Dragon">
+    <rdfs:domain rdf:resource="#UML.Method"/>
+    <rdfs:range rdf:resource="#Sequence.Dragon"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasType.UMLClass">
+    <rdfs:domain rdf:resource="#Attribute.UMLClass"/>
+    <rdfs:range rdf:resource="#Type.UMLClass"/>
+</rdf:Property>
+<rdf:Property rdf:ID="hasVisibility.UMLClass">
+    <rdfs:domain rdf:resource="#Attribute.UMLClass"/>
+    <rdfs:domain rdf:resource="#UML.Method"/>
+    <rdfs:range rdf:resource="#Visibility.UMLClass"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263248104551-472699006"
+    kaon:value="DragonAtoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DragonAtomsGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263248168766-1985846659"
+    kaon:value="Simple.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SimpleAtomsGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263248180652-435759326"
+    kaon:value="Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CompoundAtomsGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263248208687-177376904"
+    kaon:value="Functional.Simple.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Functional.Simple.Atoms"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263330989233-2119639972"
+    kaon:value="Empty.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Empty.Atom.Group"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331048374-1530604378"
+    kaon:value="Condition.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Condition"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331069430-1182700103"
+    kaon:value="SimpleLoop.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SimpleLoop.Atom"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331088114-1709281073"
+    kaon:value="Switch.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Switch.Atom"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331124082-1686179816"
+    kaon:value="SwitchingLoop.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SwitchingLoop.Atom"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331143513-1485795093"
+    kaon:value="ForLoop.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ForLoop.Atom"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331270740-703200500"
+    kaon:value="DragonGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#DragonGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331306621-713646318"
+    kaon:value="Header.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Header.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331315826-503456849"
+    kaon:value="End.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#End.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331369666-1360593089"
+    kaon:value="Action.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Action.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331432767-1063270955"
+    kaon:value="Question.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Question.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331448443-686065914"
+    kaon:value="Choise.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Choise.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331459967-2084388001"
+    kaon:value="Variant.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Variant.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331473687-1174007950"
+    kaon:value="BranchName.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#BranchName.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331485589-175179598"
+    kaon:value="Address.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Address.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331497568-509095214"
+    kaon:value="Insert.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Insert.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331513529-1019192524"
+    kaon:value="Shelf.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Shelf.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331536562-486904359"
+    kaon:value="FormalParameter.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#FormalParameter.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331556056-309155201"
+    kaon:value="ForLoopStart.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ForLoopStart.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331573737-1118653377"
+    kaon:value="ForLoopEnd.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ForLoopEnd.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331666868-170217577"
+    kaon:value="Output.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Output.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331677270-8118445"
+    kaon:value="Input.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Input.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331688326-850101112"
+    kaon:value="Pause.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Pause.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331715067-12347677"
+    kaon:value="Peroiod.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Peroiod.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331733387-347015808"
+    kaon:value="StartTimer.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StartTimer.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331765200-588797899"
+    kaon:value="TimerSynchronizer.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#TimerSynchronizer.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331795666-233597984"
+    kaon:value="ParallelProcess.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ParallelProcess.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331814965-719109816"
+    kaon:value="Comment.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Comment.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331831870-410820515"
+    kaon:value="Right.Comment.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Right.Comment.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331852067-1836652924"
+    kaon:value="Left.Comment.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Left.Comment.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331945595-1869350557"
+    kaon:value="CycleLoop.Icon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#CycleLoop.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263331999168-1627325926"
+    kaon:value="SilhouetteLoop.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SilhouetteLoop.Icon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263410587910-1929364174"
+    kaon:value="UMLGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UMLGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263410601074-1833426684"
+    kaon:value="UMLClassGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263410636031-737595468"
+    kaon:value="UMLPackage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UMLPackage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263411386212-209496369"
+    kaon:value="Visibility.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Visibility.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263440763206-1993758148"
+    kaon:value="Scope.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scope.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263524856103-1191427769"
+    kaon:value="Package.Visibility">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Package.Visibility"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525105609-262507016"
+    kaon:value="Private.Visibility">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Private.Visibility"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525123034-2074304067"
+    kaon:value="Protected.Visibility">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Protected.Visibility"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525138900-1666412856"
+    kaon:value="Public.Visibility">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Public.Visibility"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525193874-1530689160"
+    kaon:value="Classifier.Scope">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Classifier.Scope"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525212413-1547451235"
+    kaon:value="Instance.Scope">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Instance.Scope"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525388817-1587827886"
+    kaon:value="Class.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UMLClass.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525410642-481700263"
+    kaon:value="Method.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#UML.Method"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525473042-80299971"
+    kaon:value="Attribute.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Attribute.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525653302-1283577460"
+    kaon:value="Type.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Type.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525672646-725302172"
+    kaon:value="hasMethod.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasMethod"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525697403-1715623890"
+    kaon:value="hasAttribute.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasAttribute.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525737074-1816799063"
+    kaon:value="hasType.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasType.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525903340-1173660364"
+    kaon:value="relationships.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#relationships.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263525962199-530108483"
+    kaon:value="instanceLevel.Relationships">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#instanceLevel.Relationships"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526052539-1067481032"
+    kaon:value="realizes.Relationship">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#realization.Relationship"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526106016-1940782156"
+    kaon:value="generalizes.Relationship">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#generalize.Relationship"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526146014-1876637848"
+    kaon:value="composes.Relationship">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#compose.Relationship"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526174344-163296683"
+    kaon:value="aggregates.Relatonship">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#aggregate.Relatonship"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526202112-1132507220"
+    kaon:value="associates.Relationship">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#associates.Relationship"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526332918-1225923052"
+    kaon:value="hasVisibility.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasVisibility.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526376988-1390874165"
+    kaon:value="hasClass.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasClass.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526757142-877044570"
+    kaon:value="Sequence.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Sequence.Dragon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526791633-811539618"
+    kaon:value="hasSequence.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasSequence.Dragon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526836686-1222865200"
+    kaon:value="SequenceGroup.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SequenceGroup.Dragon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526872441-237538135"
+    kaon:value="Item.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Item.Sequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526890147-1317332754"
+    kaon:value="hasAtom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasAtom"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263526908555-1321453055"
+    kaon:value="hasNext.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasNext.Sequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263527182725-359776344"
+    kaon:value="hasFirst.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasFirst.Sequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263527196703-690740753"
+    kaon:value="hasLast.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#hasLast.Sequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591077005-290356998"
+    kaon:value="ExpressionGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ExpressionGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591107690-649241215"
+    kaon:value="Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591448274-1010485580"
+    kaon:value="Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591590587-1934457415"
+    kaon:value="Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591735152-2125508878"
+    kaon:value="Simple.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Simple.Atoms.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591804599-894120218"
+    kaon:value="Operator.Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operator.Simple.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591871973-43564618"
+    kaon:value="LiteralConstant.Simple.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Constant.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591898290-1233656569"
+    kaon:value="String.LiteralConstant.Simple.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#String.Constant.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263591951221-1140135518"
+    kaon:value="Numeric.LiteralConstant.Simple.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Numeric.LiteralConstant.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263592944307-1607935711"
+    kaon:value="Operand.Compound.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Operand.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263593022167-1960879588"
+    kaon:value="Identifier.Simple.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Identifier.Simple.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263593293981-1247479543"
+    kaon:value="hasOperator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263593293981-1483523331"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263593293981-1483523331">
+    <rdfs:domain rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#Operator.Simple.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263593385469-72594530"
+    kaon:value="AtomSequence.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#OperandSequence.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263593455136-228293337"
+    kaon:value="Element.AtomSequence.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Element.OperandSequence.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263593493839-1848111681"
+    kaon:value="hasNext.Element.OperandSequence.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263593493839-335204069"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263593493839-335204069">
+    <rdfs:domain rdf:resource="#Element.OperandSequence.Expression"/>
+    <rdfs:range rdf:resource="#Element.OperandSequence.Expression"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263593516912-1734263549">
+    <rdfs:domain rdf:resource="#OperandSequence.Expression"/>
+    <rdfs:range rdf:resource="#Element.OperandSequence.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263593516912-504757860"
+    kaon:value="hasFirst.Element.Operand.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263593516912-1734263549"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263593625722-1704396906">
+    <rdfs:domain rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#OperandSequence.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263593625722-291093753"
+    kaon:value="hasSequence.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263593625722-1704396906"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263593793968-126187376">
+    <rdfs:domain rdf:resource="#Element.OperandSequence.Expression"/>
+    <rdfs:domain rdf:resource="#Operand.Compound.Atom.Expression"/>
+    <rdfs:range rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#Simple.Atoms.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263593793968-1793287940"
+    kaon:value="hasValue.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263593793968-126187376"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263593925538-1520946616">
+    <rdfs:domain rdf:resource="#Action.Icon"/>
+    <rdfs:domain rdf:resource="#Output.Icon"/>
+    <rdfs:domain rdf:resource="#ParallelProcess.Icon"/>
+    <rdfs:domain rdf:resource="#Shelf.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263593925538-2083455157"
+    kaon:value="hasExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263593925538-1520946616"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263594098215-1019600434">
+    <rdfs:domain rdf:resource="#Comment.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263594098215-136084446"
+    kaon:value="hasText.String.LiteralConstant.Simple.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263594098215-1019600434"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263647486531-1345891959"
+    kaon:value="Package.UMLPackage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Package.UMLPackage"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263760163662-375974842">
+    <rdfs:domain rdf:resource="#Package.UMLPackage"/>
+    <rdfs:range rdf:resource="#Package.UMLPackage"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263760163664-644053834"
+    kaon:value="includesPackage.UMLPackage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263760163662-375974842"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263760203854-1700416385"
+    kaon:value="hasClass.UMLPackage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263760203854-2093703741"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263760203854-2093703741">
+    <rdfs:domain rdf:resource="#Package.UMLPackage"/>
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263761503711-2097630247">
+    <rdfs:domain rdf:resource="#ForLoopStart.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263761503711-334204605"
+    kaon:value="hasInitiationExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263761503711-2097630247"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263761535717-2130045212">
+    <rdfs:domain rdf:resource="#ForLoopStart.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263761535718-1421484331"
+    kaon:value="hasTerminationExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263761535717-2130045212"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263761570924-321473741"
+    kaon:value="hasIncrementExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263761570924-384203919"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263761570924-384203919">
+    <rdfs:domain rdf:resource="#ForLoopStart.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263761705088-1508081469"
+    kaon:value="ForComprehensionStart.Atom.Scala.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ForComprehensionStart.Atom.Scala.Dragon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263761774121-1749723170"
+    kaon:value="hasListExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263761774121-746216109"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263761774121-746216109">
+    <rdfs:domain rdf:resource="#ForComprehensionStart.Atom.Scala.Dragon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263761862949-1888246705">
+    <rdfs:domain rdf:resource="#CycleLoop.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263761862949-2012275363"
+    kaon:value="hasTerminatoionExpression.Boolean.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263761862949-1888246705"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263761916405-191854181">
+    <rdfs:domain rdf:resource="#Pause.Icon"/>
+    <rdfs:domain rdf:resource="#StartTimer.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263761916405-359466882"
+    kaon:value="hasDurationExperession.Integer.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263761916405-191854181"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263762249953-453939013">
+    <rdfs:domain rdf:resource="#BranchName.Icon"/>
+    <rdfs:domain rdf:resource="#Header.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263762249953-947047872"
+    kaon:value="hasName.String.LiteralConstant.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263762249953-453939013"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263764559119-1505727775"
+    kaon:value="hasLogicalExpression.Boolean.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263764559119-847422069"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263764559119-847422069">
+    <rdfs:domain rdf:resource="#Question.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263764641751-1666891750">
+    <rdfs:domain rdf:resource="#Shelf.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263764641752-664440660"
+    kaon:value="hasVariableName.String.LiteralConstant.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263764641751-1666891750"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263764785292-1768447415"
+    kaon:value="hasValueExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263764785292-187275720"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263764785292-187275720">
+    <rdfs:domain rdf:resource="#Choise.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263764852385-810081057">
+    <rdfs:domain rdf:resource="#Choise.Icon"/>
+    <rdfs:range rdf:resource="#Variant.Icon"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263764852385-884241601"
+    kaon:value="hasVariant.Simple.Atom">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263764852385-810081057"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263764892322-109007044">
+    <rdfs:domain rdf:resource="#Variant.Icon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263764892322-664400737"
+    kaon:value="hasValueExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263764892322-109007044"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263764962459-1150777222"
+    kaon:value="hasParameterName.StringLiteral.Constant.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263764962459-633351079"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263764962459-633351079">
+    <rdfs:domain rdf:resource="#FormalParameter.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263765004585-529559314">
+    <rdfs:domain rdf:resource="#FormalParameter.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263765004586-982208864"
+    kaon:value="hasParameterType.String.LiteralConstan.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765004585-529559314"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263765122711-1027356447">
+    <rdfs:domain rdf:resource="#Address.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263765122712-287198715"
+    kaon:value="hasAddressValue.String.LiteralConstant.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765122711-1027356447"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263765266647-560218767"
+    kaon:value="hasInsertBlockName.String.LiteralConstan.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765266647-689628773"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263765266647-689628773">
+    <rdfs:domain rdf:resource="#Insert.Icon"/>
+    <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263765575935-1605527754"
+    kaon:value="Branch.SilhouetteLoop.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263765618945-575406405"
+    kaon:value="hasBranchName.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765618945-656185590"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263765618945-656185590">
+    <rdfs:domain rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+    <rdfs:range rdf:resource="#BranchName.Icon"/>
+</rdf:Property>
+<rdf:Property rdf:ID="i-1263765647539-46328419">
+    <rdfs:domain rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+    <rdfs:range rdf:resource="#Address.Icon"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263765647540-1795894782"
+    kaon:value="hasAddress.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765647539-46328419"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263765692138-1190245532">
+    <rdfs:domain rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+    <rdfs:range rdf:resource="#Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263765692138-362463101"
+    kaon:value="hasBranchExpression.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765692138-1190245532"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263765725969-2042089491">
+    <rdfs:domain rdf:resource="#SilhouetteLoop.Icon"/>
+    <rdfs:range rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263765725969-709119685"
+    kaon:value="hasBranch.Atom.Dragon">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263765725969-2042089491"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263847229373-1749598588"
+    kaon:value="classLevel.Relationships">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ClassLevel.Relationships"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263847612308-558939126"
+    kaon:value="MethodInvokation.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#MethodInvokation.Compound"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263847696445-1139477223">
+    <rdfs:domain rdf:resource="#MethodInvokation.Compound"/>
+    <rdfs:range rdf:resource="#Identifier.Simple.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263847696446-1588962668"
+    kaon:value="hasObjectName.Atom.Expressio">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263847696445-1139477223"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263847855054-262907773">
+    <rdfs:domain rdf:resource="#MethodInvokation.Compound"/>
+    <rdfs:range rdf:resource="#Identifier.Simple.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263847855055-1833016847"
+    kaon:value="hasClassName.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263847855054-262907773"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263847982358-797708408">
+    <rdfs:domain rdf:resource="#MethodInvokation.Compound"/>
+    <rdfs:range rdf:resource="#OperandSequence.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263847982359-1707716750"
+    kaon:value="hasParameterSequence.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263847982358-797708408"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263848511933-743845109"
+    kaon:value="Scala.UMLClassGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263848556408-1226066568"
+    kaon:value="Scala.Class.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Class.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849360872-1786098528"
+    kaon:value="Scala.Package.UMLPackage">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Package.UMLPackage"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849538524-464158497"
+    kaon:value="Scala.Attribute.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Attribute.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849555620-1750585963"
+    kaon:value="Scala.Type.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Type.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849570831-1234031721"
+    kaon:value="Scala.Visibility.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Visibility.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849601176-1161885287"
+    kaon:value="Scala.Method.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Method.UMLClass"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849810270-618447718"
+    kaon:value="Scala.Identifier.Simple.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Identifier.Simple.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263849972638-2098956604"
+    kaon:value="Def.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Def.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850019792-1264327510"
+    kaon:value="Scala.Operator.Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850408162-346038065"
+    kaon:value="LeftBracket.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#LeftBracket.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850430056-1557398061"
+    kaon:value="RightBracket.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#RightBracket.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850472209-449690581"
+    kaon:value="StartBlock.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#StartBlock.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850491063-506657247"
+    kaon:value="EndBlock.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#EndBlock.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850529715-292078394"
+    kaon:value="Var.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Var.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850842226-1420381626"
+    kaon:value="Val.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Val.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850869325-132895739"
+    kaon:value="Assignment.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Assignment.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850908263-2145517822"
+    kaon:value="Class.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Class.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850943535-1012532544"
+    kaon:value="If.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#If.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850953928-1298591207"
+    kaon:value="Match.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Match.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850973437-1785528231"
+    kaon:value="Case.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Case.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263850990301-1978384382"
+    kaon:value="For.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#For.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263851001539-1767019788"
+    kaon:value="While.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#While.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263851041456-1986345837"
+    kaon:value="Import.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Import.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263851089620-733139174"
+    kaon:value="Throw.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Throw.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263851108850-1883716050"
+    kaon:value="New.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#New.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263851981033-396706117"
+    kaon:value="LeftSquareBracket.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#SquareBracket.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263852041609-1271223084"
+    kaon:value="RightSquareBracket.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#RightSquareBracket.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263852106996-1323806678"
+    kaon:value="Trait.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Trait.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263852187865-1288413515"
+    kaon:value="MethodSignature.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#MethodSignature.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263852219335-554047814"
+    kaon:value="Object.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Object.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263852658786-1336636165"
+    kaon:value="Else.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Else.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263852784872-1358260363"
+    kaon:value="Yield.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Yield.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263934469101-1730346570"
+    kaon:value="Scala.Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Scala.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263935782488-720996036"
+    kaon:value="FileGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#FileGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263935793043-340098331"
+    kaon:value="File">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#File"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263935803116-1823249579"
+    kaon:value="Directory">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Directory"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263935812041-465986736">
+    <rdfs:domain rdf:resource="#Directory"/>
+    <rdfs:range rdf:resource="#File"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263935812042-1140770068"
+    kaon:value="hasFile">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263935812041-465986736"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263935899498-1877528874"
+    kaon:value="hasAbsoluteAddress">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263935899498-1907657076"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263935899498-1907657076">
+    <rdfs:domain rdf:resource="#File"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263935943448-1746309719"
+    kaon:value="hasRelativeAddress">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263935943448-775729580"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263935943448-775729580">
+    <rdfs:domain rdf:resource="#File"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263935987218-431437081"
+    kaon:value="ApplicationGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ApplicationGroup"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263936022550-1456463549"
+    kaon:value="Application">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Application"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263936028892-2142291765"
+    kaon:value="Project">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Project"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263936047329-842272614">
+    <rdfs:domain rdf:resource="#Application"/>
+    <rdfs:range rdf:resource="#Project"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263936047330-2092704187"
+    kaon:value="hasProject">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263936047329-842272614"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1263936080676-1617247090"
+    kaon:value="hasFile">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263936080676-1991280606"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263936080676-1991280606">
+    <rdfs:domain rdf:resource="#Application"/>
+    <rdfs:domain rdf:resource="#Package.UMLPackage"/>
+    <rdfs:domain rdf:resource="#Project"/>
+    <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:range rdf:resource="#File"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263936364362-789603462"
+    kaon:value="ProgrammingLanguageGroup">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#ProgrammingLanguageGroup"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1263936766488-1141299843">
+    <rdfs:domain rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1263936766489-1850934738"
+    kaon:value="hasStringRepresentation">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1263936766488-1141299843"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264395264721-343570313"
+    kaon:value="firstClassName.Scala.Identifier.Simple.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#firstClassName.Scala.Identifier.Simple.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264447444123-1273871716"
+    kaon:value="classDeclaration.Scala.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#classDeclaration.Scala.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264447789270-38125317"
+    kaon:value="classDeclaration.Scala.OperandSequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#classDeclaration.Scala.OperandSequence"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264448660873-772308118"
+    kaon:value="class.classDeclaration.Element.Operand.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#class.classDeclaration.Element.Operand.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264448758238-1216505664"
+    kaon:value="hasLast.Element.Operand.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1264448758238-230996094"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1264448758238-230996094">
+    <rdfs:domain rdf:resource="#OperandSequence.Expression"/>
+    <rdfs:range rdf:resource="#Element.OperandSequence.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1264448950013-1408758739"
+    kaon:value="class.ClassDeclaration.Operand.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#class.ClassDeclaration.Operand.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264449264161-1902948181"
+    kaon:value="class.classDeclaration.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#class.classDeclaration.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264536840003-922639077"
+    kaon:value="Private.Scala.Operator.Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Private.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264536849550-695747824"
+    kaon:value="Public.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Public.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1264536865317-728577496"
+    kaon:value="Protected.Scala.Operator.Compound.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Protected.Scala.Operator.Compound.Atom.Expression"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1265141222179-1943661613">
+    <rdfs:domain rdf:resource="#UML.Method"/>
+    <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:range rdf:resource="#Identifier.Simple.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1265141222181-1535201632"
+    kaon:value="hasName.UMLClass">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1265141222179-1943661613"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1265143943319-1316968611"
+    kaon:value="Logical.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Logical.Expression"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267070774114-1603477108">
+    <rdfs:domain rdf:resource="#Scala.Visibility.UMLClass"/>
+    <rdfs:range rdf:resource="#Private.Scala.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267070774116-1784110595"
+    kaon:value="hasInstantiation.UMLClassDiagram">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267070774114-1603477108"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267156980419-1728265968"
+    kaon:value="Private.Scala.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Private.Scala.Expression"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267157023544-456902696">
+    <rdfs:domain rdf:resource="#Private.Scala.Expression"/>
+    <rdfs:range rdf:resource="#Private.Scala.Operator.Compound.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267157023544-852717816"
+    kaon:value="private.Scala.HasOperator">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267157023544-456902696"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267500139531-220866958"
+    kaon:value="Class.Scala.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Class.Scala.Expression"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267500494476-1210118582">
+    <rdfs:domain rdf:resource="#Class.Scala.Expression"/>
+    <rdfs:range rdf:resource="#Class.Scala.AtomSequence.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267500494477-922066372"
+    kaon:value="class.Scala.HasSequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267500494476-1210118582"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267500524166-1653713033"
+    kaon:value="Class.Scala.AtomSequence.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Class.Scala.AtomSequence.Expression"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267500637443-1265207470"
+    kaon:value="Visibility.Scala.Element.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Visibility.Scala.Element.Atom.Expressien"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267500711622-1050842894"
+    kaon:value="visibility.Scala.HasFirst.Element.Operand.Sequence">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267500711622-1414486021"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267500711622-1414486021">
+    <rdfs:domain rdf:resource="#Class.Scala.AtomSequence.Expression"/>
+    <rdfs:range rdf:resource="#Visibility.Scala.Element.Atom.Expressien"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267500777737-194997949"
+    kaon:value="Visibility.Scala.Operator.Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267500837186-1576397802"
+    kaon:value="Default.Scala.Operator.Compound.Atoms">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Default.Scala.Operator.Compound.Atoms"/>
+</kaon:Label>
+<kaon:Label rdf:ID="i-1267500878820-1400993396"
+    kaon:value="visibility.Scala.HasOperator.">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267500878820-1959045386"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267500878820-1959045386">
+    <rdfs:domain rdf:resource="#Visibility.Scala.Element.Atom.Expressien"/>
+    <rdfs:range rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267500950535-197443152"
+    kaon:value="Class.Scala.Element.Atom.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#Class.Scala.Element.Atom.Expression"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267500968530-797264173">
+    <rdfs:domain rdf:resource="#Class.Scala.Element.Atom.Expression"/>
+    <rdfs:range rdf:resource="#Class.Scala.Operator.Compound.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267500968531-1363200663"
+    kaon:value="class.Scala.HasOperator.">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267500968530-797264173"/>
+</kaon:Label>
+<rdf:Property rdf:ID="i-1267742882678-45793294">
+    <rdfs:domain rdf:resource="#Expression"/>
+    <rdfs:range rdf:resource="#Operand.Compound.Atom.Expression"/>
+</rdf:Property>
+<kaon:Label rdf:ID="i-1267742882679-989179300"
+    kaon:value="hasLeftOperand.Expression">
+    <kaon:inLanguage rdf:resource="&kaon;en"/>
+    <kaon:references rdf:resource="#i-1267742882678-45793294"/>
+</kaon:Label>
+<rdf:Property rdf:ID="instanceLevel.Relationships">
+    <rdfs:subPropertyOf rdf:resource="#relationships.UMLClass"/>
+</rdf:Property>
+<rdf:Property rdf:ID="realization.Relationship">
+    <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+    <rdfs:subPropertyOf rdf:resource="#ClassLevel.Relationships"/>
+</rdf:Property>
+<rdf:Property rdf:ID="relationships.UMLClass">
+    <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+</rdf:Property>
+
+</rdf:RDF>

@@ -1,0 +1,2198 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY kaon "http://kaon.semanticweb.org/2001/11/kaon-lexical#" >
+    <!ENTITY ApplicationDescriptionLanguage "http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#" >
+]>
+
+
+<rdf:RDF xmlns="http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#"
+     xml:base="http://menta/ontologies/2010/01/ApplicationDescriptionLanguage"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kaon="http://kaon.semanticweb.org/2001/11/kaon-lexical#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:ApplicationDescriptionLanguage="http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>476</owl:versionInfo>
+        <owl:versionInfo>475</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#aggregate.Relatonship -->
+
+    <owl:ObjectProperty rdf:about="#aggregate.Relatonship">
+        <rdfs:label xml:lang="en"
+            >aggregates.Relatonship</rdfs:label>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#instanceRelationships"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#applicationPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#applicationPropertiesGroup"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#associates.Relationship -->
+
+    <owl:ObjectProperty rdf:about="#associates.Relationship">
+        <rdfs:label xml:lang="en"
+            >associates.Relationship</rdfs:label>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#instanceRelationships"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.Scala.HasOperator -->
+
+    <owl:ObjectProperty rdf:about="#class.Scala.HasOperator">
+        <rdfs:label xml:lang="en"
+            >class.Scala.HasOperator.</rdfs:label>
+        <rdfs:domain rdf:resource="#Class.Scala.Element.Atom.Expression"/>
+        <rdfs:range rdf:resource="#Class.Scala.Operator.Compound.Atom.Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.Scala.HasSequence -->
+
+    <owl:ObjectProperty rdf:about="#class.Scala.HasSequence">
+        <rdfs:label xml:lang="en"
+            >class.Scala.HasSequence</rdfs:label>
+        <rdfs:range rdf:resource="#Class.Scala.AtomSequence.Expression"/>
+        <rdfs:domain rdf:resource="#Class.Scala.Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#classRelationships -->
+
+    <owl:ObjectProperty rdf:about="#classRelationships">
+        <rdfs:label xml:lang="en"
+            >classLevel.Relationships</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#relationships.UMLClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#compose.Relationship -->
+
+    <owl:ObjectProperty rdf:about="#compose.Relationship">
+        <rdfs:label xml:lang="en"
+            >composes.Relationship</rdfs:label>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#instanceRelationships"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#compoundAtomsExpressionProperties -->
+
+    <owl:ObjectProperty rdf:about="#compoundAtomsExpressionProperties">
+        <rdfs:subPropertyOf rdf:resource="#expressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#dragonPropertiesGroup -->
+
+    <owl:ObjectProperty rdf:about="#dragonPropertiesGroup"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#expressionProperties -->
+
+    <owl:ObjectProperty rdf:about="#expressionProperties"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#fileProperties -->
+
+    <owl:ObjectProperty rdf:about="#fileProperties"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#functionalSimpleAtomsProperites -->
+
+    <owl:ObjectProperty rdf:about="#functionalSimpleAtomsProperites">
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#generalize.Relationship -->
+
+    <owl:ObjectProperty rdf:about="#generalize.Relationship">
+        <rdfs:label xml:lang="en"
+            >generalizes.Relationship</rdfs:label>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#classRelationships"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAbsoluteAddress -->
+
+    <owl:ObjectProperty rdf:about="#hasAbsoluteAddress">
+        <rdfs:label xml:lang="en"
+            >hasAbsoluteAddress</rdfs:label>
+        <rdfs:domain rdf:resource="#File"/>
+        <rdfs:subPropertyOf rdf:resource="#fileProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAddress.Atom.Dragon -->
+
+    <owl:ObjectProperty rdf:about="#hasAddress.Atom.Dragon">
+        <rdfs:label xml:lang="en"
+            >hasAddress.Atom.Dragon</rdfs:label>
+        <rdfs:range rdf:resource="#Address.Icon"/>
+        <rdfs:domain rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+        <rdfs:subPropertyOf rdf:resource="#functionalSimpleAtomsProperites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAddressValue.String.LiteralConstant.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasAddressValue.String.LiteralConstant.Expression">
+        <rdfs:label xml:lang="en"
+            >hasAddressValue.String.LiteralConstant.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Address.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAtom -->
+
+    <owl:ObjectProperty rdf:about="#hasAtom">
+        <rdfs:label xml:lang="en">hasAtom.Dragon</rdfs:label>
+        <rdfs:range rdf:resource="#AtomsGroup"/>
+        <rdfs:domain rdf:resource="#Item.Sequence.Dragon"/>
+        <rdfs:subPropertyOf rdf:resource="#dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasAttribute.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="#hasAttribute.UMLClass">
+        <rdfs:label xml:lang="en"
+            >hasAttribute.UMLClass</rdfs:label>
+        <rdfs:range rdf:resource="#Attribute.UMLClass"/>
+        <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasBranch.Atom.Dragon -->
+
+    <owl:ObjectProperty rdf:about="#hasBranch.Atom.Dragon">
+        <rdfs:label xml:lang="en"
+            >hasBranch.Atom.Dragon</rdfs:label>
+        <rdfs:range rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+        <rdfs:domain rdf:resource="#SilhouetteLoop.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#functionalSimpleAtomsProperites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasBranchExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasBranchExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasBranchExpression.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#expressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasBranchName.Atom.Dragon -->
+
+    <owl:ObjectProperty rdf:about="#hasBranchName.Atom.Dragon">
+        <rdfs:label xml:lang="en"
+            >hasBranchName.Atom.Dragon</rdfs:label>
+        <rdfs:domain rdf:resource="#Branch.SilhouetteLoop.Atom.Dragon"/>
+        <rdfs:range rdf:resource="#BranchName.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#functionalSimpleAtomsProperites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasClass.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="#hasClass.UMLClass">
+        <rdfs:label xml:lang="en"
+            >hasClass.UMLClass</rdfs:label>
+        <rdfs:domain rdf:resource="#Type.UMLClass"/>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasClass.UMLPackage -->
+
+    <owl:ObjectProperty rdf:about="#hasClass.UMLPackage">
+        <rdfs:label xml:lang="en"
+            >hasClass.UMLPackage</rdfs:label>
+        <rdfs:domain rdf:resource="#Package.UMLPackage"/>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#packageProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasClassName.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasClassName.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >hasClassName.Atom.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Identifier.Simple.Atom.Expression"/>
+        <rdfs:domain rdf:resource="#MethodInvokation.Compound"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasDurationExperession.Integer.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasDurationExperession.Integer.Expression">
+        <rdfs:label xml:lang="en"
+            >hasDurationExperession.Integer.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#Pause.Icon"/>
+        <rdfs:domain rdf:resource="#StartTimer.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasExpression.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Action.Icon"/>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#Output.Icon"/>
+        <rdfs:domain rdf:resource="#ParallelProcess.Icon"/>
+        <rdfs:domain rdf:resource="#Shelf.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasFile -->
+
+    <owl:ObjectProperty rdf:about="#hasFile">
+        <rdfs:label xml:lang="en">hasFile</rdfs:label>
+        <rdfs:domain rdf:resource="#Application"/>
+        <rdfs:domain rdf:resource="#Directory"/>
+        <rdfs:range rdf:resource="#File"/>
+        <rdfs:domain rdf:resource="#Package.UMLPackage"/>
+        <rdfs:domain rdf:resource="#Project"/>
+        <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#fileProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasFirst -->
+
+    <owl:ObjectProperty rdf:about="#hasFirst">
+        <rdfs:label xml:lang="en"
+            >hasFirst.Sequence</rdfs:label>
+        <rdfs:range rdf:resource="#Item.Sequence.Dragon"/>
+        <rdfs:domain rdf:resource="#Sequence.Dragon"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasFirst.Element.Operand.Sequence -->
+
+    <owl:ObjectProperty rdf:about="#hasFirst.Element.Operand.Sequence">
+        <rdfs:label xml:lang="en"
+            >hasFirst.Element.Operand.Sequence</rdfs:label>
+        <rdfs:range rdf:resource="#Element.OperandSequence.Expression"/>
+        <rdfs:domain rdf:resource="#OperandSequence.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasIncrementExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasIncrementExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasIncrementExpression.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#ForLoopStart.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasInitiationExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasInitiationExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasInitiationExpression.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#ForLoopStart.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasInsertBlockName.String.LiteralConstan.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasInsertBlockName.String.LiteralConstan.Expression">
+        <rdfs:label xml:lang="en"
+            >hasInsertBlockName.String.LiteralConstan.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Insert.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasInstantiation.UMLClassDiagram -->
+
+    <owl:ObjectProperty rdf:about="#hasInstantiation.UMLClassDiagram">
+        <rdfs:label xml:lang="en"
+            >hasInstantiation.UMLClassDiagram</rdfs:label>
+        <rdfs:range rdf:resource="#Private.Scala.Expression"/>
+        <rdfs:domain rdf:resource="#Scala.Visibility.UMLClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLast -->
+
+    <owl:ObjectProperty rdf:about="#hasLast">
+        <rdfs:label xml:lang="en"
+            >hasLast.Sequence</rdfs:label>
+        <rdfs:range rdf:resource="#Item.Sequence.Dragon"/>
+        <rdfs:domain rdf:resource="#Sequence.Dragon"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLast.Element.Operand.Sequence -->
+
+    <owl:ObjectProperty rdf:about="#hasLast.Element.Operand.Sequence">
+        <rdfs:label xml:lang="en"
+            >hasLast.Element.Operand.Sequence</rdfs:label>
+        <rdfs:range rdf:resource="#Element.OperandSequence.Expression"/>
+        <rdfs:domain rdf:resource="#OperandSequence.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLeftOperand.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasLeftOperand.Expression">
+        <rdfs:label xml:lang="en"
+            >hasLeftOperand.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Expression"/>
+        <rdfs:range rdf:resource="#Operand.Compound.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#compoundAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasListExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasListExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasListExpression.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#ForComprehensionStart.Atom.Scala.Dragon"/>
+        <rdfs:subPropertyOf rdf:resource="#expressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasLogicalExpression.Boolean.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasLogicalExpression.Boolean.Expression">
+        <rdfs:label xml:lang="en"
+            >hasLogicalExpression.Boolean.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#Question.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasMethod -->
+
+    <owl:ObjectProperty rdf:about="#hasMethod">
+        <rdfs:label xml:lang="en"
+            >hasMethod.UMLClass</rdfs:label>
+        <rdfs:range rdf:resource="#UML.Method"/>
+        <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasName.String.LiteralConstant.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasName.String.LiteralConstant.Expression">
+        <rdfs:label xml:lang="en"
+            >hasName.String.LiteralConstant.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#BranchName.Icon"/>
+        <rdfs:domain rdf:resource="#Header.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasName.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="#hasName.UMLClass">
+        <rdfs:label xml:lang="en"
+            >hasName.UMLClass</rdfs:label>
+        <rdfs:range rdf:resource="#Identifier.Simple.Atom.Expression"/>
+        <rdfs:domain rdf:resource="#UML.Method"/>
+        <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasNext -->
+
+    <owl:ObjectProperty rdf:about="#hasNext">
+        <rdfs:label xml:lang="en"
+            >hasNext.Sequence</rdfs:label>
+        <rdfs:domain rdf:resource="#Item.Sequence.Dragon"/>
+        <rdfs:range rdf:resource="#Item.Sequence.Dragon"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasNext.Element.OperandSequence.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasNext.Element.OperandSequence.Expression">
+        <rdfs:label xml:lang="en"
+            >hasNext.Element.OperandSequence.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Element.OperandSequence.Expression"/>
+        <rdfs:domain rdf:resource="#Element.OperandSequence.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasObjectName.Atom.Expressio -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectName.Atom.Expressio">
+        <rdfs:label xml:lang="en"
+            >hasObjectName.Atom.Expressio</rdfs:label>
+        <rdfs:range rdf:resource="#Identifier.Simple.Atom.Expression"/>
+        <rdfs:domain rdf:resource="#MethodInvokation.Compound"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="#hasOperator">
+        <rdfs:label xml:lang="en">hasOperator</rdfs:label>
+        <rdfs:domain rdf:resource="#Expression"/>
+        <rdfs:range rdf:resource="#Operator.Simple.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#compoundAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasParameterName.StringLiteral.Constant.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasParameterName.StringLiteral.Constant.Expression">
+        <rdfs:label xml:lang="en"
+            >hasParameterName.StringLiteral.Constant.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#FormalParameter.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasParameterSequence.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasParameterSequence.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >hasParameterSequence.Atom.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#MethodInvokation.Compound"/>
+        <rdfs:range rdf:resource="#OperandSequence.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasParameterType.String.LiteralConstan.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasParameterType.String.LiteralConstan.Expression">
+        <rdfs:label xml:lang="en"
+            >hasParameterType.String.LiteralConstan.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#FormalParameter.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasProject -->
+
+    <owl:ObjectProperty rdf:about="#hasProject">
+        <rdfs:label xml:lang="en">hasProject</rdfs:label>
+        <rdfs:domain rdf:resource="#Application"/>
+        <rdfs:range rdf:resource="#Project"/>
+        <rdfs:subPropertyOf rdf:resource="#applicationPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasRelativeAddress -->
+
+    <owl:ObjectProperty rdf:about="#hasRelativeAddress">
+        <rdfs:label xml:lang="en"
+            >hasRelativeAddress</rdfs:label>
+        <rdfs:domain rdf:resource="#File"/>
+        <rdfs:subPropertyOf rdf:resource="#fileProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasSequence.Dragon -->
+
+    <owl:ObjectProperty rdf:about="#hasSequence.Dragon">
+        <rdfs:label xml:lang="en"
+            >hasSequence.Dragon</rdfs:label>
+        <rdfs:range rdf:resource="#Sequence.Dragon"/>
+        <rdfs:domain rdf:resource="#UML.Method"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasSequence.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasSequence.Expression">
+        <rdfs:label xml:lang="en"
+            >hasSequence.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Expression"/>
+        <rdfs:range rdf:resource="#OperandSequence.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#sequenceExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasStringRepresentation -->
+
+    <owl:ObjectProperty rdf:about="#hasStringRepresentation">
+        <rdfs:label xml:lang="en"
+            >hasStringRepresentation</rdfs:label>
+        <rdfs:domain rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasTerminationExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasTerminationExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasTerminationExpression.Expression</rdfs:label>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#ForLoopStart.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasTerminatoionExpression.Boolean.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasTerminatoionExpression.Boolean.Expression">
+        <rdfs:label xml:lang="en"
+            >hasTerminatoionExpression.Boolean.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#CycleLoop.Icon"/>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasText.String.LiteralConstant.Simple.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasText.String.LiteralConstant.Simple.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >hasText.String.LiteralConstant.Simple.Atom.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Comment.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasType.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="#hasType.UMLClass">
+        <rdfs:label xml:lang="en"
+            >hasType.UMLClass</rdfs:label>
+        <rdfs:domain rdf:resource="#Attribute.UMLClass"/>
+        <rdfs:range rdf:resource="#Type.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasValue.Compound.Atom.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasValue.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >hasValue.Compound.Atom.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Element.OperandSequence.Expression"/>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#Operand.Compound.Atom.Expression"/>
+        <rdfs:range rdf:resource="#Simple.Atoms.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#expressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasValueExpression.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasValueExpression.Expression">
+        <rdfs:label xml:lang="en"
+            >hasValueExpression.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Choise.Icon"/>
+        <rdfs:range rdf:resource="#Expression"/>
+        <rdfs:domain rdf:resource="#Variant.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasVariableName.String.LiteralConstant.Expression -->
+
+    <owl:ObjectProperty rdf:about="#hasVariableName.String.LiteralConstant.Expression">
+        <rdfs:label xml:lang="en"
+            >hasVariableName.String.LiteralConstant.Expression</rdfs:label>
+        <rdfs:domain rdf:resource="#Shelf.Icon"/>
+        <rdfs:range rdf:resource="#String.Constant.Atom.Expression"/>
+        <rdfs:subPropertyOf rdf:resource="#simpleAtomsExpressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasVariant.Simple.Atom -->
+
+    <owl:ObjectProperty rdf:about="#hasVariant.Simple.Atom">
+        <rdfs:label xml:lang="en"
+            >hasVariant.Simple.Atom</rdfs:label>
+        <rdfs:domain rdf:resource="#Choise.Icon"/>
+        <rdfs:range rdf:resource="#Variant.Icon"/>
+        <rdfs:subPropertyOf rdf:resource="#functionalSimpleAtomsProperites"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#hasVisibility.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="#hasVisibility.UMLClass">
+        <rdfs:label xml:lang="en"
+            >hasVisibility.UMLClass</rdfs:label>
+        <rdfs:domain rdf:resource="#Attribute.UMLClass"/>
+        <rdfs:domain rdf:resource="#UML.Method"/>
+        <rdfs:range rdf:resource="#Visibility.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#includesPackage.UMLPackage -->
+
+    <owl:ObjectProperty rdf:about="#includesPackage.UMLPackage">
+        <rdfs:label xml:lang="en"
+            >includesPackage.UMLPackage</rdfs:label>
+        <rdfs:domain rdf:resource="#Package.UMLPackage"/>
+        <rdfs:range rdf:resource="#Package.UMLPackage"/>
+        <rdfs:subPropertyOf rdf:resource="#packageProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#instanceRelationships -->
+
+    <owl:ObjectProperty rdf:about="#instanceRelationships">
+        <rdfs:label xml:lang="en"
+            >instanceLevel.Relationships</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#relationships.UMLClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#packageProperties -->
+
+    <owl:ObjectProperty rdf:about="#packageProperties">
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#private.Scala.HasOperator -->
+
+    <owl:ObjectProperty rdf:about="#private.Scala.HasOperator">
+        <rdfs:label xml:lang="en"
+            >private.Scala.HasOperator</rdfs:label>
+        <rdfs:domain rdf:resource="#Private.Scala.Expression"/>
+        <rdfs:range rdf:resource="#Private.Scala.Operator.Compound.Atom.Expression"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#realization.Relationship -->
+
+    <owl:ObjectProperty rdf:about="#realization.Relationship">
+        <rdfs:label xml:lang="en"
+            >realizes.Relationship</rdfs:label>
+        <rdfs:range rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#classRelationships"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#relationships.UMLClass -->
+
+    <owl:ObjectProperty rdf:about="#relationships.UMLClass">
+        <rdfs:label xml:lang="en"
+            >relationships.UMLClass</rdfs:label>
+        <rdfs:domain rdf:resource="#UMLClass.UMLClass"/>
+        <rdfs:subPropertyOf rdf:resource="#umlProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#sequenceExpressionProperties -->
+
+    <owl:ObjectProperty rdf:about="#sequenceExpressionProperties">
+        <rdfs:subPropertyOf rdf:resource="#expressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#sequenceProperties -->
+
+    <owl:ObjectProperty rdf:about="#sequenceProperties">
+        <rdfs:subPropertyOf rdf:resource="#dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#simpleAtomsExpressionProperties -->
+
+    <owl:ObjectProperty rdf:about="#simpleAtomsExpressionProperties">
+        <rdfs:subPropertyOf rdf:resource="#expressionProperties"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#simpleAtomsProperties -->
+
+    <owl:ObjectProperty rdf:about="#simpleAtomsProperties">
+        <rdfs:subPropertyOf rdf:resource="#dragonPropertiesGroup"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#umlProperties -->
+
+    <owl:ObjectProperty rdf:about="#umlProperties"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#visibility.Scala.HasFirst.Element.Operand.Sequence -->
+
+    <owl:ObjectProperty rdf:about="#visibility.Scala.HasFirst.Element.Operand.Sequence">
+        <rdfs:label xml:lang="en"
+            >visibility.Scala.HasFirst.Element.Operand.Sequence</rdfs:label>
+        <rdfs:domain rdf:resource="#Class.Scala.AtomSequence.Expression"/>
+        <rdfs:range rdf:resource="#Visibility.Scala.Element.Atom.Expressien"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#visibility.Scala.HasOperator -->
+
+    <owl:ObjectProperty rdf:about="#visibility.Scala.HasOperator">
+        <rdfs:label xml:lang="en"
+            >visibility.Scala.HasOperator.</rdfs:label>
+        <rdfs:domain rdf:resource="#Visibility.Scala.Element.Atom.Expressien"/>
+        <rdfs:range rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Action.Icon -->
+
+    <owl:Class rdf:about="#Action.Icon">
+        <rdfs:label xml:lang="en"
+            >Action.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Address.Icon -->
+
+    <owl:Class rdf:about="#Address.Icon">
+        <rdfs:label xml:lang="en"
+            >Address.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Application -->
+
+    <owl:Class rdf:about="#Application">
+        <rdfs:label xml:lang="en">Application</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ApplicationGroup"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasProject"/>
+                <owl:allValuesFrom rdf:resource="#Project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ApplicationGroup -->
+
+    <owl:Class rdf:about="#ApplicationGroup">
+        <rdfs:label xml:lang="en"
+            >ApplicationGroup</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFile"/>
+                <owl:allValuesFrom rdf:resource="#File"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Assignment.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Assignment.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Assignment.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Atom.Expression -->
+
+    <owl:Class rdf:about="#Atom.Expression">
+        <rdfs:label xml:lang="en">Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#AtomsGroup -->
+
+    <owl:Class rdf:about="#AtomsGroup">
+        <rdfs:label xml:lang="en">DragonAtoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DragonGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Attribute.UMLClass -->
+
+    <owl:Class rdf:about="#Attribute.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Attribute.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Branch.SilhouetteLoop.Atom.Dragon -->
+
+    <owl:Class rdf:about="#Branch.SilhouetteLoop.Atom.Dragon">
+        <rdfs:label xml:lang="en"
+            >Branch.SilhouetteLoop.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#BranchName.Icon -->
+
+    <owl:Class rdf:about="#BranchName.Icon">
+        <rdfs:label xml:lang="en"
+            >BranchName.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Case.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Case.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Case.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Choise.Icon -->
+
+    <owl:Class rdf:about="#Choise.Icon">
+        <rdfs:label xml:lang="en"
+            >Choise.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Class.Scala.AtomSequence.Expression -->
+
+    <owl:Class rdf:about="#Class.Scala.AtomSequence.Expression">
+        <rdfs:label xml:lang="en"
+            >Class.Scala.AtomSequence.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OperandSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Class.Scala.Element.Atom.Expression -->
+
+    <owl:Class rdf:about="#Class.Scala.Element.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Class.Scala.Element.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Element.OperandSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Class.Scala.Expression -->
+
+    <owl:Class rdf:about="#Class.Scala.Expression">
+        <rdfs:label xml:lang="en"
+            >Class.Scala.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Class.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Class.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Class.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Classifier.Scope -->
+
+    <owl:Class rdf:about="#Classifier.Scope">
+        <rdfs:label xml:lang="en"
+            >Classifier.Scope</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scope.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Comment.Icon -->
+
+    <owl:Class rdf:about="#Comment.Icon">
+        <rdfs:label xml:lang="en"
+            >Comment.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Compound.Atom.Expression">
+        <rdfs:label xml:lang="en">Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#CompoundAtomsGroup -->
+
+    <owl:Class rdf:about="#CompoundAtomsGroup">
+        <rdfs:label xml:lang="en">Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AtomsGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Condition -->
+
+    <owl:Class rdf:about="#Condition">
+        <rdfs:label xml:lang="en">Condition.Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Constant.Atom.Expression -->
+
+    <owl:Class rdf:about="#Constant.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >LiteralConstant.Simple.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Simple.Atoms.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#CycleLoop.Icon -->
+
+    <owl:Class rdf:about="#CycleLoop.Icon">
+        <rdfs:label xml:lang="en">CycleLoop.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Def.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Def.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Def.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Default.Scala.Operator.Compound.Atoms -->
+
+    <owl:Class rdf:about="#Default.Scala.Operator.Compound.Atoms">
+        <rdfs:label xml:lang="en"
+            >Default.Scala.Operator.Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Directory -->
+
+    <owl:Class rdf:about="#Directory">
+        <rdfs:label xml:lang="en">Directory</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#File"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#DragonGroup -->
+
+    <owl:Class rdf:about="#DragonGroup">
+        <rdfs:label xml:lang="en">DragonGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Element.OperandSequence.Expression -->
+
+    <owl:Class rdf:about="#Element.OperandSequence.Expression">
+        <rdfs:label xml:lang="en"
+            >Element.AtomSequence.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Else.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Else.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Else.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Empty.Atom.Group -->
+
+    <owl:Class rdf:about="#Empty.Atom.Group">
+        <rdfs:label xml:lang="en">Empty.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#CompoundAtomsGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#End.Icon -->
+
+    <owl:Class rdf:about="#End.Icon">
+        <rdfs:label xml:lang="en">End.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#EndBlock.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#EndBlock.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >EndBlock.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Expression -->
+
+    <owl:Class rdf:about="#Expression">
+        <rdfs:label xml:lang="en">Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ExpressionGroup -->
+
+    <owl:Class rdf:about="#ExpressionGroup">
+        <rdfs:label xml:lang="en">ExpressionGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#File -->
+
+    <owl:Class rdf:about="#File">
+        <rdfs:label xml:lang="en">File</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#FileGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#FileGroup -->
+
+    <owl:Class rdf:about="#FileGroup">
+        <rdfs:label xml:lang="en">FileGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#For.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#For.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >For.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ForComprehensionStart.Atom.Scala.Dragon -->
+
+    <owl:Class rdf:about="#ForComprehensionStart.Atom.Scala.Dragon">
+        <rdfs:label xml:lang="en"
+            >ForComprehensionStart.Atom.Scala.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ForLoopStart.Icon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ForLoop.Atom -->
+
+    <owl:Class rdf:about="#ForLoop.Atom">
+        <rdfs:label xml:lang="en">ForLoop.Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ForLoopEnd.Icon -->
+
+    <owl:Class rdf:about="#ForLoopEnd.Icon">
+        <rdfs:label xml:lang="en">ForLoopEnd.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ForLoopStart.Icon -->
+
+    <owl:Class rdf:about="#ForLoopStart.Icon">
+        <rdfs:label xml:lang="en"
+            >ForLoopStart.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#FormalParameter.Icon -->
+
+    <owl:Class rdf:about="#FormalParameter.Icon">
+        <rdfs:label xml:lang="en"
+            >FormalParameter.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Functional.Simple.Atoms -->
+
+    <owl:Class rdf:about="#Functional.Simple.Atoms">
+        <rdfs:label xml:lang="en"
+            >Functional.Simple.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SimpleAtomsGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Header.Icon -->
+
+    <owl:Class rdf:about="#Header.Icon">
+        <rdfs:label xml:lang="en"
+            >Header.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Identifier.Simple.Atom.Expression -->
+
+    <owl:Class rdf:about="#Identifier.Simple.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Identifier.Simple.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Simple.Atoms.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#If.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#If.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >If.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Import.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Import.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Import.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Input.Icon -->
+
+    <owl:Class rdf:about="#Input.Icon">
+        <rdfs:label xml:lang="en"
+            >Input.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Insert.Icon -->
+
+    <owl:Class rdf:about="#Insert.Icon">
+        <rdfs:label xml:lang="en"
+            >Insert.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Instance.Scope -->
+
+    <owl:Class rdf:about="#Instance.Scope">
+        <rdfs:label xml:lang="en">Instance.Scope</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scope.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Item.Sequence.Dragon -->
+
+    <owl:Class rdf:about="#Item.Sequence.Dragon">
+        <rdfs:label xml:lang="en">Item.Sequence</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SequenceGroup.Dragon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasAtom"/>
+                <owl:allValuesFrom rdf:resource="#AtomsGroup"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasNext"/>
+                <owl:allValuesFrom rdf:resource="#Item.Sequence.Dragon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Left.Comment.Icon -->
+
+    <owl:Class rdf:about="#Left.Comment.Icon">
+        <rdfs:label xml:lang="en"
+            >Left.Comment.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Comment.Icon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#LeftBracket.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#LeftBracket.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >LeftBracket.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Logical.Expression -->
+
+    <owl:Class rdf:about="#Logical.Expression">
+        <rdfs:label xml:lang="en"
+            >Logical.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Match.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Match.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Match.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#MethodInvokation.Compound -->
+
+    <owl:Class rdf:about="#MethodInvokation.Compound">
+        <rdfs:label xml:lang="en"
+            >MethodInvokation.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#MethodSignature.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#MethodSignature.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >MethodSignature.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#New.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#New.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >New.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Numeric.LiteralConstant.Atom.Expression -->
+
+    <owl:Class rdf:about="#Numeric.LiteralConstant.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Numeric.LiteralConstant.Simple.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Constant.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Object.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Object.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Object.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Operand.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Operand.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Operand.Compound.Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#OperandSequence.Expression -->
+
+    <owl:Class rdf:about="#OperandSequence.Expression">
+        <rdfs:label xml:lang="en"
+            >AtomSequence.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Operator.Simple.Atom.Expression -->
+
+    <owl:Class rdf:about="#Operator.Simple.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Operator.Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Output.Icon -->
+
+    <owl:Class rdf:about="#Output.Icon">
+        <rdfs:label xml:lang="en">Output.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Package.UMLPackage -->
+
+    <owl:Class rdf:about="#Package.UMLPackage">
+        <rdfs:label xml:lang="en"
+            >Package.UMLPackage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLPackage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Package.Visibility -->
+
+    <owl:Class rdf:about="#Package.Visibility">
+        <rdfs:label xml:lang="en"
+            >Package.Visibility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ParallelProcess.Icon -->
+
+    <owl:Class rdf:about="#ParallelProcess.Icon">
+        <rdfs:label xml:lang="en"
+            >ParallelProcess.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Pause.Icon -->
+
+    <owl:Class rdf:about="#Pause.Icon">
+        <rdfs:label xml:lang="en"
+            >Pause.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Peroiod.Icon -->
+
+    <owl:Class rdf:about="#Peroiod.Icon">
+        <rdfs:label xml:lang="en"
+            >Peroiod.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Private.Scala.Expression -->
+
+    <owl:Class rdf:about="#Private.Scala.Expression">
+        <rdfs:label xml:lang="en"
+            >Private.Scala.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Private.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Private.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Private.Scala.Operator.Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Private.Visibility -->
+
+    <owl:Class rdf:about="#Private.Visibility">
+        <rdfs:label xml:lang="en"
+            >Private.Visibility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#ProgrammingLanguageGroup -->
+
+    <owl:Class rdf:about="#ProgrammingLanguageGroup">
+        <rdfs:label xml:lang="en"
+            >ProgrammingLanguageGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Project -->
+
+    <owl:Class rdf:about="#Project">
+        <rdfs:label xml:lang="en">Project</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ApplicationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Protected.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Protected.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Protected.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Protected.Visibility -->
+
+    <owl:Class rdf:about="#Protected.Visibility">
+        <rdfs:label xml:lang="en"
+            >Protected.Visibility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Public.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Public.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Public.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.Scala.Operator.Compound.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Public.Visibility -->
+
+    <owl:Class rdf:about="#Public.Visibility">
+        <rdfs:label xml:lang="en"
+            >Public.Visibility</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Question.Icon -->
+
+    <owl:Class rdf:about="#Question.Icon">
+        <rdfs:label xml:lang="en"
+            >Question.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Right.Comment.Icon -->
+
+    <owl:Class rdf:about="#Right.Comment.Icon">
+        <rdfs:label xml:lang="en"
+            >Right.Comment.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Comment.Icon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#RightBracket.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#RightBracket.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >RightBracket.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#RightSquareBracket.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#RightSquareBracket.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >RightSquareBracket.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Attribute.UMLClass -->
+
+    <owl:Class rdf:about="#Scala.Attribute.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Scala.Attribute.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Attribute.UMLClass"/>
+        <rdfs:subClassOf rdf:resource="#Scope.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Class.UMLClass -->
+
+    <owl:Class rdf:about="#Scala.Class.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Scala.Class.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Scala.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Scala.Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Identifier.Simple.Atom.Expression -->
+
+    <owl:Class rdf:about="#Scala.Identifier.Simple.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Scala.Identifier.Simple.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Identifier.Simple.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Method.UMLClass -->
+
+    <owl:Class rdf:about="#Scala.Method.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Scala.Method.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+        <rdfs:subClassOf rdf:resource="#UML.Method"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Scala.Operator.Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Operator.Simple.Atom.Expression"/>
+        <rdfs:subClassOf rdf:resource="#Scala.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Package.UMLPackage -->
+
+    <owl:Class rdf:about="#Scala.Package.UMLPackage">
+        <rdfs:label xml:lang="en"
+            >Scala.Package.UMLPackage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Package.UMLPackage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Type.UMLClass -->
+
+    <owl:Class rdf:about="#Scala.Type.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Scala.Type.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+        <rdfs:subClassOf rdf:resource="#Type.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.UMLClass -->
+
+    <owl:Class rdf:about="#Scala.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Scala.UMLClassGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scala.Visibility.UMLClass -->
+
+    <owl:Class rdf:about="#Scala.Visibility.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Scala.Visibility.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+        <rdfs:subClassOf rdf:resource="#Visibility.UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Scope.UMLClass -->
+
+    <owl:Class rdf:about="#Scope.UMLClass">
+        <rdfs:label xml:lang="en">Scope.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.UMLClass"/>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Sequence.Dragon -->
+
+    <owl:Class rdf:about="#Sequence.Dragon">
+        <rdfs:label xml:lang="en">Sequence.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SequenceGroup.Dragon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasFirst"/>
+                <owl:allValuesFrom rdf:resource="#Item.Sequence.Dragon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="#hasLast"/>
+                <owl:allValuesFrom rdf:resource="#Item.Sequence.Dragon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#SequenceGroup.Dragon -->
+
+    <owl:Class rdf:about="#SequenceGroup.Dragon">
+        <rdfs:label xml:lang="en"
+            >SequenceGroup.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#DragonGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Shelf.Icon -->
+
+    <owl:Class rdf:about="#Shelf.Icon">
+        <rdfs:label xml:lang="en"
+            >Shelf.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#SilhouetteLoop.Icon -->
+
+    <owl:Class rdf:about="#SilhouetteLoop.Icon">
+        <rdfs:label xml:lang="en"
+            >SilhouetteLoop.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Simple.Atoms.Expression -->
+
+    <owl:Class rdf:about="#Simple.Atoms.Expression">
+        <rdfs:label xml:lang="en">Simple.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#SimpleAtomsGroup -->
+
+    <owl:Class rdf:about="#SimpleAtomsGroup">
+        <rdfs:label xml:lang="en">Simple.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AtomsGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#SimpleLoop.Atom -->
+
+    <owl:Class rdf:about="#SimpleLoop.Atom">
+        <rdfs:label xml:lang="en">SimpleLoop.Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#SquareBracket.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#SquareBracket.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >LeftSquareBracket.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#StartBlock.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#StartBlock.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >StartBlock.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#StartTimer.Icon -->
+
+    <owl:Class rdf:about="#StartTimer.Icon">
+        <rdfs:label xml:lang="en">StartTimer.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#String.Constant.Atom.Expression -->
+
+    <owl:Class rdf:about="#String.Constant.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >String.LiteralConstant.Simple.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Constant.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Switch.Atom -->
+
+    <owl:Class rdf:about="#Switch.Atom">
+        <rdfs:label xml:lang="en">Switch.Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#SwitchingLoop.Atom -->
+
+    <owl:Class rdf:about="#SwitchingLoop.Atom">
+        <rdfs:label xml:lang="en"
+            >SwitchingLoop.Atom</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Empty.Atom.Group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Throw.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Throw.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Throw.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#TimerSynchronizer.Icon -->
+
+    <owl:Class rdf:about="#TimerSynchronizer.Icon">
+        <rdfs:label xml:lang="en"
+            >TimerSynchronizer.Icon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Trait.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Trait.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Trait.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Type.UMLClass -->
+
+    <owl:Class rdf:about="#Type.UMLClass">
+        <rdfs:label xml:lang="en">Type.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#UML.Method -->
+
+    <owl:Class rdf:about="#UML.Method">
+        <rdfs:label xml:lang="en">Method.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#UMLClass -->
+
+    <owl:Class rdf:about="#UMLClass">
+        <rdfs:label xml:lang="en">UMLClassGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#UMLClass.UMLClass -->
+
+    <owl:Class rdf:about="#UMLClass.UMLClass">
+        <rdfs:label xml:lang="en">Class.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#UMLGroup -->
+
+    <owl:Class rdf:about="#UMLGroup">
+        <rdfs:label xml:lang="en">UMLGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#UMLPackage -->
+
+    <owl:Class rdf:about="#UMLPackage">
+        <rdfs:label xml:lang="en">UMLPackage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Val.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Val.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Val.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Var.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Var.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Var.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Variant.Icon -->
+
+    <owl:Class rdf:about="#Variant.Icon">
+        <rdfs:label xml:lang="en"
+            >Variant.Atom.Dragon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Functional.Simple.Atoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Visibility.Scala.Element.Atom.Expressien -->
+
+    <owl:Class rdf:about="#Visibility.Scala.Element.Atom.Expressien">
+        <rdfs:label xml:lang="en"
+            >Visibility.Scala.Element.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Element.OperandSequence.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Visibility.Scala.Operator.Compound.Atoms -->
+
+    <owl:Class rdf:about="#Visibility.Scala.Operator.Compound.Atoms">
+        <rdfs:label xml:lang="en"
+            >Visibility.Scala.Operator.Compound.Atoms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Visibility.UMLClass -->
+
+    <owl:Class rdf:about="#Visibility.UMLClass">
+        <rdfs:label xml:lang="en"
+            >Visibility.UMLClass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#UMLClass"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#While.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#While.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >While.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#Yield.Scala.Operator.Compound.Atom.Expression -->
+
+    <owl:Class rdf:about="#Yield.Scala.Operator.Compound.Atom.Expression">
+        <rdfs:label xml:lang="en"
+            >Yield.Scala.Operator.Compound.Atom.Expression</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Scala.Operator.Compound.Atom.Expression"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.ClassDeclaration.Operand.Compound.Atom.Expression -->
+
+    <owl:Thing rdf:about="#class.ClassDeclaration.Operand.Compound.Atom.Expression">
+        <rdf:type rdf:resource="#Operand.Compound.Atom.Expression"/>
+        <rdfs:label xml:lang="en"
+            >class.ClassDeclaration.Operand.Compound.Atom.Expression</rdfs:label>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.classDeclaration.Element.Operand.Expression -->
+
+    <Element.OperandSequence.Expression rdf:about="#class.classDeclaration.Element.Operand.Expression">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en"
+            >class.classDeclaration.Element.Operand.Expression</rdfs:label>
+    </Element.OperandSequence.Expression>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#class.classDeclaration.Expression -->
+
+    <Expression rdf:about="#class.classDeclaration.Expression">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en"
+            >class.classDeclaration.Expression</rdfs:label>
+    </Expression>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#classDeclaration.Scala.Expression -->
+
+    <owl:Thing rdf:about="#classDeclaration.Scala.Expression">
+        <rdf:type rdf:resource="#Expression"/>
+        <rdfs:label xml:lang="en"
+            >classDeclaration.Scala.Expression</rdfs:label>
+        <hasSequence.Expression rdf:resource="#classDeclaration.Scala.OperandSequence"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#classDeclaration.Scala.OperandSequence -->
+
+    <OperandSequence.Expression rdf:about="#classDeclaration.Scala.OperandSequence">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en"
+            >classDeclaration.Scala.OperandSequence</rdfs:label>
+        <hasFirst.Element.Operand.Sequence rdf:resource="#class.classDeclaration.Element.Operand.Expression"/>
+    </OperandSequence.Expression>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ApplicationDescriptionLanguage#firstClassName.Scala.Identifier.Simple.Atom.Expression -->
+
+    <Scala.Identifier.Simple.Atom.Expression rdf:about="#firstClassName.Scala.Identifier.Simple.Atom.Expression">
+        <rdf:type rdf:resource="&owl;Thing"/>
+        <rdfs:label xml:lang="en"
+            >firstClassName.Scala.Identifier.Simple.Atom.Expression</rdfs:label>
+    </Scala.Identifier.Simple.Atom.Expression>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

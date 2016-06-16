@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	    <!-- Register PayloadRootAnnotationMethodEndpointMapping -->
+	    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping" />
+	 
+	    <!-- Register Endpoint -->
+	    <bean id="mentaEndpoint" class="menta.ws.MentaWSEndpoint"></bean>
+	 
+	    <!-- Configure XML Marshaller -->
+	    <bean class="org.springframework.ws.server.endpoint.adapter.GenericMarshallingMethodEndpointAdapter">
+	        <constructor-arg ref="marshaller" />
+	    </bean>
+	 
+	    <bean id="marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+	        <property name="classesToBeBound">
+	            <list>
+	                <value>menta.model.MentaRequest</value>
+	                <value>menta.model.MentaResponse</value>
+	            </list>
+	        </property>
+	    </bean>
+	 
+	    <!-- Add automatic WSDL generation support -->
+	    <bean id="menta" class="org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition">
+	        <property name="schema" ref="schema" />
+	        <property name="portTypeName" value="MentaWS" />
+	        <property name="locationUri" value="http://localhost:8080/mentaws/menta.wsdl" />
+	        <property name="targetNamespace" value="http://mentaws" />
+	    </bean>
+	 
+	    <bean id="schema" class="org.springframework.xml.xsd.SimpleXsdSchema">
+	        <property name="xsd" value="/WEB-INF/menta-ws.xsd" />
+	    </bean>
+
+</beans>

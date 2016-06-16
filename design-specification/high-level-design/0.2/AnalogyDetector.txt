@@ -1,0 +1,10 @@
+#summary AnalogyDetector component specification for Menta 0.2.
+
+= AnalogyDetector. =
+Identifies the [http://code.google.com/p/menta/wiki/AcceptanceCriteria AcceptanceCriteria] alreday processed and infere the Solution
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20analogydetector.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/AnalogyDetector.apply.png

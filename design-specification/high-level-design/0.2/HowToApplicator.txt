@@ -1,0 +1,10 @@
+#summary HowToApplicator component specification for Menta 0.2.
+
+= HowToApplicator. =
+Applies the generated Solution over current Architecture in HowTo representation.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20howtoapplicator.png
+
+== Activity diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/HowToApplicator.apply.png

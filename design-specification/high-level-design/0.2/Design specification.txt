@@ -1,0 +1,84 @@
+#summary Design specification of Menta v. 0.2.
+
+= Background. =
+Menta is the solution generation system, based on: machine usable knowledge base, stochastic search, probabilistic reasoner.
+Please refer to the [http://code.google.com/p/menta/wiki/UseCase01 usecases] for the further details.
+
+Current implementation uses:
+ # Knowledge base represented as RDF storage [http://www.ontotext.com/owlim/ OWLIM].
+ # Stochastic search as genetic algorithm framework: [http://cs.gmu.edu/~eclab/projects/ecj/ ecj].
+ # Probabilistic reasoner [http://code.google.com/p/open-nars/wiki/Overview NARS].
+ # [http://www.scala-lang.org/ Scala] programming language.
+
+*This description could be moved to Technical Solution page.*
+
+_Menta operates with the knowledge that is stored in the Knowledge Base(KB). KB is capable of storing the facts in the ontology.
+Menta generates the solution of the requests in the KB to match the acceptance criteria, that are represented as facts in the KB.
+Requests should be in the form of the acceptance criteria:_
+
+_*How-tos* are the interpreted actions over current architecture of the application, ex.: how-to create Scala class, how to create project, how to create C# method._
+
+_All the inference is done by the NARS reasoner._
+
+== RDF storage. ==
+We use OWLIM as quickest according to our analysis [http://code.google.com/p/menta/wiki/OWLStore RDF Storage analysis document].
+The OWLIM is used as library.
+
+== Stochastic search. ==
+We use ecj based on [http://code.google.com/p/menta/wiki/GPFrameworksAnalysis genetic frameworks analysis document].
+
+== Probabilistic reasoner. ==
+Currently available and developed actively is only one [http://code.google.com/p/open-nars/wiki/Overview NARS].
+
+== Scala ==
+[http://www.scala-lang.org/ Scala] is functional programming language seamlessly integrated with JVM or CLR.
+As Scala is functional and generics are the part of the syntax the application created using this language is more robust and stable than created using Java and C#.
+
+= Version 0.2. =
+Menta v.0.2 consists of several components:
+ # Communicator.
+ # Solution generator.
+   # Solution checker.
+ # Translator.
+ # Applicator.
+ # Subscriber controller.
+
+Menta 0.2 is capable of:
+ # Generating the Solution best fit the Acceptance criteria.
+ # Memorise the confirmed Solution with Association with Acceptance criteria.
+ # Retrieve the previously memorised Solution according to the Acceptance criteria.
+ # Create the Confirmation request to the user.
+ # Process the Reply of the user.
+ # Publish the Confirmation request to the List of subscribers.
+ # Apply the confirmed and generated Solution over current architecture.
+ # Store all knowledge in the Knowledge Base (KB).
+
+== Menta Use-case. ==
+Each root use-case is implemented as the method of the MentaController class.
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Use%20case.png
+
+Yellow colored are minimal subset of use-cases, to indicate the work of the system.
+== General work-flow. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Activity%20menta%20in%20general.png
+
+== Component diagram. ==
+Components:
+  # MentaController.
+  # SolutionGenerator.
+    # SolutionChecker.
+  # [http://code.google.com/p/menta/wiki/Communicator Communicator].
+    # RequestBuilder.
+    # ResponseAnalyser.
+  # ReasonerAdapter.
+  # [http://code.google.com/p/menta/wiki/Learner Learner].
+    # [http://code.google.com/p/menta/wiki/Trainer Trainer].
+      # [http://code.google.com/p/menta/wiki/Associator Associator].
+      # [http://code.google.com/p/menta/wiki/Generaliser Generaliser].
+      # [http://code.google.com/p/menta/wiki/Specificator Specificator].
+    # [http://code.google.com/p/menta/wiki/AnalogyDetector AnalogyDetector].
+  # [http://code.google.com/p/menta/wiki/Translator Translator].
+  # [http://code.google.com/p/menta/wiki/Applicator Applicator].
+  # SubscriberController.
+  # [http://code.google.com/p/menta/wiki/KBServer KBServer].
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component.png

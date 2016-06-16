@@ -1,0 +1,149 @@
+<xs:schema
+        xmlns="http://www.menta.org/model/howTo/interface"
+        targetNamespace="http://www.menta.org/model/howTo/interface"
+        elementFormDefault="qualified"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:model="http://www.menta.org/model">
+
+    <xs:import namespace="http://www.menta.org/model" schemaLocation="./model.xsd"/>
+
+    <xs:complexType name="HowTo">
+        <xs:complexContent>
+            <xs:extension base="model:Knowledge">
+                <xs:sequence>
+                    <xs:element name="classifier" type="Classifier" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ExpressionTemplate">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="superClass" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="parameter" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded"/>
+                    <xs:element name="mandatoryParameters" type="Cardinality" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="scope" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="individual" type="xs:anyURI" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TemplateToAdd">
+        <xs:complexContent>
+            <xs:extension base="ExpressionTemplate"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="TemplateToRemove">
+        <xs:complexContent>
+            <xs:extension base="ExpressionTemplate"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ExpressionIndividual">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="expressionTemplate_1" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+                    <xs:element name="parameter" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded"/>
+                    <!-- HowTo -->
+                    <xs:element name="destination" type="xs:anyURI" minOccurs="1" maxOccurs="unbounded"/>
+                    <!-- ExpressionIndividual -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Add">
+        <xs:complexContent>
+            <xs:extension base="ExpressionIndividual">
+                <xs:sequence>
+                    <xs:element name="expressionTemplate_2" type="TemplateToAdd"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Remove">
+        <xs:complexContent>
+            <xs:extension base="ExpressionIndividual">
+                <xs:sequence>
+                    <xs:element name="actionClass1" type="TemplateToRemove"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <!-- supplemental -->
+
+    <xs:complexType name="Cardinality">
+        <xs:all>
+            <xs:element name="cardinality" minOccurs="1" maxOccurs="1" type="xs:integer"/>
+            <xs:element name="set" type="HowTo"/>
+        </xs:all>
+    </xs:complexType>
+
+    <xs:complexType name="Classifier">
+        <xs:sequence>
+            <xs:element name="superClassifiers" type="Classifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="subClassifiers" type="Classifier" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="name" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HowToChange">
+        <xs:complexContent>
+            <xs:extension base="HowTo"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HowToChangeSet">
+        <xs:sequence>
+            <xs:element name="howToChange" type="HowToChange" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Terminal types -->
+    <xs:complexType name="StringLiteral">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="NumberLiteral">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:float"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Reference">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="HowTo"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="Terminal">
+        <xs:complexContent>
+            <xs:extension base="HowTo">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:anyType"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>

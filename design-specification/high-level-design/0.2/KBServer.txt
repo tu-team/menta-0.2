@@ -1,0 +1,25 @@
+#summary KBServer component specification for Menta 0.2.
+
+= KBServer. =
+Knowledge base server is interface to the Storage.
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20knowledgebaseserver.png
+
+== Component diagram. ==
+Components:
+  # [http://code.google.com/p/menta/wiki/Modeller Modeller].
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component%20knowledgebaseserver.png
+
+== Storage. ==
+The storage could be implemented via following technologies ( [http://www.w3.org/2001/sw/wiki/Category:Triple_Store RDF storage] or [http://en.wikipedia.org/wiki/Graph_database Graph database]):
+  # [http://www.ontotext.com/owlim/ OWLIM(RDF storage)]
+  # [http://www.hypergraphdb.org/index HyperGraphDB]
+  # [http://en.wikipedia.org/wiki/FlockDB FlockDB]
+  # [http://www.orientechnologies.com/ OrientDB]
+  # [http://www.dekorte.com/projects/opensource/vertexdb/ vertexdb]
+
+
+Should be capable of
+ # storing the [http://en.wikipedia.org/wiki/Ontology_(computer_science) ontology] informaiton.

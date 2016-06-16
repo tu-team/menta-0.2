@@ -1,0 +1,2130 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY kaon "http://kaon.semanticweb.org/2001/11/kaon-lexical#" >
+    <!ENTITY ProblemSolutionGeneration "http://menta/ontologies/2010/01/ProblemSolutionGeneration#" >
+]>
+
+
+<rdf:RDF xmlns="http://menta/ontologies/2010/01/ProblemSolutionGeneration#"
+     xml:base="http://menta/ontologies/2010/01/ProblemSolutionGeneration"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:kaon="http://kaon.semanticweb.org/2001/11/kaon-lexical#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ProblemSolutionGeneration="http://menta/ontologies/2010/01/ProblemSolutionGeneration#">
+    <owl:Ontology rdf:about="">
+        <owl:versionInfo>661</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="#frequency"/>
+    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="#probability"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;label"/>
+    <owl:AnnotationProperty rdf:about="#confidence"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DB.hasColumn -->
+
+    <owl:ObjectProperty rdf:about="#DB.hasColumn">
+        <rdfs:label xml:lang="en">DB.hasColumn</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DB.hasColumnType -->
+
+    <owl:ObjectProperty rdf:about="#DB.hasColumnType">
+        <rdfs:label xml:lang="en"
+            >DB.hasColumnType</rdfs:label>
+        <rdfs:domain rdf:resource="#DB.Column"/>
+        <rdfs:range rdf:resource="#DB.ColumnType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#confidence -->
+
+    <owl:ObjectProperty rdf:about="#confidence">
+        <rdfs:subPropertyOf rdf:resource="#probability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#frequency -->
+
+    <owl:ObjectProperty rdf:about="#frequency">
+        <rdfs:subPropertyOf rdf:resource="#probability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasAction -->
+
+    <owl:ObjectProperty rdf:about="#hasAction">
+        <rdfs:label xml:lang="en">hasAction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasBehaviour -->
+
+    <owl:ObjectProperty rdf:about="#hasBehaviour">
+        <rdfs:label xml:lang="en">hasBehaviour</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasBusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasBusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasBusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasBusinessReq -->
+
+    <owl:ObjectProperty rdf:about="#hasBusinessReq">
+        <rdfs:label xml:lang="en">hasBusinessReq</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasCondition">
+        <rdfs:label xml:lang="en">hasCondition</rdfs:label>
+        <rdfs:range rdf:resource="#Condition"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasCurrentBehaviour -->
+
+    <owl:ObjectProperty rdf:about="#hasCurrentBehaviour">
+        <rdfs:label xml:lang="en"
+            >hasCurrentBehaviour</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDataToAdd.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasDataToAdd.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasDataToAdd.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDescription -->
+
+    <owl:ObjectProperty rdf:about="#hasDescription">
+        <rdfs:label xml:lang="en">hasDescription</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDescripton.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasDescripton.BusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasDescripton.BusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDestination.AddField.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasDestination.AddField.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasDestination.AddField.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDestinationName -->
+
+    <owl:ObjectProperty rdf:about="#hasDestinationName">
+        <rdfs:label xml:lang="en"
+            >hasDestinationName</rdfs:label>
+        <rdfs:range rdf:resource="#ActionParameter.DestinationName"/>
+        <rdfs:domain rdf:resource="#AddFieldAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasDestinationName.PageName -->
+
+    <owl:ObjectProperty rdf:about="#hasDestinationName.PageName">
+        <rdfs:label xml:lang="en"
+            >hasDestinationName.PageName</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#hasDestinationName"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasElements -->
+
+    <owl:ObjectProperty rdf:about="#hasElements">
+        <rdfs:label xml:lang="en">hasElements</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasElements.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasElements.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasElements.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasEpressionToDelete -->
+
+    <owl:ObjectProperty rdf:about="#hasEpressionToDelete">
+        <rdfs:label xml:lang="en"
+            >hasEpressionToDelete</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasExpression -->
+
+    <owl:ObjectProperty rdf:about="#hasExpression">
+        <rdfs:label xml:lang="en">hasExpression</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasExpression.Select.First -->
+
+    <owl:ObjectProperty rdf:about="#hasExpression.Select.First">
+        <rdfs:label xml:lang="en"
+            >hasExpression.Select.First</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFieldName -->
+
+    <owl:ObjectProperty rdf:about="#hasFieldName">
+        <rdfs:label xml:lang="en">hasFieldName</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstAction.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasFirstAction.BusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasFirstAction.BusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstElement.Sequence.Condition -->
+
+    <owl:ObjectProperty rdf:about="#hasFirstElement.Sequence.Condition">
+        <rdfs:label xml:lang="en"
+            >hasFirstElement.Sequence.Condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstLexem.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasFirstLexem.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasFirstLexem.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstStatement -->
+
+    <owl:ObjectProperty rdf:about="#hasFirstStatement">
+        <rdfs:label xml:lang="en"
+            >hasFirstStatement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFirstStatement.SQL.Select.First -->
+
+    <owl:ObjectProperty rdf:about="#hasFirstStatement.SQL.Select.First">
+        <rdfs:label xml:lang="en"
+            >hasFirstStatement.SQL.Select.First</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowing -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowing">
+        <rdfs:label xml:lang="en">hasFollowing</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowingLexem">
+        <rdfs:label xml:lang="en"
+            >hasFollowingLexem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowingLexem.SQL">
+        <rdfs:label xml:lang="en"
+            >hasFollowingLexem.SQL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowingLexem.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasFollowingLexem.SQL.Select.Columname</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL.Select.From -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowingLexem.SQL.Select.From">
+        <rdfs:label xml:lang="en"
+            >hasFollowingLexem.SQL.Select.From</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL.Select.Group -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowingLexem.SQL.Select.Group">
+        <rdfs:label xml:lang="en"
+            >hasFollowingLexem.SQL.Select.Group</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFollowingLexem.SQL.Select.Tablename -->
+
+    <owl:ObjectProperty rdf:about="#hasFollowingLexem.SQL.Select.Tablename">
+        <rdfs:label xml:lang="en"
+            >hasFollowingLexem.SQL.Select.Tablename</rdfs:label>
+        <rdfs:range rdf:resource="#SQLLiteral.TableName"/>
+        <rdfs:domain rdf:resource="#SQLOperator.FROM"/>
+        <rdfs:subPropertyOf rdf:resource="#hasFollowingLexem.SQL.Select.Group"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasFunctionalReq -->
+
+    <owl:ObjectProperty rdf:about="#hasFunctionalReq">
+        <rdfs:label xml:lang="en"
+            >hasFunctionalReq</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasHeadLexem -->
+
+    <owl:ObjectProperty rdf:about="#hasHeadLexem">
+        <rdfs:label xml:lang="en">hasHeadLexem</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasHeadLexem.SQL -->
+
+    <owl:ObjectProperty rdf:about="#hasHeadLexem.SQL">
+        <rdfs:label xml:lang="en"
+            >hasHeadLexem.SQL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasHowTo.AddFieldToWebForm -->
+
+    <owl:ObjectProperty rdf:about="#hasHowTo.AddFieldToWebForm">
+        <rdfs:label xml:lang="en"
+            >hasHowTo.AddFieldToWebPageList</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasIdentifier -->
+
+    <owl:ObjectProperty rdf:about="#hasIdentifier">
+        <rdfs:label xml:lang="en">hasIdentifier</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasIdentifier.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasIdentifier.BusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasIdentifier.BusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasIntendedBehaviour.CR -->
+
+    <owl:ObjectProperty rdf:about="#hasIntendedBehaviour.CR">
+        <rdfs:label xml:lang="en"
+            >hasIntendedBehaviour.CR</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLastAction.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasLastAction.BusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasLastAction.BusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLastElement.Sequence.Condition -->
+
+    <owl:ObjectProperty rdf:about="#hasLastElement.Sequence.Condition">
+        <rdfs:label xml:lang="en"
+            >hasLastElement.Sequence.Condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLexemSequence -->
+
+    <owl:ObjectProperty rdf:about="#hasLexemSequence">
+        <rdfs:label xml:lang="en"
+            >hasLexemSequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLexemSequence.SQL -->
+
+    <owl:ObjectProperty rdf:about="#hasLexemSequence.SQL">
+        <rdfs:label xml:lang="en"
+            >hasLexemSequence.SQL</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasLexemSequence.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasLexemSequence.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasLexemSequence.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNextAction.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasNextAction.BusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasNextAction.BusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNextElement.Condition -->
+
+    <owl:ObjectProperty rdf:about="#hasNextElement.Condition">
+        <rdfs:label xml:lang="en"
+            >hasNextElement.Condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNonFunctionalReq -->
+
+    <owl:ObjectProperty rdf:about="#hasNonFunctionalReq">
+        <rdfs:label xml:lang="en"
+            >hasNonFunctionalReq</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasNonFunctionalReq.ReqSpec -->
+
+    <owl:ObjectProperty rdf:about="#hasNonFunctionalReq.ReqSpec">
+        <rdfs:label xml:lang="en"
+            >hasNonFunctionalReq.ReqSpec</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasObject.AddField.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasObject.AddField.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasObject.AddField.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperand -->
+
+    <owl:ObjectProperty rdf:about="#hasOperand">
+        <rdfs:label xml:lang="en">hasOperand</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperand.Condition -->
+
+    <owl:ObjectProperty rdf:about="#hasOperand.Condition">
+        <rdfs:label xml:lang="en"
+            >hasOperand.Condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperandSequence.Condition -->
+
+    <owl:ObjectProperty rdf:about="#hasOperandSequence.Condition">
+        <rdfs:label xml:lang="en"
+            >hasOperandSequence.Condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperator -->
+
+    <owl:ObjectProperty rdf:about="#hasOperator">
+        <rdfs:label xml:lang="en">hasOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasOperator.Condition -->
+
+    <owl:ObjectProperty rdf:about="#hasOperator.Condition">
+        <rdfs:label xml:lang="en"
+            >hasOperator.Condition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasPattern.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasPattern.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasPattern.SQL.Select.AddField</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasPostCondition -->
+
+    <owl:ObjectProperty rdf:about="#hasPostCondition">
+        <rdfs:label xml:lang="en"
+            >hasPostCondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasPrecondition -->
+
+    <owl:ObjectProperty rdf:about="#hasPrecondition">
+        <rdfs:label xml:lang="en">hasPrecondition</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasProgrammingLanguage -->
+
+    <owl:ObjectProperty rdf:about="#hasProgrammingLanguage">
+        <rdfs:label xml:lang="en"
+            >hasProgrammingLanguage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasProperty -->
+
+    <owl:ObjectProperty rdf:about="#hasProperty">
+        <rdfs:label xml:lang="en">hasProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSQLFollowing -->
+
+    <owl:ObjectProperty rdf:about="#hasSQLFollowing">
+        <rdfs:label xml:lang="en">hasSQLFollowing</rdfs:label>
+        <rdfs:range rdf:resource="#SQLLiteral.ColumnValue"/>
+        <rdfs:domain rdf:resource="#SQLLiteral.ColumnValue"/>
+        <rdfs:domain rdf:resource="#SQLLiteral.TableName"/>
+        <rdfs:range rdf:resource="#SQLLiteral.TableName"/>
+        <rdfs:domain rdf:resource="#SQLOperator.Bracket"/>
+        <rdfs:range rdf:resource="#SQLOperator.Bracket"/>
+        <rdfs:range rdf:resource="#SQLOperator.CloseBracket"/>
+        <rdfs:domain rdf:resource="#SQLOperator.INTO"/>
+        <rdfs:range rdf:resource="#SQLOperator.INTO"/>
+        <rdfs:domain rdf:resource="#SQLOperator.Insert"/>
+        <rdfs:range rdf:resource="#SQLOperator.VALUES"/>
+        <rdfs:domain rdf:resource="#SQLOperator.VALUES"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSQLOperator -->
+
+    <owl:ObjectProperty rdf:about="#hasSQLOperator">
+        <rdfs:label xml:lang="en">hasSQLOperator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSeparator -->
+
+    <owl:ObjectProperty rdf:about="#hasSeparator">
+        <rdfs:label xml:lang="en">hasSeparator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSeparator.SQL.Comma -->
+
+    <owl:ObjectProperty rdf:about="#hasSeparator.SQL.Comma">
+        <rdfs:label xml:lang="en"
+            >hasSeparator.SQL.Comma</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasSequence.BusinessProcess -->
+
+    <owl:ObjectProperty rdf:about="#hasSequence.BusinessProcess">
+        <rdfs:label xml:lang="en"
+            >hasSequence.BusinessProcess</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasStatement.SQL.Select -->
+
+    <owl:ObjectProperty rdf:about="#hasStatement.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >hasStatementSequence.SQL.Select</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#hasValue -->
+
+    <owl:ObjectProperty rdf:about="#hasValue">
+        <rdfs:label xml:lang="en">hasValue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#insteadOf -->
+
+    <owl:ObjectProperty rdf:about="#insteadOf">
+        <rdfs:label xml:lang="en">insteadOf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probability -->
+
+    <owl:ObjectProperty rdf:about="#probability"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyHasMethod -->
+
+    <owl:ObjectProperty rdf:about="#probablyHasMethod">
+        <rdfs:label xml:lang="en"
+            >probablyHasMethod</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyHasNormalization -->
+
+    <owl:ObjectProperty rdf:about="#probablyHasNormalization">
+        <rdfs:label xml:lang="en"
+            >probablyHasNormalization</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyHasValidation -->
+
+    <owl:ObjectProperty rdf:about="#probablyHasValidation">
+        <rdfs:label xml:lang="en"
+            >probablyHasValidation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyIncludes -->
+
+    <owl:ObjectProperty rdf:about="#probablyIncludes">
+        <rdfs:label xml:lang="en"
+            >probablyIncludes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyRequests -->
+
+    <owl:ObjectProperty rdf:about="#probablyRequests">
+        <rdfs:label xml:lang="en"
+            >probablyRequests</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#probablyRequiresRetrivalUpdate -->
+
+    <owl:ObjectProperty rdf:about="#probablyRequiresRetrivalUpdate">
+        <rdfs:label xml:lang="en"
+            >probablyRequiresRetrivalUpdate</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#references -->
+
+    <owl:ObjectProperty rdf:about="#references">
+        <rdfs:label xml:lang="en">references</rdfs:label>
+        <rdfs:range rdf:resource="#AbstractApplicationArchitecture"/>
+        <rdfs:domain rdf:resource="#Literal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#references.DB.Column -->
+
+    <owl:ObjectProperty rdf:about="#references.DB.Column">
+        <rdfs:label xml:lang="en"
+            >references.DB.Column</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#references.DB.Table -->
+
+    <owl:ObjectProperty rdf:about="#references.DB.Table">
+        <rdfs:label xml:lang="en"
+            >references.DB.Table</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#references"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AbstractApplicationArchitecture -->
+
+    <owl:Class rdf:about="#AbstractApplicationArchitecture">
+        <rdfs:label xml:lang="en"
+            >AbstractApplicationArchitecture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SolutionGenerationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AbstractProgramSyntaxGroup -->
+
+    <owl:Class rdf:about="#AbstractProgramSyntaxGroup">
+        <rdfs:label xml:lang="en"
+            >AbstractProgramSyntaxGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SolutionGenerationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Action -->
+
+    <owl:Class rdf:about="#Action">
+        <rdfs:label xml:lang="en">Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ActionGroup -->
+
+    <owl:Class rdf:about="#ActionGroup">
+        <rdfs:label xml:lang="en">ActionGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ActionParameter.DestinationName -->
+
+    <owl:Class rdf:about="#ActionParameter.DestinationName">
+        <rdfs:label xml:lang="en"
+            >ActionParameter.DestinationName</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ActionProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ActionParameter.DestinationName.ModuleName -->
+
+    <owl:Class rdf:about="#ActionParameter.DestinationName.ModuleName">
+        <rdfs:label xml:lang="en"
+            >ActionParameter.DestinationName.ModuleName</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ActionParameter.DestinationName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ActionParameter.DestinationName.PageName -->
+
+    <owl:Class rdf:about="#ActionParameter.DestinationName.PageName">
+        <rdfs:label xml:lang="en"
+            >ActionParameter.DestinationName.PageName</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ActionParameter.DestinationName"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ActionParameter.FieldName -->
+
+    <owl:Class rdf:about="#ActionParameter.FieldName">
+        <rdfs:label xml:lang="en"
+            >ActionParameter.FieldName</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ActionProperty -->
+
+    <owl:Class rdf:about="#ActionProperty">
+        <rdfs:label xml:lang="en"
+            >AnyActionParameter</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ActionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AddFieldAction -->
+
+    <owl:Class rdf:about="#AddFieldAction">
+        <rdfs:label xml:lang="en">AddFieldAction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AddFieldAction.WebForm -->
+
+    <owl:Class rdf:about="#AddFieldAction.WebForm">
+        <rdfs:label xml:lang="en"
+            >AddFieldAction.WebPageList</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AddFieldAction.WebPage -->
+
+    <owl:Class rdf:about="#AddFieldAction.WebPage">
+        <rdfs:label xml:lang="en"
+            >AddFieldAction.WebPage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AddFieldAction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AddFieldToWebForm -->
+
+    <owl:Class rdf:about="#AddFieldToWebForm">
+        <rdfs:label xml:lang="en"
+            >AnyAddFieldToWebForm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#And.Operator.Condition -->
+
+    <owl:Class rdf:about="#And.Operator.Condition">
+        <rdfs:label xml:lang="en"
+            >And.Operator.Condition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAction -->
+
+    <owl:Class rdf:about="#AnyAction">
+        <rdfs:label xml:lang="en">AnyAction</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ActionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAddFieldToClass -->
+
+    <owl:Class rdf:about="#AnyAddFieldToClass">
+        <rdfs:label xml:lang="en"
+            >AnyAddFieldToClass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAddFieldToList -->
+
+    <owl:Class rdf:about="#AnyAddFieldToList">
+        <rdfs:label xml:lang="en"
+            >AnyAddFieldToList</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAddFieldToModule -->
+
+    <owl:Class rdf:about="#AnyAddFieldToModule">
+        <rdfs:label xml:lang="en"
+            >AnyAddFieldToModule</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyModuleCreation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAddFieldToWebPage -->
+
+    <owl:Class rdf:about="#AnyAddFieldToWebPage">
+        <rdfs:label xml:lang="en"
+            >AnyAddFieldToWebPage</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyWebPageUpdate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAddFieldToWebPageList -->
+
+    <owl:Class rdf:about="#AnyAddFieldToWebPageList">
+        <rdfs:label xml:lang="en"
+            >AnyAddFieldToWebPageList</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyAddFieldToList"/>
+        <rdfs:subClassOf rdf:resource="#AnyAddFieldToWebPage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyAddMethodToModule -->
+
+    <owl:Class rdf:about="#AnyAddMethodToModule">
+        <rdfs:label xml:lang="en"
+            >AnyAddMethodToModule</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyApplication -->
+
+    <owl:Class rdf:about="#AnyApplication">
+        <rdfs:label xml:lang="en"
+            >AnyApplicationUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyConnectionSetup -->
+
+    <owl:Class rdf:about="#AnyConnectionSetup">
+        <rdfs:label xml:lang="en"
+            >ConnectionSetupUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyStatementUpdate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyDBConnectionSetup -->
+
+    <owl:Class rdf:about="#AnyDBConnectionSetup">
+        <rdfs:label xml:lang="en"
+            >ConnectionSetupUpdate.DB</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyConnectionSetup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyDataRepresentationUpdate -->
+
+    <owl:Class rdf:about="#AnyDataRepresentationUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyDataRepresentationUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyDataRetrievalUpdate -->
+
+    <owl:Class rdf:about="#AnyDataRetrievalUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyDataRetrievalUpdate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyHTTPRequestProcessorUpdate -->
+
+    <owl:Class rdf:about="#AnyHTTPRequestProcessorUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyHTTPRequestProcessorUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyRequestDataProcessingUpdate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyHowTo -->
+
+    <owl:Class rdf:about="#AnyHowTo">
+        <rdfs:label xml:lang="en">AnyHowTo</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyInsertDataStatementUpdate -->
+
+    <owl:Class rdf:about="#AnyInsertDataStatementUpdate">
+        <rdfs:label xml:lang="en"
+            >StatementUpdate.SQL.Instert</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnySQLStatementUpdate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyJDBCConnectionSetup -->
+
+    <owl:Class rdf:about="#AnyJDBCConnectionSetup">
+        <rdfs:label xml:lang="en"
+            >ConnectionSetupUpdate.DB.JDBC</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyDBConnectionSetup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyModuleCreation -->
+
+    <owl:Class rdf:about="#AnyModuleCreation">
+        <rdfs:label xml:lang="en">AnyModuleUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyReqestDataNormalisation -->
+
+    <owl:Class rdf:about="#AnyReqestDataNormalisation">
+        <rdfs:label xml:lang="en"
+            >AnyReqestDataNormalisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyRequestDataProcessingUpdate -->
+
+    <owl:Class rdf:about="#AnyRequestDataProcessingUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyRequestDataProcessingUpdate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyRequestDataValidationUpdate -->
+
+    <owl:Class rdf:about="#AnyRequestDataValidationUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyRequestDataValidationUpdate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnySQLExpression -->
+
+    <owl:Class rdf:about="#AnySQLExpression">
+        <rdfs:label xml:lang="en"
+            >AnySQLExpression</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnySQLSelectStatementUpdate -->
+
+    <owl:Class rdf:about="#AnySQLSelectStatementUpdate">
+        <rdfs:label xml:lang="en"
+            >StatementUpdate.SQL.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnySQLStatementUpdate -->
+
+    <owl:Class rdf:about="#AnySQLStatementUpdate">
+        <rdfs:label xml:lang="en"
+            >StatementUpdate.SQL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyStatementUpdate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyStatement -->
+
+    <owl:Class rdf:about="#AnyStatement">
+        <rdfs:label xml:lang="en">AnyStatement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyStatementOfProgrammingLanguage -->
+
+    <owl:Class rdf:about="#AnyStatementOfProgrammingLanguage">
+        <rdfs:label xml:lang="en"
+            >AnyExpressionOfProgrammingLanguage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyStatementUpdate -->
+
+    <owl:Class rdf:about="#AnyStatementUpdate">
+        <rdfs:label xml:lang="en">StatementUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyWebApplicationUpdate -->
+
+    <owl:Class rdf:about="#AnyWebApplicationUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyWebApplicationUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyApplication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#AnyWebPageUpdate -->
+
+    <owl:Class rdf:about="#AnyWebPageUpdate">
+        <rdfs:label xml:lang="en"
+            >AnyWebPageUpdate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AnyHowTo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Behaviour -->
+
+    <owl:Class rdf:about="#Behaviour">
+        <rdfs:label xml:lang="en">Behaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BehaviourGroup -->
+
+    <owl:Class rdf:about="#BehaviourGroup">
+        <rdfs:label xml:lang="en">BehaviourGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SolutionGenerationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BisinessIdentifier -->
+
+    <owl:Class rdf:about="#BisinessIdentifier">
+        <rdfs:label xml:lang="en"
+            >BisinessIdentifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BusinessProcessGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BugReportGroup -->
+
+    <owl:Class rdf:about="#BugReportGroup">
+        <rdfs:label xml:lang="en">BugReportGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessAction -->
+
+    <owl:Class rdf:about="#BusinessAction">
+        <rdfs:label xml:lang="en">BusinessAction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessActionSequence -->
+
+    <owl:Class rdf:about="#BusinessActionSequence">
+        <rdfs:label xml:lang="en"
+            >BusinessActionSequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessProcess -->
+
+    <owl:Class rdf:about="#BusinessProcess">
+        <rdfs:label xml:lang="en">BusinessProcess</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessProcessDescription -->
+
+    <owl:Class rdf:about="#BusinessProcessDescription">
+        <rdfs:label xml:lang="en"
+            >BusinessActionDescription</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessProcessGroup -->
+
+    <owl:Class rdf:about="#BusinessProcessGroup">
+        <rdfs:label xml:lang="en"
+            >BusinessProcessGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessReq -->
+
+    <owl:Class rdf:about="#BusinessReq">
+        <rdfs:label xml:lang="en">BusinessReq</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#BusinessReqGroup -->
+
+    <owl:Class rdf:about="#BusinessReqGroup">
+        <rdfs:label xml:lang="en"
+            >BusinessReqGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ReqSpecGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#CR -->
+
+    <owl:Class rdf:about="#CR">
+        <rdfs:label xml:lang="en">BugReport</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#CRGroup -->
+
+    <owl:Class rdf:about="#CRGroup">
+        <rdfs:label xml:lang="en">CRGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Condition -->
+
+    <owl:Class rdf:about="#Condition">
+        <rdfs:label xml:lang="en">Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ConditionGroup -->
+
+    <owl:Class rdf:about="#ConditionGroup">
+        <rdfs:label xml:lang="en">ConditionGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BehaviourGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#CurrentBehaviour -->
+
+    <owl:Class rdf:about="#CurrentBehaviour">
+        <rdfs:label xml:lang="en"
+            >CurrentBehaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DB.Column -->
+
+    <owl:Class rdf:about="#DB.Column">
+        <rdfs:label xml:lang="en">DB.Column</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DB.ColumnType -->
+
+    <owl:Class rdf:about="#DB.ColumnType">
+        <rdfs:label xml:lang="en">DB.ColumnType</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AbstractApplicationArchitecture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#DataRetrieval.AddField -->
+
+    <owl:Class rdf:about="#DataRetrieval.AddField">
+        <rdfs:label xml:lang="en"
+            >DataRetrieval.AddField</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Element.Sequence.Condition -->
+
+    <owl:Class rdf:about="#Element.Sequence.Condition">
+        <rdfs:label xml:lang="en"
+            >Element.Sequence.Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ExpressionGroup -->
+
+    <owl:Class rdf:about="#ExpressionGroup">
+        <rdfs:label xml:lang="en">ExpressionGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AbstractProgramSyntaxGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ExpressionGroup.SQL -->
+
+    <owl:Class rdf:about="#ExpressionGroup.SQL">
+        <rdfs:label xml:lang="en"
+            >ExpressionGroup.SQL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Finction -->
+
+    <owl:Class rdf:about="#Finction">
+        <rdfs:label xml:lang="en">FunctionCall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NonTerminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Function -->
+
+    <owl:Class rdf:about="#Function">
+        <rdfs:label xml:lang="en">Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#FunctionalReq -->
+
+    <owl:Class rdf:about="#FunctionalReq">
+        <rdfs:label xml:lang="en">FunctionalReq</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Function"/>
+        <rdfs:subClassOf rdf:resource="#ReqSpecGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#GUI.InputInterface -->
+
+    <owl:Class rdf:about="#GUI.InputInterface">
+        <rdfs:label xml:lang="en"
+            >GUI.InputInterface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#InputInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#HowToGroup -->
+
+    <owl:Class rdf:about="#HowToGroup">
+        <rdfs:label xml:lang="en">HowToGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SolutionGenerationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Identifier -->
+
+    <owl:Class rdf:about="#Identifier">
+        <rdfs:label xml:lang="en">Identifier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#InputInterface -->
+
+    <owl:Class rdf:about="#InputInterface">
+        <rdfs:label xml:lang="en">InputInterface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#IntendedBehaviour -->
+
+    <owl:Class rdf:about="#IntendedBehaviour">
+        <rdfs:label xml:lang="en"
+            >IntendedBehaviour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Keyword -->
+
+    <owl:Class rdf:about="#Keyword">
+        <rdfs:label xml:lang="en">Keyword</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Terminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Lexem -->
+
+    <owl:Class rdf:about="#Lexem">
+        <rdfs:label xml:lang="en">Lexem</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Lexem.SQL -->
+
+    <owl:Class rdf:about="#Lexem.SQL">
+        <rdfs:label xml:lang="en">Lexem.SQL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#LexemSequence -->
+
+    <owl:Class rdf:about="#LexemSequence">
+        <rdfs:label xml:lang="en">LexemSequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#LexemSequence.SQL -->
+
+    <owl:Class rdf:about="#LexemSequence.SQL">
+        <rdfs:label xml:lang="en"
+            >LexemSequence.SQL</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#LexemSequence.SQL.Select -->
+
+    <owl:Class rdf:about="#LexemSequence.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >LexemSequence.SQL.Select</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#LexemSequence.SQL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ListLiterals -->
+
+    <owl:Class rdf:about="#ListLiterals">
+        <rdfs:label xml:lang="en">ListLiterals</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ListSubElements"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ListLiterals.Separated -->
+
+    <owl:Class rdf:about="#ListLiterals.Separated">
+        <rdfs:label xml:lang="en"
+            >ListLiterals.Separated</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ListLiterals.Separated.SQL.Select -->
+
+    <owl:Class rdf:about="#ListLiterals.Separated.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >ListLiterals.Separated.SQL.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ListSubElements -->
+
+    <owl:Class rdf:about="#ListSubElements">
+        <rdfs:label xml:lang="en">ListSubElements</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Literal -->
+
+    <owl:Class rdf:about="#Literal">
+        <rdfs:label xml:lang="en">Literal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#NonFunctionalReq -->
+
+    <owl:Class rdf:about="#NonFunctionalReq">
+        <rdfs:label xml:lang="en"
+            >NonFunctionalReq</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#NonTerminal -->
+
+    <owl:Class rdf:about="#NonTerminal">
+        <rdfs:label xml:lang="en">NonTerminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Lexem"/>
+        <rdfs:subClassOf rdf:resource="#Operand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Not.Operator.Condition -->
+
+    <owl:Class rdf:about="#Not.Operator.Condition">
+        <rdfs:label xml:lang="en"
+            >Not.Operator.Condition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Operand -->
+
+    <owl:Class rdf:about="#Operand">
+        <rdfs:label xml:lang="en">Operand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Operand.Condition -->
+
+    <owl:Class rdf:about="#Operand.Condition">
+        <rdfs:label xml:lang="en"
+            >Operand.Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Operator -->
+
+    <owl:Class rdf:about="#Operator">
+        <rdfs:label xml:lang="en">Operator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Operator.Condititon -->
+
+    <owl:Class rdf:about="#Operator.Condititon">
+        <rdfs:label xml:lang="en"
+            >Operator.Condititon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Or.Operator.Condition -->
+
+    <owl:Class rdf:about="#Or.Operator.Condition">
+        <rdfs:label xml:lang="en"
+            >Or.Operator.Condition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#OutputInterface -->
+
+    <owl:Class rdf:about="#OutputInterface">
+        <rdfs:label xml:lang="en">OutputInterface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Pattern.AddField.SQL.Select -->
+
+    <owl:Class rdf:about="#Pattern.AddField.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >Pattern.AddField.SQL.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#PatternGroup -->
+
+    <owl:Class rdf:about="#PatternGroup">
+        <rdfs:label xml:lang="en">PatternGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Performance -->
+
+    <owl:Class rdf:about="#Performance">
+        <rdfs:label xml:lang="en"
+            >Performance.NonFunctionalReq</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NonFunctionalReq"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#PostCondition -->
+
+    <owl:Class rdf:about="#PostCondition">
+        <rdfs:label xml:lang="en">PostCondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Precondition -->
+
+    <owl:Class rdf:about="#Precondition">
+        <rdfs:label xml:lang="en">Precondition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ProgrammingLanguage.SQL -->
+
+    <owl:Class rdf:about="#ProgrammingLanguage.SQL">
+        <rdfs:label xml:lang="en"
+            >ProgrammingLanguage.SQL</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ProgrammingLanguageGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ProgrammingLanguageGroup -->
+
+    <owl:Class rdf:about="#ProgrammingLanguageGroup">
+        <rdfs:label xml:lang="en"
+            >AnyProgrammingLanguage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Property -->
+
+    <owl:Class rdf:about="#Property">
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Report.OutputInterface -->
+
+    <owl:Class rdf:about="#Report.OutputInterface">
+        <rdfs:label xml:lang="en"
+            >Report.OutputInterface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OutputInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ReqSpec -->
+
+    <owl:Class rdf:about="#ReqSpec">
+        <rdfs:label xml:lang="en">ReqSpec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ReqSpecGroup -->
+
+    <owl:Class rdf:about="#ReqSpecGroup">
+        <rdfs:label xml:lang="en">ReqSpecGroup</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#RequestGroup -->
+
+    <owl:Class rdf:about="#RequestGroup">
+        <rdfs:label xml:lang="en">RequestGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SolutionGenerationGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLExpression.InsertIntoTable -->
+
+    <owl:Class rdf:about="#SQLExpression.InsertIntoTable">
+        <rdfs:label xml:lang="en"
+            >SQLExpression.InsertIntoTable</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLExpression.Select -->
+
+    <owl:Class rdf:about="#SQLExpression.Select">
+        <rdfs:label xml:lang="en"
+            >SQLExpression.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLKeyword -->
+
+    <owl:Class rdf:about="#SQLKeyword">
+        <rdfs:label xml:lang="en">SQLKeyword</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Keyword"/>
+        <rdfs:subClassOf rdf:resource="#SQLTerminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLLiteral -->
+
+    <owl:Class rdf:about="#SQLLiteral">
+        <rdfs:label xml:lang="en">SQLLiteral</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLLiteral.ColumnName -->
+
+    <owl:Class rdf:about="#SQLLiteral.ColumnName">
+        <rdfs:label xml:lang="en"
+            >SQLLiteral.ColumnName</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLLiteral.ColumnValue -->
+
+    <owl:Class rdf:about="#SQLLiteral.ColumnValue">
+        <rdfs:label xml:lang="en"
+            >SQLLiteral.ColumnValue</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLLiteral"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLLiteral.Comma -->
+
+    <owl:Class rdf:about="#SQLLiteral.Comma">
+        <rdfs:label xml:lang="en"
+            >SQLLiteral.Comma</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLLiteral.TableName -->
+
+    <owl:Class rdf:about="#SQLLiteral.TableName">
+        <rdfs:label xml:lang="en"
+            >SQLLiteral.TableName</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperand -->
+
+    <owl:Class rdf:about="#SQLOperand">
+        <rdfs:label xml:lang="en">SQLOperand</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#ExpressionGroup.SQL"/>
+        <rdfs:subClassOf rdf:resource="#Operand"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator -->
+
+    <owl:Class rdf:about="#SQLOperator">
+        <rdfs:label xml:lang="en">SQLOperator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Operator"/>
+        <rdfs:subClassOf rdf:resource="#SQLKeyword"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.Bracket -->
+
+    <owl:Class rdf:about="#SQLOperator.Bracket">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.OpenBracket</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.CloseBracket -->
+
+    <owl:Class rdf:about="#SQLOperator.CloseBracket">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.CloseBracket</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.Delete -->
+
+    <owl:Class rdf:about="#SQLOperator.Delete">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.DELETE</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.EQ -->
+
+    <owl:Class rdf:about="#SQLOperator.EQ">
+        <rdfs:label xml:lang="en">SQLOperator.EQ</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.FROM -->
+
+    <owl:Class rdf:about="#SQLOperator.FROM">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.FROM</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.INTO -->
+
+    <owl:Class rdf:about="#SQLOperator.INTO">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.INTO</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.Insert -->
+
+    <owl:Class rdf:about="#SQLOperator.Insert">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.INSERT</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.SELECT -->
+
+    <owl:Class rdf:about="#SQLOperator.SELECT">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.SELECT</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.SET -->
+
+    <owl:Class rdf:about="#SQLOperator.SET">
+        <rdfs:label xml:lang="en">SQLOperator.SET</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.Update -->
+
+    <owl:Class rdf:about="#SQLOperator.Update">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.UPDATE</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.VALUES -->
+
+    <owl:Class rdf:about="#SQLOperator.VALUES">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.VALUES</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLOperator.WHERE -->
+
+    <owl:Class rdf:about="#SQLOperator.WHERE">
+        <rdfs:label xml:lang="en"
+            >SQLOperator.WHERE</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#SQLOperator"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SQLTerminal -->
+
+    <owl:Class rdf:about="#SQLTerminal">
+        <rdfs:label xml:lang="en">SQLTerminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Lexem.SQL"/>
+        <rdfs:subClassOf rdf:resource="#Terminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Security.NonFunctionalReq -->
+
+    <owl:Class rdf:about="#Security.NonFunctionalReq">
+        <rdfs:label xml:lang="en"
+            >Security.NonFunctionalReq</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NonFunctionalReq"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Sequence.Condition -->
+
+    <owl:Class rdf:about="#Sequence.Condition">
+        <rdfs:label xml:lang="en"
+            >Sequence.Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SequenceGroup.Condition -->
+
+    <owl:Class rdf:about="#SequenceGroup.Condition">
+        <rdfs:label xml:lang="en"
+            >SequenceGroup.Condition</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#SolutionGenerationGroup -->
+
+    <owl:Class rdf:about="#SolutionGenerationGroup"/>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#StatemenUpdate.SQL.AddField -->
+
+    <owl:Class rdf:about="#StatemenUpdate.SQL.AddField">
+        <rdfs:label xml:lang="en"
+            >StatementUpdate.SQL.Select.AddField</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Statement.SQL.Select.First -->
+
+    <owl:Class rdf:about="#Statement.SQL.Select.First">
+        <rdfs:label xml:lang="en"
+            >Statement.SQL.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#StatementGroup -->
+
+    <owl:Class rdf:about="#StatementGroup">
+        <rdfs:label xml:lang="en">StatementGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#AbstractProgramSyntaxGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#StatementSequence -->
+
+    <owl:Class rdf:about="#StatementSequence">
+        <rdfs:label xml:lang="en"
+            >AnyStatementSequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#StatementSequence.SQL.Select.First -->
+
+    <owl:Class rdf:about="#StatementSequence.SQL.Select.First">
+        <rdfs:label xml:lang="en"
+            >StatementSequence.SQL.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Table -->
+
+    <owl:Class rdf:about="#Table">
+        <rdfs:label xml:lang="en">DB.Table</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Terminal -->
+
+    <owl:Class rdf:about="#Terminal">
+        <rdfs:label xml:lang="en">Terminal</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Lexem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ToAddData -->
+
+    <owl:Class rdf:about="#ToAddData">
+        <rdfs:label xml:lang="en">ToAddData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ToAddData.SQL.Select -->
+
+    <owl:Class rdf:about="#ToAddData.SQL.Select">
+        <rdfs:label xml:lang="en"
+            >ToAddData.SQL.Select</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#ToDeleteData -->
+
+    <owl:Class rdf:about="#ToDeleteData">
+        <rdfs:label xml:lang="en">ToDeleteData</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#UpdateDataGroup -->
+
+    <owl:Class rdf:about="#UpdateDataGroup">
+        <rdfs:label xml:lang="en">UpdateDataGroup</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#HowToGroup"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Value -->
+
+    <owl:Class rdf:about="#Value">
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Varible -->
+
+    <owl:Class rdf:about="#Varible">
+        <rdfs:label xml:lang="en">VariableCall</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#NonTerminal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#WebForm.InputInteface -->
+
+    <owl:Class rdf:about="#WebForm.InputInteface">
+        <rdfs:label xml:lang="en"
+            >WebForm.InputInteface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#InputInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#WebService.InputInterface -->
+
+    <owl:Class rdf:about="#WebService.InputInterface">
+        <rdfs:label xml:lang="en"
+            >WebService.InputInterface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#InputInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#WebService.OutputInterface -->
+
+    <owl:Class rdf:about="#WebService.OutputInterface">
+        <rdfs:label xml:lang="en"
+            >WebService.OutputInterface</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#OutputInterface"/>
+    </owl:Class>
+    
+
+
+    <!-- http://menta/ontologies/2010/01/ProblemSolutionGeneration#Xor.Operator.Condition -->
+
+    <owl:Class rdf:about="#Xor.Operator.Condition">
+        <rdfs:label xml:lang="en"
+            >Xor.Operator.Condition</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Operator.Condititon"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

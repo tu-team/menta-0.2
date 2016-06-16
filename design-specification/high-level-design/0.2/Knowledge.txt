@@ -1,0 +1,8 @@
+#summary Knowledge model specification for Menta 0.2.
+
+= Knowledge. =
+
+Is the model that represents all Domain model entities stored in [http://code.google.com/p/menta/wiki/KBServer storage].
+
+== Class diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/System%20model.png

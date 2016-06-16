@@ -1,0 +1,44 @@
+=Example in meta language.=
+solution example: [OperationHowTo0.destination(TargetHowTo0), OperationHowTo1.destination(TargetHowTo1)]
+
+== HowTo tree of the application: ==
+ * Application Example
+  * Project Example
+    * Package model
+     * Class model Example
+    * Package controller
+     * Class controller Example
+    * Package GUI
+     * Class GUI Example
+  * Database Example
+   * Table Example
+  * ORM Example
+   * ORM mapping record {Class model Example -> Table Example}
+
+== Generalised and Parametrised  HowTo-s ==
+ * Generalised HowTo-s
+  * Create BusinessObject($businessObjectName: URI) component
+   * Create table($businessObjectName)
+   * Create model class($businessObjectName)
+   * Create ORM mapping($businessObjectName) {Class model $businessObjectName -> Table $businessObjectName}
+   * Create controller class($businessObjectName)
+   * Create link for: ORM mapping to table, model to ORM mapping, controller to  model class, GUI to controller
+
+== run through solution elements and check that all OperationHowTo-s are AddField. ==
+foreach($element: OperationHowTo in solution) {
+ ?($element.URI == "menta/model/AddField")
+}
+
+==  run through solution elements and check that all TargetHowTo-s are connected to specified component. ==
+foreach($element: OperationHowTo in solution) {
+ has?($element.destination.link(CustomerHowTo))
+}
+
+== run through solution elements and check that there are no duplicates. ==
+foreach($element0: OperationHowTo in solution) {
+ foreach($element1: OperationHowTo in solution) {
+  if($element0.index != $element1.index) {
+   ?($element0.URI != $element1.URI || $element0.destination != $element1.destination)
+  }
+ }
+}

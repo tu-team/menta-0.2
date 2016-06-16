@@ -1,0 +1,26 @@
+#summary Learner component specification for Menta 0.2.
+
+= Learner. =
+Machine learning component that uses [http://www.springerlink.com/content/1g9ul8gef3l53dnx/fulltext.pdf C4.5 rules represented as predicates], implemented via [http://code.google.com/p/menta/wiki/HowTo HowTos].
+
+== Interface diagram. ==
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Interface%20learner.png
+
+== Component diagram. ==
+Components:
+  # [http://code.google.com/p/menta/wiki/Trainer Trainer].
+    # [http://code.google.com/p/menta/wiki/Associator Associator].
+    # [http://code.google.com/p/menta/wiki/Generaliser Generaliser].
+    # [http://code.google.com/p/menta/wiki/Specificator Specificator].
+  # [http://code.google.com/p/menta/wiki/AnalogyDetector AnalogyDetector].
+
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Component%20learner.png
+
+== Activity diagrams. ==
+
+=== Learner.detectAnalogy. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Learner.detectAnalogy.png
+
+=== Learner.train. ===
+http://menta.googlecode.com/hg/design-specification/high-level-design/0.2/Learner.train.png
+
